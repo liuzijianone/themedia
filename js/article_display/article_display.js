@@ -3,6 +3,7 @@ let para = {
 }
 
 $(function () {
+
     const { log } = console;
 
     // $('.main-content-box').eq(0).css('height', '1200px');
