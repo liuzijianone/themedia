@@ -53,6 +53,7 @@ body {
 
 .content-container {
     width: 1200px;
+    height: auto;
     margin: 0 auto;
     position: relative;
     /* background-color: rgba(165, 157, 212, 0.4); */

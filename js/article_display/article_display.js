@@ -50,11 +50,131 @@ $(function () {
         // }
     });
 
+    // 滚到顶部
     $('.uparrow').click(function () {
         log('ok');
         // $('html , body').animate({ scrollTop: 0 }, 'slow');
         $('html , body').animate({ scrollTop: 0 }, 2000);
     });
 
+    const commentTmpl = comments => `
+        ${comments.map(comment => `
+            <div class="comment-card">
+                <div class="comment-head">
+                    <img class="head-sculpture" src=${comment.headSculptureSrc} />
+                    <a class="pen-name" href="#">${comment.penName}</a>
+                    <span class="remarks">起舞弄清影</span>
+                </div>
+                <div class="comment-body">${comment.commentContent}
+                </div>
+                <div class="comment-tail">
+                    <span class="comment-time">${comment.commentTime}</span>
+
+                    <span class="like"><a href="#">赞</a><span>${comment.likeCount}</span></span>
+                    <span class="dislike"><a href="#">踩</a><span>${comment.dislikeCount}</span></span>
+                    <span class="recomments"><a href="#">回复</a></span>
+                    <span class="share"><a href="#">分享</a>
+                        <ul class="share-box">
+                            <li class="share-icon"><img src="../imgs/article_display/blog.png" /></li>
+                            <li class="share-icon"><img src="../imgs/article_display/QQ.png" /></li>
+                            <li class="share-icon"><img src="../imgs/article_display/QQzone.png" /></li>
+                            <li class="share-icon"><img src="../imgs/article_display/wechat.png" /></li>
+                        </ul>
+                    </span>
+                    <span class="report"><a href="#">举报</a></span>
+                    <span class="view-comments"><a href="#">查看回复 ${comment.commentCount}</a></span>
+                </div>
+            </div >`).join('')}`;
+
+    $('.comments-container').eq(0).html(commentTmpl([
+        {
+            headSculptureSrc: "../imgs/article_display/scholar2.jpg",
+            penName: "啊咧咧嘻",
+            commentContent: 'yiyiyiyi咦，为嘛CNBC不提50年代初中国也用同样的话警告过米军？米军不听，进而爆发抗米抗米抗米援朝战争。。。不敢提吗？！😂',
+            commentTime: '1小时前',
+            likeCount: '99+',
+            dislikeCount: '99+',
+            commentCount: '99+',
+        },
+        {
+            headSculptureSrc: "../imgs/article_display/scholar2.jpg",
+            penName: "啊咧咧嘻1111",
+            commentContent: 'yiyiyiyi咦，为嘛CNBC不提50年代初中国也用同样的话警告过米军？米军不听，进而爆发抗米抗米抗米援朝战争。。。不敢提吗？！😂',
+            commentTime: '4小时前',
+            likeCount: '22',
+            dislikeCount: '99+',
+            commentCount: '99+',
+        }
+    ]));
+
+    $('.comments-container').eq(1).html(commentTmpl([
+        {
+            headSculptureSrc: "../imgs/article_display/scholar2.jpg",
+            penName: "啊咧咧嘻",
+            commentContent: 'yiyiyiyi咦，为嘛CNBC不提50年代初中国也用同样的话警告过米军？米军不听，进而爆发抗米抗米抗米援朝战争。。。不敢提吗？！😂',
+            commentTime: '1小时前',
+            likeCount: '99+',
+            dislikeCount: '99+',
+            commentCount: '99+',
+        },
+        {
+            headSculptureSrc: "../imgs/article_display/scholar2.jpg",
+            penName: "啊咧咧嘻1111",
+            commentContent: 'yiyiyiyi咦，为嘛CNBC不提50年代初中国也用同样的话警告过米军？米军不听，进而爆发抗米抗米抗米援朝战争。。。不敢提吗？！😂',
+            commentTime: '4小时前',
+            likeCount: '22',
+            dislikeCount: '99+',
+            commentCount: '99+',
+        }
+    ]));
+
+    tailFunc();
+
 });
+
+function tailFunc() {
+    let contentHeight = $('.main-content-box').eq(0).outerHeight() > $('.side-content-box').eq(0).outerHeight() ? $('.main-content-box').eq(0).outerHeight() : $('.side-content-box').eq(0).outerHeight();
+
+    $('.content-container').eq(0).css('height', contentHeight + 'px');
+    $('.content-box').eq(0).css('height', contentHeight + 'px');
+}
+
+function loadComments() {
+    let headSculptureSrc = "../imgs/article_display/scholar2.jpg";
+    let penName = "啊咧咧嘻";
+    let commentContent = 'yiyiyiyi咦，为嘛CNBC不提50年代初中国也用同样的话警告过米军？米军不听，进而爆发抗米抗米抗米援朝战争。。。不敢提吗？！😂';
+    let commentTime = '1小时前';
+    let likeCount = '99+';
+    let dislikeCount = '99+';
+    let commentCount = '99+';
+    $('.comments-container').eq(0).append(
+        `<div class="comment-card">
+        <div class="comment-head">
+            <img class="head-sculpture" src=${headSculptureSrc} />
+            <a class="pen-name" href="#">${penName}</a>
+            <span class="remarks">起舞弄清影</span>
+        </div>
+        <div class="comment-body">${commentContent}
+        </div>
+        <div class="comment-tail">
+            <span class="comment-time">${commentTime}</span>
+
+            <span class="like"><a href="#">赞</a><span>${likeCount}</span></span>
+            <span class="dislike"><a href="#">踩</a><span>${dislikeCount}</span></span>
+            <span class="recomments"><a href="#">回复</a></span>
+            <span class="share"><a href="#">分享</a>
+                <ul class="share-box">
+                    <li class="share-icon"><img src="../imgs/article_display/blog.png" /></li>
+                    <li class="share-icon"><img src="../imgs/article_display/QQ.png" /></li>
+                    <li class="share-icon"><img src="../imgs/article_display/QQzone.png" /></li>
+                    <li class="share-icon"><img src="../imgs/article_display/wechat.png" /></li>
+                </ul>
+            </span>
+            <span class="report"><a href="#">举报</a></span>
+            <span class="view-comments"><a href="#">查看回复 ${commentCount}</a></span>
+        </div>
+
+    </div>`
+    );
+}
 
