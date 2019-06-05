@@ -12,7 +12,7 @@
     <!-- <link href="./images/index/seu.jpg" rel="shortcut icon" type="image/*" /> -->
 
     <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="../js/article_display/tmpl.js"></script>
+    <script type="text/javascript" src="../js/article_display/commentTmpl.js"></script>
     <script type="text/javascript" src="../js/article_display/article_display.js"></script>
 </head>
 
@@ -274,20 +274,24 @@
                                 </div>
                                 <div class="comment-tail">
                                     <span class="comment-time">1小时前</span>
-
-                                    <span class="like"><a href="#">赞</a><span>99+</span></span>
-                                    <span class="dislike"><a href="#">踩</a><span>99+</span></span>
-                                    <span class="recomments"><a href="#">回复</a></span>
-                                    <span class="share"><a href="#">分享</a>
-                                        <ul class="share-box">
-                                            <li class="share-icon"><img src="../imgs/article_display/blog.png" /></li>
-                                            <li class="share-icon"><img src="../imgs/article_display/QQ.png" /></li>
-                                            <li class="share-icon"><img src="../imgs/article_display/QQzone.png" /></li>
-                                            <li class="share-icon"><img src="../imgs/article_display/wechat.png" /></li>
-                                        </ul>
-                                    </span>
-                                    <span class="report"><a href="#">举报</a></span>
-                                    <span class="view-comments"><a href="#">查看回复 99+</a></span>
+                                    <div class="comment-btn-box">
+                                        <span class="view-comments"><a href="#">查看回复 99+</a></span>
+                                        <span class="report"><a href="#">举报</a></span>
+                                        <span class="share"><a href="#">分享</a>
+                                            <ul class="share-box">
+                                                <li class="share-icon"><img src="../imgs/article_display/blog.png" />
+                                                </li>
+                                                <li class="share-icon"><img src="../imgs/article_display/QQ.png" /></li>
+                                                <li class="share-icon"><img src="../imgs/article_display/QQzone.png" />
+                                                </li>
+                                                <li class="share-icon"><img src="../imgs/article_display/wechat.png" />
+                                                </li>
+                                            </ul>
+                                        </span>
+                                        <span class="recomments"><a href="#">回复</a></span>
+                                        <span class="dislike"><a href="#">踩</a><span>99+</span></span>
+                                        <span class="like"><a href="#">赞</a><span>99+</span></span>
+                                    </div>
                                 </div>
 
                             </div> -->
@@ -298,6 +302,12 @@
                     <!-- 我要评论 -->
                     <div class="my-comments">
                         <div class="comment-title">我要评论</div>
+                        <div class="comment-box">
+                            <textarea placeholder="请输入评论..."></textarea>
+                            <div class="comment-write-box">
+                                <span class="publish-btn">发布</span>
+                            </div>
+                        </div>
                     </div>
                     <!-- 我要评论 -->
 

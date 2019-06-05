@@ -329,6 +329,58 @@
     font-size: 11pt;
 }
 
+.comment-box textarea {
+    position: relative;
+    margin-top: 10px;
+    display: block;
+    width: 90%;
+    left: 5%;
+    height: 100px;
+    font-size: 11pt;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    line-height: 20px;
+    resize: none;
+    background-color: rgb(221, 221, 221);
+    border-radius: 5px;
+    border: 1px solid #999;
+    outline: none;
+    placeholder: "请介绍自己..."
+}
+
+.comment-box textarea:focus {
+    background-color: #fff;
+    border: 1px solid #666;
+}
+
+.comment-write-box {
+    position: relative;
+    width: 90%;
+    left: 5%;
+    margin-top: 5px;
+    height: 30px;
+}
+
+.publish-btn {
+    /* display: inline-block; */
+    float: right;
+    height: 30px;
+    text-align: center;
+    width: 40px;
+    line-height: 30px;
+    padding: 0 8px;
+    background-color: #999;
+    border-radius: 5px 5px;
+    color: #fff;
+    font-size: 12pt;
+    /* letter-spacing: 2px; */
+    cursor: pointer;
+}
+
+.publish-btn:hover {
+    background-color: #a00;
+}
+
 .comment-tail {
     box-sizing: border-box;
     padding-left: 40px;
@@ -351,9 +403,19 @@
     float: left;
 }
 
-.view-comments, .report, .share, .recomments, .dislike, .like {
+.comment-btn-box {
     float: right;
+}
+
+.view-comments, .report, .share, .recomments, .dislike, .like {
+    /* float: right; */
+    float: left;
+    width: 35px;
     margin-right: 20px;
+}
+
+.view-comments {
+    width: 80px;
 }
 
 .share {
@@ -405,7 +467,7 @@
 
 /* *************************************************************** */
 
-.related-recomendation{
+.related-recomendation {
     margin-top: 20px;
 }
 
@@ -566,7 +628,7 @@
 
 /* ********************************************************** */
 
-.fix-card{
+.fix-card {
     background-color: rgb(248, 247, 247);
     box-shadow: 2px 2px 4px #333333;
     border-radius: 5px;
@@ -575,12 +637,12 @@
     cursor: pointer;
 }
 
-.fix-card:hover{
+.fix-card:hover {
     background-color: rgb(243, 243, 243);
     box-shadow: 2px 2px 4px #000;
 }
 
-.uparrow img{
+.uparrow img {
     position: relative;
     width: 40px;
     height: 40px;
