@@ -104,7 +104,7 @@ button{
 #img_contain{
     height: 100%;
     width: 70%;
-    background-image: url(../../../imgs/article_ls/莱昂纳德.jpg);
+    background-image: url(themedia/imgs/article_ls/莱昂纳德.jpg);
     background-size: contain;
     display: inline-block;
     /* display: inline-block; */
