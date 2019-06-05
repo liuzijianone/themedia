@@ -1,7 +1,10 @@
-import comments from './tmpl.js';
+// import comments from './tmpl.js';
 // const tmpl = require('tmpl');
 const { log } = console;
 log(comments);
+addComment({ commentContent: '66666666' });
+log(comments);
+log(comments[2]);
 
 $(function () {
 
@@ -86,26 +89,7 @@ $(function () {
                 </div>
             </div >`).join('')}`;
 
-    $('.comments-container').eq(0).html(commentTmpl([
-        {
-            headSculptureSrc: "../imgs/article_display/scholar2.jpg",
-            penName: "啊咧咧嘻",
-            commentContent: 'yiyiyiyi咦，为嘛CNBC不提50年代初中国也用同样的话警告过米军？米军不听，进而爆发抗米抗米抗米援朝战争。。。不敢提吗？！😂',
-            commentTime: '1小时前',
-            likeCount: '99+',
-            dislikeCount: '99+',
-            commentCount: '99+',
-        },
-        {
-            headSculptureSrc: "../imgs/article_display/scholar2.jpg",
-            penName: "啊咧咧嘻1111",
-            commentContent: 'yiyiyiyi咦，为嘛CNBC不提50年代初中国也用同样的话警告过米军？米军不听，进而爆发抗米抗米抗米援朝战争。。。不敢提吗？！😂',
-            commentTime: '4小时前',
-            likeCount: '22',
-            dislikeCount: '99+',
-            commentCount: '99+',
-        }
-    ]));
+    $('.comments-container').eq(0).html(commentTmpl(comments));
 
     $('.comments-container').eq(1).html(commentTmpl([
         {

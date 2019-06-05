@@ -25,13 +25,13 @@ function addComment({
     commentContent = '',
     commentTime = (new Date()).toLocaleString(),
     likeCount = 0, dislikeCount = 0, commentCount = 0 }) {
-    comments.push([{
+    comments.push({
         headSculptureSrc,
         penName,
         commentContent,
         commentTime,
         likeCount, dislikeCount, commentCount
-    }]);
+    });
 }
 
-export { comments, addComment };
+// export { comments, addComment };
