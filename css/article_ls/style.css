@@ -104,7 +104,7 @@ button{
 #img_contain{
     height: 100%;
     width: 70%;
-    background-image: url(../images/莱昂纳德.jpg);
+    background-image: url(../../../imgs/article_ls/莱昂纳德.jpg);
     background-size: contain;
     display: inline-block;
     /* display: inline-block; */
@@ -143,7 +143,7 @@ div.container>ul>li{
 ul>li>div:nth-child(1){
     display: inline-block;
     background-color: blue;
-    background-image: url(../images/验钞机.jpg);
+    background-image: url(../../../imgs/article_ls/验钞机.jpg);
     background-size: contain;
     vertical-align: top;
     margin: 30px 30px;
