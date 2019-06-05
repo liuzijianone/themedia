@@ -345,7 +345,7 @@
     border-radius: 5px;
     border: 1px solid #999;
     outline: none;
-    placeholder: "请介绍自己..."
+    
 }
 
 .comment-box textarea:focus {

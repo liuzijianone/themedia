@@ -64,7 +64,7 @@ const commentTmpl = ({
 
 let commentProxy = new Proxy(comments, {
     get: (target, property) => {
-        log('------set------');
+        log('------get------');
         if (property in target) {
             tailFunc();
             return target[property];
@@ -75,6 +75,7 @@ let commentProxy = new Proxy(comments, {
 
         $('.comments-container').eq(0).append(
             commentTmpl({ commentContent: $('.comment-box textarea').eq(0).val() }));
+        $('.comment-box textarea').eq(0).val("");
         tailFunc();
     }
 });
@@ -91,7 +92,8 @@ const commentsTmpl = comments => `
 function safeHTML(str) {
     return str.replace(/&/g, "&amp;")
         .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;");
+        .replace(/>/g, "&gt;")
+        .replace(/\n/g, "<br>");
 };
 
 function tailFunc() {

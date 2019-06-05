@@ -84,12 +84,13 @@ $(function () {
 
         log($('.comment-box textarea').eq(0).val().replace(/&/g, "&amp;")
             .replace(/</g, "&lt;")
-            .replace(/>/g, "&gt;"));
+            .replace(/>/g, "&gt;").replace(/\n/g, "\\n"));
 
         addComment({
             commentContent: $('.comment-box textarea').eq(0).val().replace(/&/g, "&amp;")
                 .replace(/</g, "&lt;")
                 .replace(/>/g, "&gt;")
+                .replace(/\n/g, "\\n")
         });
         // $('.comments-container').eq(0).append(
         //     commentTmpl({ commentContent: $('.comment-box textarea').eq(0).val() }));
