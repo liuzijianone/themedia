@@ -105,5 +105,9 @@ function tailFunc() {
     $('.content-box').eq(0).css('height', contentHeight + 'px');
 }
 
+window.onload = function () {
+    tailFunc();
+};
+
 
 
