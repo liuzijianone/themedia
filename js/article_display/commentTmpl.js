@@ -80,6 +80,9 @@ function tailFunc() {
 }
 
 let commentProxy = new Proxy(comments, {
+    get: (target, property) => {
+        tailFunc();
+    },
     set: (obj, prop, value) => {
         log('------set------');
 
