@@ -62,6 +62,28 @@ const commentTmpl = ({
                 </div>
             </div >`;
 
+let commentProxy = new Proxy(comments, {
+    get: (target, property) => {
+        log('------set------');
+        if (property in target) {
+            tailFunc();
+            return target[property];
+        }
+    },
+    set: (obj, prop, value) => {
+        log('------set------');
+
+        $('.comments-container').eq(0).append(
+            commentTmpl({ commentContent: $('.comment-box textarea').eq(0).val() }));
+        tailFunc();
+    }
+});
+
+log(commentProxy[Symbol.for('allComments')]);
+log(commentProxy[Symbol.for('allComments')].map(() => {
+    log(1);
+}));
+
 const commentsTmpl = comments => `
         ${commentProxy[Symbol.for('allComments')].map(comment =>
     commentTmpl(comment)).join('')}`;
@@ -79,19 +101,7 @@ function tailFunc() {
     $('.content-box').eq(0).css('height', contentHeight + 'px');
 }
 
-let commentProxy = new Proxy(comments, {
-    get: (target, property) => {
-        tailFunc();
-    },
-    set: (obj, prop, value) => {
-        log('------set------');
 
-        $('.comments-container').eq(0).append(
-            commentTmpl({ commentContent: $('.comment-box textarea').eq(0).val() }));
-        tailFunc();
-        log('------set------');
-    }
-});
 
 function addComment({
     headSculptureSrc = '../imgs/article_display/scholar2.jpg',
