@@ -100,7 +100,7 @@ $(function () {
 
 function tailFunc() {
     let contentHeight = $('.main-content-box').eq(0).outerHeight() > $('.side-content-box').eq(0).outerHeight() ? $('.main-content-box').eq(0).outerHeight() : $('.side-content-box').eq(0).outerHeight();
-
+    log('contentHeight:' + contentHeight)
     $('.content-container').eq(0).css('height', contentHeight + 'px');
     $('.content-box').eq(0).css('height', contentHeight + 'px');
 }
