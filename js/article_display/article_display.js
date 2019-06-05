@@ -1,10 +1,9 @@
-let para = {
-
-}
+import comments from './tmpl.js';
+// const tmpl = require('tmpl');
+const { log } = console;
+log(comments);
 
 $(function () {
-
-    const { log } = console;
 
     // $('.main-content-box').eq(0).css('height', '1200px');
     // $('.side-content-box').eq(0).css('height', '1100px');
@@ -57,6 +56,7 @@ $(function () {
         $('html , body').animate({ scrollTop: 0 }, 2000);
     });
 
+    let serial = 0;
     const commentTmpl = comments => `
         ${comments.map(comment => `
             <div class="comment-card">
@@ -127,6 +127,16 @@ $(function () {
             commentCount: '99+',
         }
     ]));
+
+    log(typeof ($('.view-comments a')));
+    log($('.view-comments a'));
+    log(Object.keys($('.view-comments a')));
+
+    for (let i of Object.keys($('.view-comments a'))) {
+        $('.view-comments a').eq(i).click(() => {
+            log(i);
+        });
+    }
 
     tailFunc();
 
