@@ -1,0 +1,62 @@
+.content-box {
+    margin-top: 20px;
+}
+
+.content-container {
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* ****************************************************************** */
+
+.video-box {
+    float: left;
+    width: 75%;
+    height: 500px;
+    background-color: #000;
+}
+
+.video-box video {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+/* ****************************************************************** */
+
+.side-video-box {
+    float: left;
+    width: 25%;
+    height: 500px;
+}
+
+/* ****************************************************************** */
+
+.author-box {
+    float: left;
+    margin-top: 10px;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* ****************************************************************** */
+
+.comments-box {
+    margin-top: 10px;
+    width: 75%;
+    float: left;
+    height: 1200px;
+    background-color: rgba(173, 108, 108, 0.4);
+}
+
+/* ****************************************************************** */
+
+.hot-video-box {
+    margin-top: 10px;
+    width: 25%;
+    float: left;
+    height: 1200px;
+    background-color: rgba(149, 218, 149, 0.4);
+}
