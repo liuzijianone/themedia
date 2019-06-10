@@ -1,0 +1,26 @@
+.content-box {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.content-container {
+    width: 1200px;
+    margin: 0 auto;
+    height: auto;
+}
+
+.main-content-box, .side-content-box {
+    float: left;
+}
+
+.main-content-box {
+    width: 65%;
+    height: auto;
+    box-sizing: border-box;
+    padding-right: 20px;
+}
+
+.side-content-box {
+    width: 35%;
+    position: relative;
+}

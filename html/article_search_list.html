@@ -1,0 +1,265 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>全媒体文章详情页</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <link href="../css/article_display/common.css" rel="stylesheet" type="text/css" />
+    <link href="../css/article_display/topnav.css" rel="stylesheet" type="text/css" />
+    <link href="../css/article_display/copyright.css" rel="stylesheet" type="text/css" />
+    <link href="../css/article_search_list/main_cloumn.css" rel="stylesheet" type="text/css" />
+    <link href="../css/article_search_list/article_search_list.css" rel="stylesheet" type="text/css" />
+    <link href="../css/article_search_list/right_side_column.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../js/article_search_list/mainColumnTmpl.js"></script>
+    <script type="text/javascript" src="../js/article_search_list/article_search_list.js"></script>
+
+</head>
+
+<body>
+
+    <!-- 顶部导航栏 -->
+    <div class="top-nav-box">
+        <div class="top-nav-container">
+            <div class="logo-box">
+                <img class="logo" src="../imgs/article_display/tigercheng.png" />
+            </div>
+            <ul class="nav-item-box">
+                <li class="nav-item"><a href="#">首页</a></li>
+                <li class="nav-item"><a href="#">国际</a></li>
+                <li class="nav-item"><a href="#">军事</a></li>
+                <li class="nav-item"><a href="#">财经</a></li>
+                <li class="nav-item"><a href="#">民生</a></li>
+                <li class="nav-item"><a href="#">科技</a></li>
+                <li class="nav-item"><a href="#">百科</a></li>
+                <li class="nav-item"><a href="#">问答</a></li>
+                <li class="nav-item"><a href="#">视频</a></li>
+                <li class="nav-item"><a href="#">直播</a></li>
+            </ul>
+            <div class="user-box">
+                <span class="login-sign-container">
+                    <a href="#">登录 </a>/
+                    <a href="#">注册</a>
+                </span>
+            </div>
+        </div>
+    </div>
+    <!-- 顶部导航栏 -->
+
+    <!-- 内容区 -->
+    <div class="content-box">
+        <div class="content-container clearfix">
+            <!-- 左边内容区 -->
+            <div class="main-content-box">
+
+                <!-- 搜索结果 -->
+                <div class="main-column">
+                    <!-- <div class="main-column-title">搜索结果</div> -->
+                    <div class="main-column-label">搜索结果:<span>0</span>条</div>
+                    <div class="main-column-box">
+                        <div class="main-column-card">
+                            <img class='main-column-img' src='../imgs/article_display/news15.jpg' />
+                            <div class="main-column-container">
+                                <span class="main-column-title"><a href="#">日本女高中生怒抓痴汉，大爷路见不平一伸腿</a></span>
+                                <span class="main-column-tail">
+                                    <span class="main-column-time">2019-05-29 17:18</span>
+                                    <span class="main-column-source"><a href="#">观察动物网</a></span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="main-column-card">
+                            <img class='main-column-img' src='../imgs/article_display/gg.gif' />
+                            <div class="main-column-container">
+                                <span class="main-column-title"><a href="#">
+                                        日本女高中生怒抓痴汉，大爷路见不平一伸腿日本女高中生怒抓痴汉，大爷路见不平一伸腿
+                                    </a></span>
+                                <span class="main-column-tail">
+                                    <span class="main-column-time">2019-05-29 17:18</span>
+                                    <span class="main-column-source"><a href="#">观察动物网</a></span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="main-column-card">
+                            <img class='main-column-img' src='../imgs/article_display/news15.jpg' />
+                            <div class="main-column-container">
+                                <span class="main-column-title"><a href="#">日本女高中生怒抓痴汉，大爷路见不平一伸腿</a></span>
+                                <span class="main-column-tail">
+                                    <span class="main-column-time">2019-05-29 17:18</span>
+                                    <span class="main-column-source"><a href="#">观察动物网</a></span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="main-column-card">
+                            <img class='main-column-img' src='../imgs/article_display/gg.gif' />
+                            <div class="main-column-container">
+                                <span class="main-column-title"><a href="#">
+                                        日本女高中生怒抓痴汉，大爷路见不平一伸腿日本女高中生怒抓痴汉，大爷路见不平一伸腿
+                                    </a></span>
+                                <span class="main-column-tail">
+                                    <span class="main-column-time">2019-05-29 17:18</span>
+                                    <span class="main-column-source"><a href="#">观察动物网</a></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 搜索结果 -->
+
+            </div>
+            <!-- 左边内容区 -->
+
+            <!-- 右边侧栏 -->
+            <div class="side-content-box">
+
+                <!-- 搜索框 -->
+                <div class="search-box">
+                    <input type="text" placeholder="输入搜索内容..." />
+                    <span>搜索</span>
+                </div>
+                <!-- 搜索框 -->
+
+                <!-- 全媒体头条 -->
+                <div class="column-box">
+                    <div class="column-title-box">
+                        <span class="column-title">全媒体栏目</span>
+                        <a class="col-more" href="#">查看全部</a>
+                    </div>
+                    <div class="columns">
+                        <div class="col-card">
+                            <img class='col-img' src='../imgs/article_display/gg.gif' />
+                            <div class="col-container">
+                                <span class="col-title"><a href="#">
+                                        日本女高中生怒抓痴汉，大爷路见不平一伸腿
+                                    </a></span>
+                                <span class="col-tail">评论 99+ </span>
+                            </div>
+                        </div>
+
+                        <div class="col-card">
+                            <img class='col-img' src='../imgs/article_display/gg.gif' />
+                            <div class="col-container">
+                                <span class="col-title"><a href="#">
+                                        日本女高中生怒抓痴汉，大爷路见不平一伸腿
+                                    </a></span>
+                                <span class="col-tail">评论 99+ </span>
+                            </div>
+                        </div>
+
+                        <div class="col-card">
+                            <img class='col-img' src='../imgs/article_display/gg.gif' />
+                            <div class="col-container">
+                                <span class="col-title"><a href="#">
+                                        日本女高中生怒抓痴汉，大爷路见不平一伸腿
+                                    </a></span>
+                                <span class="col-tail">评论 99+ </span>
+                            </div>
+                        </div>
+
+                        <div class="col-card">
+                            <img class='col-img' src='../imgs/article_display/gg.gif' />
+                            <div class="col-container">
+                                <span class="col-title"><a href="#">
+                                        日本女高中生怒抓痴汉，大爷路见不平一伸腿
+                                    </a></span>
+                                <span class="col-tail">评论 99+ </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 全媒体头条 -->
+
+                <!-- 全媒体头条 -->
+                <div class="column-box">
+                    <div class="column-title-box">
+                        <span class="column-title">全媒体栏目</span>
+                        <a class="col-more" href="#">查看全部</a>
+                    </div>
+                    <div class="columns">
+                        <div class="col-card">
+                            <img class='col-img' src='../imgs/article_display/gg.gif' />
+                            <div class="col-container">
+                                <span class="col-title"><a href="#">
+                                        日本女高中生怒抓痴汉，大爷路见不平一伸腿
+                                    </a></span>
+                                <span class="col-tail">评论 99+ </span>
+                            </div>
+                        </div>
+
+                        <div class="col-card">
+                            <img class='col-img' src='../imgs/article_display/news11.jpg' />
+                            <div class="col-container">
+                                <span class="col-title"><a href="#">
+                                        日本女高中生怒抓痴汉，大爷路见不平一伸腿
+                                    </a></span>
+                                <span class="col-tail">评论 99+ </span>
+                            </div>
+                        </div>
+
+                        <div class="col-card">
+                            <img class='col-img' src='../imgs/article_display/gg.gif' />
+                            <div class="col-container">
+                                <span class="col-title"><a href="#">
+                                        日本女高中生怒抓痴汉，大爷路见不平一伸腿
+                                    </a></span>
+                                <span class="col-tail">评论 99+ </span>
+                            </div>
+                        </div>
+
+                        <div class="col-card">
+                            <img class='col-img' src='../imgs/article_display/news10.jpg' />
+                            <div class="col-container">
+                                <span class="col-title"><a href="#">
+                                        日本女高中生怒抓痴汉，大爷路见不平一伸腿
+                                    </a></span>
+                                <span class="col-tail">评论 99+ </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 全媒体头条 -->
+
+            </div>
+            <!-- 右边侧栏 -->
+
+            <!-- 左边悬浮框 -->
+            <!-- <div class="left-fix-box"></div> -->
+            <!-- 左边悬浮框 -->
+
+            <!-- 右边悬浮框 -->
+            <div class="right-fix-box fixable">
+                <div class="fix-card uparrow">
+                    <img src="../imgs/article_display/up.png" />
+                </div>
+            </div>
+            <!-- 右边悬浮框 -->
+        </div>
+    </div>
+    <!-- 内容区 -->
+
+    <!-- 底部版权栏 -->
+    <div class="copyright-box">
+        <div class="copyright-container">
+            <ul class="webpage-link-box">
+                <li class="link-item"><a href="#">联系我们</a></li>
+                <li class="link-item"><a href="#">关于我们</a></li>
+                <li class="link-item"><a href="#">版权声明</a></li>
+                <li class="link-item"><a href="#">服务条款</a></li>
+                <li class="link-item"><a href="#">刊登广告</a></li>
+                <li class="link-item"><a href="#">加入我们</a></li>
+                <li class="link-item"><a href="#">举报链接</a></li>
+                <li class="link-item"><a href="#">《网站自律规范》</a></li>
+            </ul>
+            <div class="copyright">Copyright © 2018 观察者 All rights reserved。</div>
+            <div class="contact">沪ICP备10213822号 互联网新闻信息服务许可证：31220170001 违法及不良信息举报电话：021-62376571</div>
+        </div>
+    </div>
+    <!-- 底部版权栏 -->
+
+</body>
+
+</html>

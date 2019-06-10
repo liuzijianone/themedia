@@ -75,6 +75,11 @@ $(function () {
         });
     }
 
+    // $('.publish-btn').eq(0).bind('keypress', (event) => {
+    //     if (event.keyCode === 13)
+    //         $('.publish-btn').eq(0).click();
+    // });
+
     $('.publish-btn').eq(0).click(() => {
         // log($('.comment-box textarea').eq(0).val());
         if (($('.comment-box textarea').eq(0).val()).trim() === '') {
@@ -86,17 +91,31 @@ $(function () {
             .replace(/</g, "&lt;")
             .replace(/>/g, "&gt;").replace(/\n/g, "\\n"));
 
+        // addComment({
+        //     commentContent: $('.comment-box textarea').eq(0).val().replace(/&/g, "&amp;")
+        //         .replace(/</g, "&lt;")
+        //         .replace(/>/g, "&gt;")
+        //         .replace(/\n/g, "\\n")
+        // });
+
         addComment({
-            commentContent: $('.comment-box textarea').eq(0).val().replace(/&/g, "&amp;")
-                .replace(/</g, "&lt;")
-                .replace(/>/g, "&gt;")
-                .replace(/\n/g, "\\n")
+            commentContent: safeHTML($('.comment-box textarea').eq(0).val())
         });
         // $('.comments-container').eq(0).append(
         //     commentTmpl({ commentContent: $('.comment-box textarea').eq(0).val() }));
     });
 
-    tailFunc();
+    $('.search-box input').eq(0).bind('keypress', (event) => {
+        if (event.keyCode === 13)
+            $('.search-box span').eq(0).click();
+    });
+
+    $('.search-box span').eq(0).click(() => {
+        // window.location.href='./article_search_list.html'+'?search='+$('.search-box input').eq(0).val();
+        window.location.assign('./article_search_list.html' + '?searchContent=' + encodeURI($('.search-box input').eq(0).val()));
+    });
+
+    // tailFunc();
 });
 
 function tailFunc() {

@@ -28,6 +28,7 @@
 }
 
 .link-item a {
+    display: inline;
     color: #666;
 }
 
