@@ -11,7 +11,7 @@ body{
     clear: both;
 }
 .wrapper{
-    background-image: url(../images/头条背景.png);
+    background-image: url(../../imgs/log in/头条背景.png);
     background-size: cover;
     width: 100%;
     position: absolute;
@@ -21,7 +21,7 @@ body{
     z-index: -1;
 }
 .slogan{
-    background-image: url(../images/创造价值.png);
+    background-image: url(../../imgs/log in/创造价值.png);
     background-size: cover;
     position: absolute;
     width: 600px;
