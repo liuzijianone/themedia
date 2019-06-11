@@ -4,25 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/article_ls/style.css">
+    <!-- <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="css/topnav.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/copyright.css">
+    <title>Article Ls</title>
+    
 </head>
 <body>
-    <nav id="nav_fixed">
-        <!-- <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul> -->
+    <!-- <nav id="nav_fixed">
         <a href="#">登陆</a>
         <a href="#">问答</a>
         <a href="#">百科</a>
         <a href="#">新闻</a>
-    </nav>
-    <div id="div_nav1">
+    </nav> -->
+
+
+
+
+    <div class="top-nav-box">
+        <div class="top-nav-container clearfix">
+            <div class="logo-box">
+                <img class="logo" src="images/tigercheng.png" />
+            </div>
+            <ul class="nav-item-box">
+                <li class="nav-item"><a href="#">首页</a></li>
+                <li class="nav-item"><a href="#">国际</a></li>
+                <li class="nav-item"><a href="#">军事</a></li>
+                <li class="nav-item"><a href="#">财经</a></li>
+                <li class="nav-item"><a href="#">民生</a></li>
+                <li class="nav-item"><a href="#">科技</a></li>
+                <li class="nav-item"><a href="#">百科</a></li>
+                <li class="nav-item"><a href="#">问答</a></li>
+                <li class="nav-item"><a href="#">视频</a></li>
+                <li class="nav-item"><a href="#">直播</a></li>
+            </ul>
+            <div class="user-box">
+                <span class="login-sign-container">
+                    <a href="#">登录 </a>/
+                    <a href="#">注册</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div id="div_nav1">
         <div style="height: 40px;"></div>
         <div id="div_nav2">
             <a href="#">推荐</a>
@@ -37,11 +65,11 @@
                 <input type="text" name="text" placeholder="请输入搜索内容">
             </div>
         </div>
-    </div>
-    <!-- <div id="aa"></div> -->
+    </div> -->
+
     <div id="total">
         <div id="left_block">
-            <div id="card1">
+            <div id="card1" class="clearfix">
                 <div id="img_contain"></div><!--卡片1的左边用来放图片-->
                 <div id="text">
                     <div>纵观季后赛|伦纳德+麦科勒姆，英雄是NBA的唯一主题</div>
@@ -94,6 +122,10 @@
             </div>
         </div>
         <div id="right_block">
+            <div class="search clearfix">              
+                <input type="text" name="search" placeholder="请输入搜索内容">
+                <button type="submit">搜索</button>
+            </div>
             <div class="news">
                 <div>精选新闻</div>
                 <ol>
@@ -117,6 +149,27 @@
             </div>
         </div>
     </div>
+
+
+
+    <!-- 底部版权栏 -->
+    <div class="copyright-box">
+        <div class="copyright-container">
+            <ul class="webpage-link-box">
+                <li class="link-item"><a href="#">联系我们</a></li>
+                <li class="link-item"><a href="#">关于我们</a></li>
+                <li class="link-item"><a href="#">版权声明</a></li>
+                <li class="link-item"><a href="#">服务条款</a></li>
+                <li class="link-item"><a href="#">刊登广告</a></li>
+                <li class="link-item"><a href="#">加入我们</a></li>
+                <li class="link-item"><a href="#">举报链接</a></li>
+                <li class="link-item"><a href="#">《网站自律规范》</a></li>
+            </ul>
+            <div class="copyright">Copyright © 2018 观察者 All rights reserved。</div>
+            <div class="contact">沪ICP备10213822号 互联网新闻信息服务许可证：31220170001 违法及不良信息举报电话：021-62376571</div>
+        </div>
+    </div>
+    <!-- 底部版权栏 -->
     
     
 </body>
