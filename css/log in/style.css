@@ -11,7 +11,7 @@ body{
     clear: both;
 }
 .wrapper{
-    background-image: url(../../imgs/log in/头条背景.png);
+    background-image: url(../../../imgs/log in/头条背景.png);
     background-size: cover;
     width: 100%;
     position: absolute;
