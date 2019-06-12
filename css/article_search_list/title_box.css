@@ -1,0 +1,197 @@
+/**
+ *                    _ooOoo_
+ *                   o8888888o
+ *                   88" . "88
+ *                   (| -_- |)
+ *                    O\ = /O
+ *                ____/`---'\____
+ *              .   ' \\| |// `.
+ *               / \\||| : |||// \
+ *             / _||||| -:- |||||- \
+ *               | | \\\ - /// | |
+ *             | \_| ''\---/'' | |
+ *              \ .-\__ `-` ___/-. /
+ *           ___`. .' /--.--\ `. . __
+ *        ."" '< `.___\_<|>_/___.' >'"".
+ *       | | : `- \`.;`\ _ /`;.`/ - ` : | |
+ *         \ \ `-. \_ __\ /__ _/ .-` / /
+ * ======`-.____`-.___\_____/___.-`____.-'======
+ *                    `=---='
+ *
+ * .............................................
+ *          佛祖保佑             永无BUG
+ * 
+ * 文章视频详情页的标题和作者区样式
+ * 
+ */
+
+.article-head-box {
+    width: 100%;
+    height: auto;
+    /* background-color: rgba(0, 0, 0, 0.4); */
+}
+
+.article-title-box {
+    width: 100%;
+    height: auto;
+    line-height: 40px;
+}
+
+.article-title {
+    color: #333;
+    font-weight: bolder;
+    font-size: 22pt;
+    line-height: 40px;
+}
+
+.author-box {
+    display: block;
+    width: 100%;
+    height: 60px;
+}
+
+.author-img {
+    float: left;
+    width: 60px;
+    height: 60px;
+}
+
+.author-name-box {
+    float: left;
+    height: 60px;
+    margin-left: 10px;
+}
+
+.author-name-box a {
+    color: #333;
+}
+
+.author-name-box a:hover {
+    color: brown;
+    text-decoration: underline;
+}
+
+.article-btn-box {
+    width: 100%;
+    height: 25px;
+    margin-top: 10px;
+}
+
+.share-btn-box {
+    float: left;
+    width: 60%;
+    height: 25px;
+    color: #666;
+    font-size: 9pt;
+    line-height: 25px;
+}
+
+.share-btn-box span {
+    float: left;
+    line-height: 25px;
+}
+
+.share-btn-box ul {
+    display: inline;
+}
+
+.share-btn {
+    display: inline-block;
+    width: 60px;
+    height: 25px;
+    text-align: center;
+    padding-top: 2.5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.share-btn:nth-child(1) {
+    background-color: rgb(240, 100, 102);
+}
+
+.share-btn:nth-child(2) {
+    background-color: rgb(107, 162, 214);
+}
+
+.share-btn:nth-child(3) {
+    background-color: rgb(242, 188, 58);
+}
+
+.share-btn:nth-child(4) {
+    background-color: rgb(140, 197, 63);
+}
+
+.share-btn:nth-child(5) {
+    background-color: rgb(160, 160, 160);
+}
+
+.share-btn img {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+}
+
+.special-btn-box {
+    float: right;
+    height: 100%;
+}
+
+.special-btn-box ul {
+    display: inline-block;
+    height: 100%;
+}
+
+.special-btn-box ul li {
+    display: inline-block;
+    background-color: rgb(189, 5, 9);
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0 5px;
+    box-sizing: border-box;
+}
+
+.spec-img {
+    height: 25px;
+    display: inline-block;
+}
+
+.spec-img img {
+    display: inline-block;
+    height: 20px;
+    position: relative;
+    top: 2.5px;
+}
+
+.spec-num {
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    color: #eee;
+    font-size: 10pt;
+}
+
+.article-intro-box {
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    font-size: 9pt;
+    color: #666;
+    margin-top: 5px;
+}
+
+.keywords-box {
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    font-size: 10pt;
+    color: #666;
+}
+
+.keywords-box span {
+    float: left;
+}
+
+.keywords-box ul {
+    float: left;
+}
