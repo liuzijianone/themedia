@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人详细信息填写</title>
+
+    <link href="../css/detailed_inf/detailed_inf.css" type="text/css" rel="stylesheet">
+    </link>
+
+
+    </link>
+
+</head>
+<body>
+    <div id="container">
+        <div id="content_menu">
+
+                <div id="head_pic_1"></div>
+                <div id="name_1">name</div>
+                <select id="character">
+                    <option value="管理员">管理员</option>
+                    <option value="个人主页">个人主页</option>
+                    <option value="个人信息">个人信息</option>
+                </select>
+
+            <ol class="tree">
+                <li>
+
+                    <label for="folder1" class="folderOne">
+                        <div id="pic_1"></div>主页</label> <input type="checkbox" id="folder1" />
+                </li>
+                <li>
+
+                    <label for="folder2" class="folderOne"><div id="pic_2"></div>稿件管理</label> <input type="checkbox" id="folder2" />
+                </li>
+                <li>
+
+                    <label for="folder3" class="folderOne" >
+                        <div id="pic_3"></div>权限认证申请</label> <input type="checkbox" id="folder3" />
+                    <ol>
+                        <li>
+                            <label for="subfolder2" class="folderTwo">认证用户申请</label> <input type="checkbox" id="subfolder2"  />
+                            <ol>
+                                <li class="file folderThree"><a href="#">认证为媒体</a></li>
+                                <li class="file folderThree"><a href="#">认证为企业</a></li>
+                            </ol>
+                        </li>
+                        <li class="file folderTwo"><a href="#">特级用户申请</a></li>
+                    </ol>
+                </li>
+                <li>
+
+                    <label for="folder4" class="folderOne" >
+                        <div id="pic_4"></div>审核</label> <input type="checkbox" id="folder4" />
+                    <ol>
+                             <li class="file folderTwo"><a href="#">个人信息审核</a></li>
+                        <li class="file folderTwo"><a href="#">稿件详情审核</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <label for="folder5" class="folderOne">
+                        <div id="pic_5"></div>详细信息填写
+                    </label> <input type="checkbox" id="folder5" />
+                </li>
+            </ol>
+        </div>
+        <div id="inform">
+            <div id="left" >全媒体新闻信息智能管理</div>
+            <div id="L">
+                <div id="star"></div>
+                <div id="level">等级</div>
+
+            </div>
+            <div id="head">
+                <div id="name">name</div>
+                <div id="head_pic"></div>
+
+            </div>
+            <div id="notice"></div>
+            <button id="email" ></button>
+
+
+
+        </div>
+
+        <div id="detailed_inf_in">
+            <div id="h_pic"></div>
+            <div id="change_h">修改头像</div>
+            <input type="button" id="plus_c" ></input>
+            <div id="changename">修改昵称</div>
+            <input id="text1" type="text" placeholder="请输入新的昵称"></input>
+            <textarea id="text2" type="textarea" placeholder="请更新个人简介"  ></textarea>
+            <div id="new_introduction">修改个人简介</div>
+            <div id="update_num">修改手机号</div>
+
+            <input id="text3" type="text" placeholder="请输入新的手机号" ></input>
+            <div class="send">
+                <input type="text" placeholder="请输入4位验证码">
+                <button>发送验证码</button>
+            </div>
+
+            <div id="update_email">修改邮箱</div>
+
+            <input id="text4" type="text" placeholder="请输入新的邮箱" ></input>
+            <div class="send2">
+                <input type="text" placeholder="请输入4位验证码">
+                <button>发送验证邮件</button>
+            </div>
+
+            <div id="update_sig">修改签名</div>
+
+            <input id="text5" type="text" placeholder="请输入新的签名" ></input>
+
+            <div id="update_field">修改领域</div>
+
+            <select id="field">
+                <option>1 新闻</option>
+                <option>2 娱乐</option>
+                <option>3 体育</option>
+                <option>4 财经</option>
+                <option>5 军事</option>
+                <option>6 人文</option>
+                <option>7 科技</option>
+                <option>8 互联网</option>
+                <option>9 数码</option>
+                <option>10 社会</option>
+                <option>11 汽车</option>
+                <option>12 房产</option>
+                <option>13 旅游</option>
+                <option>14 女人</option>
+                <option>15 时尚</option>
+                <option>16 情感</option>
+                <option>17 星座</option>
+                <option>18 美食</option>
+                <option>19 生活</option>
+                <option>20 育儿</option>
+                <option>21 其他</option>
+            </select>
+
+
+            <input id="out" type="button" value="退出登录"></input>
+        </div>
+    </div>
+</body>
+</html>

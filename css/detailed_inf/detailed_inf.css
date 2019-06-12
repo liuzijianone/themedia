@@ -1,0 +1,483 @@
+body{
+    margin: 0px;
+}
+
+
+
+div#container{
+    width:1200px;
+    height: 1000px;
+    background-color:whitesmoke;
+    margin:0 auto;
+}
+div#content_menu{
+    margin-top: 0px;
+    height:100%;
+    width:18%;
+    background-color: #2f4050;
+    float:left;
+}
+div#inform{
+    line-height: 100%;
+    margin-left: 18%;
+    width:82%;
+    height:14%;
+    float:top;
+    background-color: #222222;
+
+}
+#left{
+    color:white;
+    float:left;
+    padding-left:40px;
+    line-height: 130px;
+    font-size:44px;
+
+}
+
+#email{
+    border:0px;
+    background: url("../../imgs/detailed_inf/email.png");
+    width:44px;
+    height:36px;
+    float:right;
+    background-size: cover;
+    background-color: aliceblue;
+    margin-top: 52px;
+
+    cursor: pointer;
+    margin-left:15px;
+
+}
+
+#notice{
+    background: url("../../imgs/detailed_inf/inform.png");
+    width:44px;
+    height:42px;
+    cursor: pointer;
+    background-size: cover;
+    float: right;
+    margin-top: 50px;
+
+
+    margin-left:15px;
+    background-size: 100% 100%;
+}
+
+#head_pic{
+    background: url("../../imgs/detailed_inf/pic.png");
+    width:82px;
+    height:80px;
+
+    background-size: cover;
+    float: right;
+    margin-top: 26px;
+    margin-left:25px;
+    background-size: 100% 100%;
+}
+
+
+#name{
+    color:white;
+    float:right;
+    line-height: 130px;
+    font-size:24px;
+    margin-left:10px;
+
+
+}
+
+
+#head_pic_1{
+    background: url("../../imgs/detailed_inf/pic.png");
+    width:110px;
+    height:110px;
+    background-size: cover;
+    float: left;
+    background-size: 100% 100%;
+    position:relative;
+    left:15%;
+    top:5%;
+
+}
+
+#pic_1{
+     background: url("../../imgs/detailed_inf/mainpage.png");
+     width: 26px;
+     height:26px;
+     background-size: 100% 100%;
+     float: left;
+     margin-right: 8px;
+ }
+#pic_2{
+    background: url("../../imgs/detailed_inf/article.png");
+    width: 26px;
+    height:26px;
+    background-size: 100% 100%;
+    float: left;
+    margin-right: 8px;
+}
+#pic_3{
+    background: url("../../imgs/detailed_inf/user.png");
+    width: 26px;
+    height:26px;
+    background-size: 100% 100%;
+    float: left;
+    margin-right: 8px;
+}
+#pic_4{
+    background: url("../../imgs/detailed_inf/check.png");
+    width: 26px;
+    height:26px;
+    background-size: 100% 100%;
+    float: left;
+    margin-right: 8px;
+}
+#pic_5{
+    background: url("../../imgs/detailed_inf/inf.png");
+    width: 26px;
+    height:26px;
+    background-size: 100% 100%;
+    float: left;
+    margin-right: 8px;
+}
+
+#name_1{
+    color:white;
+    float:left;
+    line-height: 155px;
+    font-size:24px;
+    position:relative;
+    left:-25%;
+    top:10%;
+
+}
+
+#character{
+    float: left;
+    height:28px;
+    width:80px;
+    line-height:28px;
+    border-radius:6px;
+    position:relative;
+    left:22%;
+    top:5%;
+
+}
+#level{
+    color:white;
+    float:right;
+    padding-left:20px;
+    line-height: 130px;
+    font-size:24px;
+}
+
+#star{
+    background: url("../../imgs/detailed_inf/star.png");
+    width:60px;
+    height:30px;
+
+    float: right;
+    margin-top: 50px;
+
+
+    margin-right:20px;
+
+
+}
+div#detailed_inf_in{
+    height:86%;
+    width: 82%;
+    float:left;
+}
+
+.tree {margin-top: 260px;padding: 0;overflow: hidden;}
+/*隐藏input*/
+.tree li input{position: absolute;left: 0;opacity: 0;z-index: 2;cursor: pointer;height: 1em;width:1em;top: 0;}
+/*所有菜单项设置统一样式*/
+.tree li {position: relative;list-style: none;}
+/*!*一级菜单加下边线*!*/
+/*.tree>li{border-bottom: 1px solid #d9d9d9;}*/
+/*给有子菜单的菜单项添加背景图标*/
+.tree li label {color:white;max-width:999px;cursor: pointer;display: block;margin:0 0 0 0px;padding: 15px 10px 15px 25px;background: url(../../imgs/detailed_inf/cp-detail-arrow-b.png) no-repeat right center;background-position:95% 50%;white-space:nowrap;overflow:hidden;text-overflow: ellipsis; }
+.tree li label:hover,li label:focus{background-color:black;color:#fff;}
+/*清除所有展开的子菜单的display*/
+.tree li input + ol{display: none;}
+/*当input被选中时，给所有展开的子菜单设置样式*/
+.tree input:checked + ol {padding-left:14px;height: auto;display: block;}
+.tree input:checked + ol > li { height: auto;}
+/*末层菜单为A标签，设置样式*/
+.tree li.file a{margin:0 -10px 0 -50px;padding: 15px 20px 15px 70px;text-decoration:none;display: block;color:white;white-space:nowrap;overflow:hidden;text-overflow: ellipsis;}
+.tree li.file a:hover,li.file a:focus{color:#fff;}
+/*不同层级的菜单字体大小不同*/
+.tree .folderOne{font-size: 18px;}
+.tree .folderTwo{font-size:16px;}
+.tree .folderThree{font-size:14px;}
+
+
+#h_pic{
+    background: url("../../imgs/detailed_inf/pic.png");
+    width:100px;
+    height:100px;
+    background-size: cover;
+    float: left;
+    background-size: 100% 100%;
+    margin: 40px 40px;
+}
+#change_h{
+    color:black;
+    position:relative;
+    float: left;
+
+    line-height: 200px;
+    font-size:34px;
+}
+#plus_c{
+    background: url("../../imgs/detailed_inf/change.png");
+    width:80px;
+    height:80px;
+    background-size: cover;
+    float: left;
+    background-size: 100% 100%;
+    position:relative;
+    top:7%;
+    border:0px;
+    cursor: pointer;
+}
+#changename{
+    color:black;
+    position:absolute;
+    margin-left:40px;
+    top:340px;
+float: left;
+    font-size:24px;
+}
+
+#text1{
+    width:25%;
+    height: 4%;
+    font-size: 24px;
+    color: gray;
+    background: url(../../imgs/detailed_inf/pencil.png) no-repeat right center;
+    float: left;
+
+    position:relative;
+    top:23%;
+    left:-25%;
+}
+
+#new_introduction{
+    color:black;
+
+    margin:190px 10px;
+    top:340px;
+    float:right;
+    font-size:24px;
+    position:relative;
+    top:-4%;
+
+
+
+}
+#text2{
+    float:right;
+    width: 28%;
+    height:28%;
+    font-size: 24px;
+    color: gray;
+   margin:195px 20px;
+    rows:"50";
+    cols:"20";
+    background: url(../../imgs/detailed_inf/pencil.png) no-repeat right bottom;
+}
+
+#update_num{
+    color:black;
+    position:absolute;
+    margin-left:22px;
+    top:400px;
+    float: left;
+    font-size:24px;
+}
+
+#text3{
+    width:25%;
+    height: 4%;
+    font-size: 24px;
+    color: gray;
+    float: left;
+    position:relative;
+    top:7%;
+    left:15.3%;
+
+}
+
+#input4{
+    width:25%;
+    height: 4%;
+    font-size: 24px;
+    color: gray;
+    position: relative;
+    left:-16.9%;
+    top:28%;
+    border-radius: 6px;
+}
+
+#get1{
+
+    font-size: 20px;
+    position: relative;
+    float:right;
+    border-radius: 6px;
+}
+
+.send{
+    float: left;
+    font-size: 0;
+    width:26%;
+    height: 4%;
+    position:relative;
+    top:8.5%;
+    left:15.2%;
+    border-radius: 4px;
+}
+
+.send input{
+    width: 169px;
+    float: left;
+    height:40px;
+    box-sizing: border-box;
+    outline:0;
+    border-radius: 4px;
+    border:1px solid #d3d3d3;
+
+
+}
+
+.send button{
+    float: left;
+    height:40px;
+    border:none;
+    vertical-align: top;
+    outline: none;
+    margin-left: 3.5px;
+    border-radius: 4px;
+}
+.send2{
+    float: left;
+    font-size: 0;
+    border:0 ;
+    position:relative;
+    top:13%;
+    left:15%;
+    height: 4%;
+    border-radius: 4px;
+    width:28%;
+}
+.send2 input{
+    float: left;
+    height:40px;
+    box-sizing: border-box;
+    outline:0;
+
+    border-radius: 4px;
+    border:1px solid #d3d3d3;
+    width: 158px;
+
+}
+
+.send2 button{
+
+    float: left;
+    height:40px;
+    border:none;
+    vertical-align: top;
+    outline: none;
+    margin-left: 3.5px;
+    border-radius: 4px;
+}
+
+#update_email{
+    color:black;
+    position:absolute;
+    margin-left:40px;
+    top:515px;
+    float: left;
+    font-size:24px;
+}
+
+#text4{
+    width:25%;
+    height: 4%;
+    font-size: 24px;
+    color: gray;
+    float: left;
+    position:relative;
+    top:11.5%;
+    left:15.3%;
+
+}
+
+#update_sig{
+    color:black;
+    position:absolute;
+    margin-left:40px;
+    top:625px;
+    float: left;
+    font-size:24px;
+}
+
+#text5{
+    width:25%;
+    height: 4%;
+    font-size: 24px;
+    color: gray;
+    float: left;
+    position:relative;
+    top:15.7%;
+    left:15.3%;
+    background: url(../../imgs/detailed_inf/pencil.png) no-repeat right bottom;
+}
+
+#update_field{
+    color:black;
+    position:absolute;
+    margin-left:536px;
+    top:625px;
+    float: left;
+    font-size:24px;
+}
+
+#field{
+    position: relative;
+    font-size: 18px;
+    width: 28%;
+    height: 4%;
+    top: 11.2%;
+    left: 69.5%;
+    border-radius: 4px;
+}
+
+#out{
+    border-radius: 4px;
+    background-color: white; /* Green */
+    border: none;
+    color: red;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+
+    font-size: 26px;
+    width:25%;
+    height:8%;
+    border: 2px solid black;
+    position: relative;
+    top:18%;
+    left:36%;
+
+    cursor: pointer;
+}
+
+#out:hover{
+
+}
