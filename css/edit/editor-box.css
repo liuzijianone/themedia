@@ -1,0 +1,21 @@
+/*菜单栏*/
+.toolbar {
+    border: 1px solid #ccc;
+}
+/*题目*/
+.text1 {
+    border: 1px solid #ccc;
+    height: 100px;
+    width: 100%;
+}
+/*作者*/
+.text2 {
+    border: 1px solid #ccc;
+    height: 50px;
+    width: 100%;
+}
+/*正文*/
+.text3 {
+    border: 1px solid #ccc;
+    height: 200px;
+}

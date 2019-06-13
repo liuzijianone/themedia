@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>editor demo</title>
+
+    <link href="../css/edit/editor.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/edit/editor-header.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/edit/editor-left-content.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/edit/editor-right-content.css" rel="stylesheet" type="text/css"/>
+
+    <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../wangEditor/release/wangEditor.min.js"></script>
+    <script type="text/javascript" src="../js/edit/dates.js"></script>
+    <script type="text/javascript" src="../js/edit/edit.js"></script>
+
+</head>
+<body>
+<div class="header">
+    <div class="header-content-box">
+        <div class="header-title-box">
+            <span class="header-title">全媒体新闻智能管理</span>
+        </div>
+        <div class="header-inform-box">
+            <ul class="header-inform-ul">
+                <li class="header-inline"><a href="#"><img src="../imgs/edit/email.png" height="50" width="50"></a></li>
+                <li class="header-inline"><a href="#"><img src="../imgs/edit/note.png" height="50" width="50"></a></li>
+                <li class="header-inline"><a href="#"><img src="../imgs/edit/logo.png" height="80" width="80"></a></li>
+                <li class="header-inline-name"><a href="#"><span class="li-name">嘟嘟嘟</span></a></li>
+                <li class="header-inline-rank"><span class="li-rank">等级</span></a></li>
+                <li class="header-inline-star"><img src="../imgs/edit/star.png" height="30" width="30"><img
+                        src="../imgs/edit/star.png" height="30" width="30"></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="main-content">
+    <div class="left-box">
+        <div class="editor-box">
+            <!--选择器-->
+            <div class="editor-selector" id="tab">
+                <ul class="editor-ul">
+                    <li class="editor-li-show">视频制作</li>
+                    <li>爆料制作</li>
+                    <li>图文制作</li>
+                </ul>
+            </div>
+            <!--编辑框-->
+            <div class="editing-box" id="showBox">
+                <!--<div class="editing1">111111</div>-->
+                <form class="editing">
+                    <div id="div1" class="toolbar"></div>
+                    <!--菜单栏-->
+                    <div class="articlebox">
+                        <!--编辑区1-->
+                        <textarea id="div2" class="text1">请在这里输入标题</textarea>
+                    </div>
+                    <!--编辑区1-->
+                    <div class="authorbox">
+                        <!--编辑区2-->
+                        <textarea id="div3" class="text2">请输入作者</textarea>
+                    </div>
+                    <!--编辑区2-->
+                    <div class="contentbox">
+                        <!--编辑区3-->
+                        <div id="div4" class="text3">
+                            <p>从这里开始正文</p>
+                        </div>
+                    </div>
+                    <!--编辑区1-->
+                    <button id="save">保存</button>
+                    <button id="watch">预览</button>
+                    <button id="publish">发布</button>
+                </form>
+                <div class="editing">
+                    <from class="editing2">222222</from>
+                </div>
+                <div class="editing">
+                    <from class="editing3">333333</from>
+                </div>
+            </div>
+            <!-- &lt;!&ndash;菜单栏&ndash;&gt;
+                 <div id="div1" class="toolbar"></div>
+                 &lt;!&ndash;菜单栏&ndash;&gt;
+                 <div style="padding: 5px 0; color: #ccc"></div>
+
+                 &lt;!&ndash;编辑区1&ndash;&gt;
+                 <textarea id="div2" class="text1">请在这里输入标题</textarea>
+
+                 &lt;!&ndash;编辑区1&ndash;&gt;
+                 <div style="padding: 5px 0; color: #ccc"></div>
+                 &lt;!&ndash;编辑区2&ndash;&gt;
+                 <textarea id="div3" class="text2">请输入作者</textarea>
+                 &lt;!&ndash;编辑区2&ndash;&gt;
+                 <div style="padding: 5px 0; color: #ccc"></div>
+                 &lt;!&ndash;编辑区3&ndash;&gt;
+                 <div id="div4" class="text3">
+                     <p>从这里开始正文</p>
+                 </div>
+                 &lt;!&ndash;编辑区1&ndash;&gt;
+                 <button id="save">保存</button>
+                 <button id="watch">预览</button>
+                 <button id="publish">发布</button>-->
+        </div>
+        <div class="links-box">
+            <div class="links-title-box">
+                <span class="links-title">友情链接</span>
+            </div>
+            <div class="links-content-box" id="LinkNews">
+                <!--<span class="links-content"><a href="#">光明网</a></span>-->
+            </div>
+        </div>
+    </div>
+    <div class="right-box">
+        <div class="hotnews-box">
+            <div class="hotnews-title">24小时热新闻</div>
+            <ul class="hotnews-ul" id="24hot">
+                <!--<li class="hotnews-li">
+                    <span class="hotnews-img"><a href="#" target="_blank"><img src="./imgs/edit/air.jpg"></a></span>
+                    <span class="hotnews-label"><a href="#" target="_blank">这才是你该追的全球大片！世界有时差，梦想不打烊！</a></span>
+                </li>-->
+            </ul>
+        </div>
+        <div class="horizontal"></div>
+        <div class="image-box">
+            <div class="image-title">精彩图片</div>
+            <ul class="image-ul" id="ImgsNews">
+                <!-- <li class="image-li">
+                     <span class="image-img"><a href="#" target="_blank"><img src="./imgs/edit/air.jpg"></a></span>
+                     <span class="image-label"><a href="#" target="_blank">这才是你该追的全球大片！世界有时差，梦想不打烊！</a></span>
+                 </li>-->
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<!--引用js-->
+<script type="text/javascript">
+    /*选项卡切换*/
+    window.onload = function () {
+        var nav = document.getElementById('tab');
+        var oNav = nav.getElementsByTagName('li');
+
+        var container = document.getElementById('showBox');
+        var oDiv = container.getElementsByClassName('editing');
+        for (var i = 0; i < oNav.length; i++) {
+            oNav[i].index = i;
+            oNav[i].onclick = function () {
+                for (var i = 0; i < oNav.length; i++) {
+                    oNav[i].className = 'editor-li-off';
+                    oDiv[i].style.display = "none";
+                }
+                this.className = 'editor-li-show';
+                oDiv[this.index].style.display = "block"
+            }
+            for (var m = 1; m < oNav.length; m++) {
+                oNav[m].className = 'editor-li-off';
+                oDiv[m].style.display = "none";
+            }
+        }
+    };
+    /*编辑器设计*/
+    var E = window.wangEditor
+    var editor = new E('#div1', '#div4')
+    /*配置菜单栏*/
+    editor.customConfig.menus = [
+        'head',  // 标题
+        'bold',  // 粗体
+        'fontSize',  // 字号
+        'fontName',  // 字体
+        'italic',  // 斜体
+        'underline',  // 下划线
+        'strikeThrough',  // 删除线
+        'foreColor',  // 文字颜色
+        'backColor',  // 背景颜色
+        'link',  // 插入链接
+        'list',  // 列表
+        'justify',  // 对齐方式
+        'quote',  // 引用
+        'emoticon',  // 表情
+        'image',  // 插入图片
+        'table',  // 表格
+        'video',  // 插入视频
+        /*'code',  // 插入代码*/
+        'undo',  // 撤销
+        'redo'  // 重复
+    ]
+    editor.customConfig.pasteIgnoreImg = true
+    /*忽略粘贴内容的照片*/
+    editor.customConfig.uploadImgShowBase64 = true   // 使用 base64 保存图片
+    editor.create()
+    /*清除提示内容*/
+    /*editor1.txt.clear()*/
+    document.getElementById('save').addEventListener('click', function () {
+        // 读取 text
+        alert(editor.txt.text())
+    }, false)
+    document.getElementById('watch').addEventListener('click', function () {
+        // 读取 text
+        alert(editor.txt.html())
+    }, false)
+</script>
+
+</body>
+</html>
