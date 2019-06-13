@@ -1,0 +1,100 @@
+/**
+ *                    _ooOoo_
+ *                   o8888888o
+ *                   88" . "88
+ *                   (| -_- |)
+ *                    O\ = /O
+ *                ____/`---'\____
+ *              .   ' \\| |// `.
+ *               / \\||| : |||// \
+ *             / _||||| -:- |||||- \
+ *               | | \\\ - /// | |
+ *             | \_| ''\---/'' | |
+ *              \ .-\__ `-` ___/-. /
+ *           ___`. .' /--.--\ `. . __
+ *        ."" '< `.___\_<|>_/___.' >'"".
+ *       | | : `- \`.;`\ _ /`;.`/ - ` : | |
+ *         \ \ `-. \_ __\ /__ _/ .-` / /
+ * ======`-.____`-.___\_____/___.-`____.-'======
+ *                    `=---='
+ *
+ * .............................................
+ *          佛祖保佑             永无BUG
+ * 左边内容区的列表样式
+ */
+
+.main-column {
+    margin-top: 20px;
+}
+
+.main-column-title {
+    font-size: 16pt;
+    font-weight: bolder;
+    color: #000;
+}
+
+.main-column-label {
+    font-size: 10pt;
+    color: #666;
+}
+
+.main-column-label span {
+    text-decoration: underline;
+    color: #333;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.main-column-card {
+    height: 100px;
+    border-bottom: 1px solid #999;
+    padding: 10px 10px;
+}
+
+.main-column-img {
+    float: left;
+    width: 160px;
+    height: 100px;
+}
+
+.main-column-container {
+    height: 100px;
+    padding-left: 180px;
+}
+
+.main-column-title {
+    display: block;
+    font-size: 14pt;
+    font-weight: bolder;
+    height: 80px;
+}
+
+.main-column-title a {
+    color: #222;
+}
+
+.main-column-title a:hover {
+    text-decoration: underline;
+    color: #a00;
+}
+
+.main-column-tail {
+    height: 20px;
+    line-height: 20px;
+    color: #666;
+    font-size: 10pt;
+}
+
+.main-column-source {
+    float: right;
+}
+
+.main-column-source a {
+    color: #a00;
+}
+
+.main-column-source a:hover {
+    text-decoration: underline;
+}
+
+/* ***************************************************** */

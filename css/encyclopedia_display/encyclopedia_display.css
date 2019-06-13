@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li, a {
+    display: inline;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.clearfix:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+/* ******************************************************* */
+
+.content-box {
+    width: 1200px;
+    /* background-color: rgba(158, 90, 90, 0.767); */
+    height: auto;
+    margin: 20px auto 0;
+}
+
+.main-encyc-box {
+    float: left;
+    width: 65%;
+    height: auto;
+    /* background-color: rgba(126, 180, 133, 0.767); */
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.side-encyc-box {
+    float: left;
+    width: 35%;
+    height: auto;
+    /* background-color: rgba(180, 172, 126, 0.767); */
+}
+
+/* ******************************************************* */
+
+.word-p {
+    text-indent: 2em;
+    line-height: 30px;
+    margin-top: 20px;
+}
+
+/* ******************************************************* */
+
+.search-box {
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.search-box input {
+    float: left;
+    height: 30px;
+    position: relative;
+    top: 10px;
+    width: 85%;
+    box-sizing: border-box;
+    border: 1px solid brown;
+    padding-left: 20px;
+}
+
+.search-box span {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    top: 10px;
+    background-color: brown;
+    color: #fff;
+    width: 15%;
+    text-align: center;
+    font-size: 11pt;
+    letter-spacing: 2px;
+}
+
+/* ******************************************************* */
+
+.encyc-title {
+    height: 40px;
+    font-size: 22pt;
+    line-height: 40px;
+    font-weight: bold;
+}
+
+.encyc-category {
+    margin-left: 10px;
+    font-size: 11pt;
+    color: #666;
+}
+
+.encyc-label-box {
+    margin-top: 10px;
+}
+
+.tiny-label {
+    float: left;
+    height: 16px;
+    line-height: 16px;
+    font-size: 9pt;
+    margin: 0 5px;
+    padding: 0 2px;
+    background-color: #ddd;
+    border: 1px solid #999;
+    border-radius: 3px;
+    color: #666;
+}
+
+.encyc-tail-box {
+    margin-top: 10px;
+    font-size: 9pt;
+    color: #666;
+    text-align: right;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+/* ******************************************************* */
+
+.realtive-encyc-box {
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.column-title-box {
+    border-top: 2px solid brown;
+    height: 40px;
+    line-height: 40px;
+}
+
+.column-title-box span {
+    border-left: 4px solid brown;
+    padding-left: 10px;
+    font-size: 14pt;
+    font-weight: bold;
+    color: #222;
+}
+
+.encyc-card {
+    width: 180px;
+    height: 100px;
+    position: relative;
+    float: left;
+    margin: 5px 5px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.encyc-card:hover .col-img-box img {
+    transform: scale(1.1);
+    
+}
+
+.col-img-box {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.col-img-box img {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    transition: all 0.8s ease-in-out;
+}
+
+.col-title {
+    position: absolute;
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    top: 80px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.col-title a {
+    color: #fff;
+    font-size: 10pt;
+}
+
+.col-title a:hover {
+    color: rgb(140, 140, 245);
+    text-decoration: underline;
+}
+
+/* ******************************************************* */

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/register/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">全媒体系统</div>
+        <div class="slogan"></div>
+        <div class="register">
+            <div class="telreg">手机号注册</div>
+            <div class="hr"></div>
+            <div class="tel">
+                <input type="text" placeholder="请输入手机号" name="tel">
+            </div>
+            <div class="verify clearfix">
+                <input type="text" name="verify" placeholder="请输入验证码">
+                <div class="divide"></div>
+                <button id="send">发送验证码</button>
+            </div>
+            <div class="back">
+                <a href="#">返回上一步</a>
+            </div>
+            <button type="button">注册</button>
+        </div>
+    </div>
+</body>
+<script>
+        var bt01 = document.getElementById("send");
+        bt01.onclick = function () {
+            bt01.disabled = true;  //当点击后倒计时时候不能点击此按钮 
+            var time = 10;  //倒计时5秒 
+            var timer = setInterval(fun1, 1000);  //设置定时器 
+            function fun1() {
+                time--;
+                if (time >= 0) {
+                    bt01.innerHTML = time + "s后重新发送";
+                } else {
+                    bt01.innerHTML = "重新发送验证码";
+                    bt01.disabled = false;  //倒计时结束能够重新点击发送的按钮 
+                    clearTimeout(timer);  //清除定时器 
+                    time = 10;  //设置循环重新开始条件 
+                }
+            }
+        } 
+    </script>
+</html>

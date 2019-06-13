@@ -1,0 +1,156 @@
+/**
+ *                    _ooOoo_
+ *                   o8888888o
+ *                   88" . "88
+ *                   (| -_- |)
+ *                    O\ = /O
+ *                ____/`---'\____
+ *              .   ' \\| |// `.
+ *               / \\||| : |||// \
+ *             / _||||| -:- |||||- \
+ *               | | \\\ - /// | |
+ *             | \_| ''\---/'' | |
+ *              \ .-\__ `-` ___/-. /
+ *           ___`. .' /--.--\ `. . __
+ *        ."" '< `.___\_<|>_/___.' >'"".
+ *       | | : `- \`.;`\ _ /`;.`/ - ` : | |
+ *         \ \ `-. \_ __\ /__ _/ .-` / /
+ * ======`-.____`-.___\_____/___.-`____.-'======
+ *                    `=---='
+ *
+ * .............................................
+ *          佛祖保佑             永无BUG
+ * 右边内容区的列表样式
+ */
+
+/* **************************************************** */
+
+.search-box {
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.search-box input {
+    float: left;
+    height: 30px;
+    position: relative;
+    top: 10px;
+    width: 85%;
+    box-sizing: border-box;
+    border: 1px solid brown;
+    padding-left: 10px;
+}
+
+.search-box span {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    top: 10px;
+    background-color: brown;
+    color: #fff;
+    width: 15%;
+    text-align: center;
+    font-size: 11pt;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.search-box span:hover {
+    background-color: rgb(121, 38, 38);
+}
+
+/* ***************************************************** */
+
+.column-box {
+    padding: 0 20px;
+    margin-top: 20px;
+}
+
+.column-title-box {
+    border-top: 2px solid brown;
+    height: 40px;
+    line-height: 40px;
+}
+
+.column-title {
+    border-left: 4px solid brown;
+    padding-left: 10px;
+    font-size: 14pt;
+    font-weight: bold;
+    color: #222;
+}
+
+.col-more {
+    float: right;
+    color: brown;
+    font-size: 10pt;
+}
+
+.col-more:hover {
+    text-decoration: underline;
+}
+
+.col-card {
+    height: 80px;
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.col-img {
+    float: left;
+    width: 100px;
+    height: 80px;
+}
+
+.col-container {
+    padding-left: 110px;
+}
+
+.col-title {
+    display: block;
+    height: 60px;
+    font-size: 11pt;
+}
+
+.col-title a {
+    color: #333;
+}
+
+.col-title a:hover {
+    color: brown;
+    text-decoration: underline;
+}
+
+.col-tail {
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    font-size: 9pt;
+    color: #666;
+}
+
+/* ********************************************************** */
+
+.fix-card {
+    background-color: rgb(248, 247, 247);
+    box-shadow: 2px 2px 4px #696969;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.fix-card:hover {
+    background-color: rgb(243, 243, 243);
+    box-shadow: 2px 2px 4px rgb(71, 71, 71);
+}
+
+.uparrow img {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    left: 5px;
+    top: 5px;
+}
