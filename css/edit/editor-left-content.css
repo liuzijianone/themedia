@@ -2,7 +2,7 @@
 .editor-box{
     width: 98%;
     height: 600px;
-    background-color: rgba(11, 21, 17, 0.2);
+    background-color: rgba(255, 255, 255, 0.2);
     border: 2px solid #666666;
     margin: 10px auto 0px;
     display: block;
@@ -85,23 +85,7 @@
     margin: 5px auto;
     display: block;
 }
-.toolbar{
-    width: 98%;
-    height: 30px;
-    margin: 2px auto 5px;
-    background-color: #31402a;
-}
-/*标题*/
-.articlebox{
-}
-/*作者*/
-.authorbox{
 
-}
-/*正文*/
-.contentbox{
-
-}
 /*.editing1{
     background-color: #aa0000;
 }*/

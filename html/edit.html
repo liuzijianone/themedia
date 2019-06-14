@@ -8,6 +8,7 @@
     <link href="../css/edit/editor-header.css" rel="stylesheet" type="text/css"/>
     <link href="../css/edit/editor-left-content.css" rel="stylesheet" type="text/css"/>
     <link href="../css/edit/editor-right-content.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/edit/editor-box.css" rel="stylesheet" type="text/css">
 
     <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="../wangEditor/release/wangEditor.min.js"></script>
@@ -47,37 +48,85 @@
             </div>
             <!--编辑框-->
             <div class="editing-box" id="showBox">
-                <!--<div class="editing1">111111</div>-->
+                <!--视频制作-->
                 <form class="editing">
-                    <div id="div1" class="toolbar"></div>
-                    <!--菜单栏-->
-                    <div class="articlebox">
-                        <!--编辑区1-->
-                        <textarea id="div2" class="text1">请在这里输入标题</textarea>
-                    </div>
                     <!--编辑区1-->
-                    <div class="authorbox">
-                        <!--编辑区2-->
-                        <textarea id="div3" class="text2">请输入作者</textarea>
+                    <div class="divbox">
+                        <textarea placeholder="请在这里输入标题" class="articlebox" required></textarea>
                     </div>
                     <!--编辑区2-->
-                    <div class="contentbox">
-                        <!--编辑区3-->
-                        <div id="div4" class="text3">
+                    <div class="divbox">
+                        <textarea placeholder="请输入作者"  class="authorbox" required></textarea>
+                    </div>
+                    <!--编辑区3-->
+                    <div class="divbox">
+                        <div id="div1-2" class="contentbox">
                             <p>从这里开始正文</p>
                         </div>
                     </div>
-                    <!--编辑区1-->
-                    <button id="save">保存</button>
-                    <button id="watch">预览</button>
-                    <button id="publish">发布</button>
+                    <!--菜单栏-->
+                    <div id="div1-1" class="toolbar"></div>
+                    <!--按钮区-->
+                    <div class="divbox">
+                        <button class="editing-button"id="save">保存</button>
+                        <button class="editing-button"id="watch">预览</button>
+                        <button class="editing-button"id="publish">发布</button>
+                    </div>
                 </form>
-                <div class="editing">
-                    <from class="editing2">222222</from>
-                </div>
-                <div class="editing">
-                    <from class="editing3">333333</from>
-                </div>
+                <!--视频制作-->
+                <!--爆料制作-->
+                <form class="editing">
+                    <!--编辑区1-->
+                    <div class="divbox">
+                        <textarea placeholder="请在这里输入标题" class="articlebox" required></textarea>
+                    </div>
+                    <!--编辑区2-->
+                    <div class="divbox">
+                        <textarea placeholder="请输入作者"  class="authorbox" required></textarea>
+                    </div>
+                    <!--编辑区3-->
+                    <div class="divbox">
+                        <div id="div2-2" class="contentbox">
+                            <p>从这里开始正文</p>
+                        </div>
+                    </div>
+                    <!--菜单栏-->
+                    <div id="div2-1" class="toolbar"></div>
+                    <!--按钮区-->
+                    <div class="divbox">
+                        <button class="editing-button"id="save">保存</button>
+                        <button class="editing-button"id="watch">预览</button>
+                        <button class="editing-button"id="publish">发布</button>
+                    </div>
+
+                </form>
+                <!--爆料制作-->
+                <!--图文制作-->
+                <form class="editing">
+                    <!--菜单栏-->
+                    <div id="div3-1" class="toolbar"></div>
+                    <!--编辑区1-->
+                    <div class="divbox">
+                        <textarea placeholder="请在这里输入标题" class="articlebox" required></textarea>
+                    </div>
+                    <!--编辑区2-->
+                    <div class="divbox">
+                        <textarea placeholder="请输入作者"  class="authorbox" required></textarea>
+                    </div>
+                    <!--编辑区3-->
+                    <div class="divbox">
+                        <div id="div3-2" class="contentbox">
+                            <p>从这里开始正文</p>
+                        </div>
+                    </div>
+                    <!--按钮区-->
+                    <div class="divbox">
+                        <button class="editing-button" id="save">保存</button>
+                        <button class="editing-button" id="watch">预览</button>
+                        <button class="editing-button" id="publish">发布</button>
+                    </div>
+                </form>
+                <!--图文制作-->
             </div>
             <!-- &lt;!&ndash;菜单栏&ndash;&gt;
                  <div id="div1" class="toolbar"></div>
@@ -161,10 +210,59 @@
         }
     };
     /*编辑器设计*/
-    var E = window.wangEditor
-    var editor = new E('#div1', '#div4')
+    /*视频编辑器设计*/
+    var one_E = window.wangEditor;
+    /* 创建富文本编辑器*/
+    var one_editor = new one_E('#div1-1', '#div1-2');
+    /*div1是菜单栏 div4 是被编辑栏*/
     /*配置菜单栏*/
-    editor.customConfig.menus = [
+    one_editor.customConfig.menus = [
+        'video',  // 插入视频
+    ]
+    one_editor.create()
+    /*清除提示内容*/
+    /*editor1.txt.clear()*/
+    document.getElementById('save').addEventListener('click', function () {
+        // 读取 text
+        alert( one_editor.txt.text())
+    }, false)
+    document.getElementById('watch').addEventListener('click', function () {
+        // 读取 text
+        alert( one_editor.txt.html())
+    }, false)
+    /*视频编辑器设计*/
+    /*爆料编辑器设计*/
+    var two_E = window.wangEditor;
+    /* 创建富文本编辑器*/
+    var two_editor = new two_E('#div2-1', '#div2-2');
+    /*div1是菜单栏 div4 是被编辑栏*/
+    /*配置菜单栏*/
+    two_editor.customConfig.menus = [
+        'image',  // 插入图片
+        'video',  // 插入视频
+    ]
+    two_editor.customConfig.pasteIgnoreImg = true
+    /*忽略粘贴内容的照片*/
+    two_editor.customConfig.uploadImgShowBase64 = true   // 使用 base64 保存图片
+    two_editor.create()
+    /*清除提示内容*/
+    /*editor1.txt.clear()*/
+    document.getElementById('save').addEventListener('click', function () {
+        // 读取 text
+        alert( two_editor.txt.text())
+    }, false)
+    document.getElementById('watch').addEventListener('click', function () {
+        // 读取 text
+        alert( two_editor.txt.html())
+    }, false)
+    /*爆料编辑器设计*/
+    /*图文制作编辑器设计*/
+    var three_E = window.wangEditor;
+    /* 创建富文本编辑器*/
+    var three_editor = new three_E('#div3-1', '#div3-2');
+    /*div1是菜单栏 div4 是被编辑栏*/
+    /*配置菜单栏*/
+    three_editor.customConfig.menus = [
         'head',  // 标题
         'bold',  // 粗体
         'fontSize',  // 字号
@@ -186,20 +284,21 @@
         'undo',  // 撤销
         'redo'  // 重复
     ]
-    editor.customConfig.pasteIgnoreImg = true
+    three_editor.customConfig.pasteIgnoreImg = true
     /*忽略粘贴内容的照片*/
-    editor.customConfig.uploadImgShowBase64 = true   // 使用 base64 保存图片
-    editor.create()
+    three_editor.customConfig.uploadImgShowBase64 = true   // 使用 base64 保存图片
+    three_editor.create()
     /*清除提示内容*/
     /*editor1.txt.clear()*/
     document.getElementById('save').addEventListener('click', function () {
         // 读取 text
-        alert(editor.txt.text())
+        alert(three_editor.txt.text())
     }, false)
     document.getElementById('watch').addEventListener('click', function () {
         // 读取 text
-        alert(editor.txt.html())
+        alert(three_editor.txt.html())
     }, false)
+    /*图文制作编辑器设计*/
 </script>
 
 </body>
