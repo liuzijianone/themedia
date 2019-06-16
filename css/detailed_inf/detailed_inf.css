@@ -156,13 +156,13 @@ div#inform{
 
 #character{
     float: left;
-    height:28px;
-    width:80px;
-    line-height:28px;
-    border-radius:6px;
-    position:relative;
-    left:0%;
-    top:10%;
+    height: 28px;
+    width: 80px;
+    line-height: 28px;
+    border-radius: 6px;
+    position: relative;
+    left: 2%;
+    margin-top: 47%;
 
 }
 #level{
@@ -179,10 +179,10 @@ position:relative;
     width:60px;
     height:30px;
 
-    float: right;
+
    position:relative;
-    left:-31%;
-    top:5%;
+    left:42%;
+    top:20.5%;
 
 
 }
@@ -229,19 +229,38 @@ div#detailed_inf_in{
     color:black;
     position:relative;
     float: left;
-
+    left:0%;
+    top:0%;
     line-height: 200px;
     font-size:34px;
 }
-#plus_c{
+.fileinput-button {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.fileinput-button input{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    opacity: 0;
+    -ms-filter: 'alpha(opacity=0)';
     background: url("../../imgs/detailed_inf/change.png");
-    width:80px;
+    font-size: 200px;
+
+
+}
+
+#plus_c{
+    /*background: url("../../imgs/detailed_inf/change.png");*/
+    width:200px;
     height:80px;
     background-size: cover;
     float: left;
     background-size: 100% 100%;
     position:relative;
-    top:7%;
+    top:11%;
     border:0px;
     cursor: pointer;
 }
@@ -249,7 +268,7 @@ div#detailed_inf_in{
     color:black;
     position:absolute;
     margin-left:40px;
-    top:340px;
+    top:203px;
 float: left;
     font-size:24px;
 }
@@ -264,7 +283,7 @@ float: left;
 
     position:relative;
     top:23%;
-    left:-25%;
+    left:-37%;
 }
 
 #new_introduction{
@@ -296,7 +315,7 @@ float: left;
     color:black;
     position:absolute;
     margin-left:22px;
-    top:400px;
+    top:264px;
     float: left;
     font-size:24px;
 }
@@ -402,7 +421,7 @@ float: left;
     color:black;
     position:absolute;
     margin-left:40px;
-    top:515px;
+    top:378px;
     float: left;
     font-size:24px;
 }
@@ -423,7 +442,7 @@ float: left;
     color:black;
     position:absolute;
     margin-left:40px;
-    top:625px;
+    top:487px;
     float: left;
     font-size:24px;
 }
@@ -444,7 +463,7 @@ float: left;
     color:black;
     position:absolute;
     margin-left:536px;
-    top:625px;
+    top:486px;
     float: left;
     font-size:24px;
 }
@@ -467,18 +486,43 @@ float: left;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-
     font-size: 26px;
     width:25%;
     height:8%;
     border: 2px solid black;
     position: relative;
     top:18%;
-    left:36%;
+    left:27%;
 
     cursor: pointer;
 }
 
-#out:hover{
+#save{
+    border-radius: 4px;
+    background-color: white; /* Green */
+    border: none;
+    color: red;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 26px;
+    width:25%;
+    height:8%;
+    border: 2px solid black;
+    position: relative;
+    top:18%;
+    left:19%;
 
+    cursor: pointer;
+}
+#save:hover{
+
+}
+
+
+
+#detail{
+    height:86%;
+    width: 82%;
+    float: left;
 }
