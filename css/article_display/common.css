@@ -1,3 +1,31 @@
+/**
+ *                    _ooOoo_
+ *                   o8888888o
+ *                   88" . "88
+ *                   (| -_- |)
+ *                    O\ = /O
+ *                ____/`---'\____
+ *              .   ' \\| |// `.
+ *               / \\||| : |||// \
+ *             / _||||| -:- |||||- \
+ *               | | \\\ - /// | |
+ *             | \_| ''\---/'' | |
+ *              \ .-\__ `-` ___/-. /
+ *           ___`. .' /--.--\ `. . __
+ *        ."" '< `.___\_<|>_/___.' >'"".
+ *       | | : `- \`.;`\ _ /`;.`/ - ` : | |
+ *         \ \ `-. \_ __\ /__ _/ .-` / /
+ * ======`-.____`-.___\_____/___.-`____.-'======
+ *                    `=---='
+ *
+ * .............................................
+ *          佛祖保佑             永无BUG
+ *
+ *  常用样式集：清除浮动、滚动条、固定位置、搜索框
+ *
+ *
+ */
+
 * {
     margin: 0;
     padding: 0;
@@ -14,12 +42,16 @@ body {
     height: 100%;
 }
 
+/* ********************************************************* */
+
 .clearfix:after {
     content: " ";
     display: block;
     height: 0;
     clear: both;
 }
+
+/* ********************************************************* */
 
 .scrollbar::-webkit-scrollbar {
     /*滚动条整体样式*/
@@ -46,11 +78,53 @@ body {
     background: rgba(0, 0, 0, 0.1);
 }
 
+/* ********************************************************* */
+
 .fixable {
     position: fixed;
     /* z-index: 999; */
     bottom: 100px;
-    right: 50px;
+    right: 40px;
     /* overflow: hidden; */
     /* *zoom: 1; */
 }
+
+/* ********************************************************* */
+
+.search-box {
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.search-box input {
+    float: left;
+    height: 30px;
+    position: relative;
+    top: 10px;
+    width: 85%;
+    box-sizing: border-box;
+    border: 1px solid brown;
+    padding-left: 10px;
+}
+
+.search-box span {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    top: 10px;
+    background-color: brown;
+    color: #fff;
+    width: 15%;
+    text-align: center;
+    font-size: 11pt;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.search-box span:hover {
+    background-color: rgb(121, 38, 38);
+}
+
+/* ********************************************************* */

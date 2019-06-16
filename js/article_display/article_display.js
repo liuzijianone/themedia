@@ -30,7 +30,7 @@ $(function () {
         // let sideH = $('.side-content-box').eq(0).height();// 右侧边栏高度
 
         // $('.left-fix-box').eq(0).css('top', 500 + scroH + 'px');
-        $('.right-fix-box').eq(0).css('top', 500 + scroH + 'px');
+        // $('.right-fix-box').eq(0).css('top', 500 + scroH + 'px');
 
         // 顶部固定 右侧较矮
         if (scroH >= threshold) {

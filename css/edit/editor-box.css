@@ -1,0 +1,74 @@
+textarea{
+    overflow: auto; /*文本溢出容器*/
+    text-rendering: auto; /*渲染*/
+    letter-spacing: normal; /*字符间距*/
+    word-spacing: normal; /*单词之间间距*/
+    text-transform: none; /*控制文本的大小写*/
+    text-indent: 0px; /*缩进*/
+    text-shadow: none; /*字的阴影*/
+    display: inline-block;
+    text-align: start; /*文本对齐方式*/
+    margin: 0px;
+    font: 400 13.3333px Arial; /*字体类型*/
+    resize:none; /*尺寸不可变*/
+}
+/*菜单栏*/
+.toolbar{
+    width: 98%;
+    height: 30px;
+    margin: 2px auto 5px;
+    background-color: #ffffff;
+    display: block;
+}
+.divbox{
+    width: 99%;
+    height: auto;
+    margin: 5px auto 5px;
+    display: block;
+   /* background-color:#a2a2a2;*/
+}
+/*标题*/
+.articlebox{
+    width: 98%;
+    height: 60px;
+    margin: 3px auto 1px;
+    margin-left: 3px;
+    padding-left: 10px;
+    padding-top: 8px;
+    line-height: 25px;
+    font-size: 20px;
+    background-color: #ffffff;
+    display: block;
+}
+/*作者*/
+.authorbox{
+    width: 98%;
+    height: 30px;
+    margin: 3px auto 1px;
+    margin-left: 3px;
+    padding-top: 3px;
+    padding-left: 10px;
+    font-size: 15px;
+    background-color: #ffffff;
+    display: block;
+}
+/*正文*/
+.contentbox{
+    width: 100%;
+    height: 300px;
+    margin: 3px auto 1px;
+    margin-left: 3px;
+    padding-top: 3px;
+    padding-left: 10px;
+    border: 1px solid #ccc;
+    overflow:auto ;
+    display: block;
+}
+.editing-button{
+    float: right;
+    width: 100px;
+    height: 30px;
+    display: inline-block;
+    margin-right: 9px;
+    background-color: rgba(30, 136, 229, 0.79);
+}
