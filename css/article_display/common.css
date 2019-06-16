@@ -21,7 +21,7 @@
  * .............................................
  *          佛祖保佑             永无BUG
  *
- *  常用样式集：清除浮动、滚动条、固定位置、搜索框
+ *  常用样式集：清除浮动、滚动条、固定位置、搜索框、评论
  *
  *
  */
@@ -126,5 +126,188 @@ body {
 .search-box span:hover {
     background-color: rgb(121, 38, 38);
 }
+
+/* ********************************************************* */
+
+.comment-title {
+    color: #a00;
+    /* font-weight: bold; */
+    border-bottom: 2px solid #a00;
+    margin-top: 20px;
+}
+
+.comment-head {
+    height: 40px;
+    margin-top: 10px;
+}
+
+.head-sculpture {
+    float: left;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+}
+
+.pen-name, .remarks {
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    font-size: 10pt;
+    color: #333;
+    margin-left: 5px;
+}
+
+.pen-name:hover {
+    text-decoration: underline;
+}
+
+.remarks {
+    color: #666;
+    font-size: 8pt;
+}
+
+.comment-body {
+    box-sizing: border-box;
+    padding: 5px 40px;
+    font-size: 11pt;
+}
+
+.comment-box textarea {
+    position: relative;
+    margin-top: 10px;
+    display: block;
+    width: 90%;
+    left: 5%;
+    height: 100px;
+    font-size: 11pt;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    line-height: 20px;
+    resize: none;
+    background-color: rgb(221, 221, 221);
+    border-radius: 5px;
+    border: 1px solid #999;
+    outline: none;
+}
+
+.comment-box textarea:focus {
+    background-color: #fff;
+    border: 1px solid #666;
+}
+
+.comment-write-box {
+    position: relative;
+    width: 90%;
+    left: 5%;
+    margin-top: 5px;
+    height: 30px;
+}
+
+.publish-btn {
+    /* display: inline-block; */
+    float: right;
+    height: 30px;
+    text-align: center;
+    width: 40px;
+    line-height: 30px;
+    padding: 0 8px;
+    background-color: #999;
+    border-radius: 5px 5px;
+    color: #fff;
+    font-size: 12pt;
+    /* letter-spacing: 2px; */
+    cursor: pointer;
+}
+
+.publish-btn:hover {
+    background-color: #a00;
+}
+
+.comment-tail {
+    box-sizing: border-box;
+    padding-left: 40px;
+    font-size: 9pt;
+    height: 20px;
+    line-height: 20px;
+    color: #666;
+    border-bottom: 1px dashed #999;
+}
+
+.comment-tail a {
+    color: #666;
+}
+
+.comment-tail a:hover {
+    text-decoration: underline;
+}
+
+.comment-time {
+    float: left;
+}
+
+.comment-btn-box {
+    float: right;
+}
+
+.view-comments, .report, .share, .recomments, .dislike, .like {
+    /* float: right; */
+    float: left;
+    width: 35px;
+    margin-right: 20px;
+}
+
+.view-comments {
+    width: 80px;
+}
+
+.share {
+    position: relative;
+}
+
+.share:hover .share-box {
+    display: block;
+}
+
+.share-box {
+    display: none;
+    position: absolute;
+    top: -100px;
+    left: 24px;
+}
+
+.share-icon {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.share-icon:nth-child(1):hover {
+    background-color: rgb(240, 100, 102);
+}
+
+.share-icon:nth-child(2):hover {
+    background-color: rgb(107, 162, 214);
+}
+
+.share-icon:nth-child(3):hover {
+    background-color: rgb(242, 188, 58);
+}
+
+.share-icon:nth-child(4):hover {
+    background-color: rgb(140, 197, 63);
+}
+
+.share-icon img {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    left: 2.5px;
+    top: 2.5px;
+}
+
+/* ********************************************************* */
+
 
 /* ********************************************************* */
