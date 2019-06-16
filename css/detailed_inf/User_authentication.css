@@ -1,0 +1,108 @@
+#main_title{
+    font-size: 40px;
+    position: relative;
+    left:7%;
+    top:5%;
+}
+
+div#container{
+    width:1200px;
+    height: 1000px;
+    background-color:whitesmoke;
+    margin:0 auto;
+}
+
+#detailed_authentication{
+    height:86%;
+    width: 82%;
+    float:left;
+}
+
+#current_level{
+    font-size: 35px;
+    position: relative;
+    left:7%;
+    top:16%;
+
+}
+
+
+#user_level{
+    font-size: 35px;
+    color: chocolate;
+    position: relative;
+    left:42%;
+    top:10.8%;
+
+}
+
+#user_pic{
+    background: url("../../imgs/detailed_inf/user_title.png");
+    width: 160px;
+    height: 160px;
+    position:relative;
+    left:16%;
+    top:19.5%;
+
+
+}
+
+#organization{
+    background: url("../../imgs/detailed_inf/organization.png");
+    width: 160px;
+    height: 160px;
+    position:relative;
+    left:56%;
+    top:0.5%;
+}
+
+#text1{
+    font-size: 21px;
+    position: relative;
+    left:10%;
+    top:2%;
+}
+
+#text2{
+    font-size: 21px;
+    position: relative;
+    left:51%;
+    top:-7%;
+}
+
+#user_apply{
+    border-radius: 4px;
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 6px 23px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 26px;
+    width: 20%;
+    height: 6%;
+    border: 0px solid black;
+    position: relative;
+    top: 20%;
+    left: 14%;
+    cursor: pointer;
+
+}
+
+#spuser_apply{
+    border-radius: 4px;
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 6px 22px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 26px;
+    width: 20%;
+    height: 6%;
+    border: 0px solid black;
+    position: relative;
+    top: 18%;
+    left: 34%;
+    cursor: pointer;
+}
