@@ -14,6 +14,7 @@
     <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="../js/article_display/commentTmpl.js"></script>
     <script type="text/javascript" src="../js/article_display/article_display.js"></script>
+    <script type="text/javascript" src="../js/article_display/articleTmpl.js"></script>
 </head>
 
 <body>
@@ -54,7 +55,9 @@
                 <div class="article-head-box">
                     <!-- 文章标题 -->
                     <div class="article-title-box">
-                        <span class="article-title">美媒把“勿谓言之不预”放头条了全球顶级技术学会IEEE封杀华为？我们采访到一位内部人士</span>
+                        <span class="article-title">
+                            <!-- 美媒把“勿谓言之不预”放头条了全球顶级技术学会IEEE封杀华为？我们采访到一位内部人士 -->
+                        </span>
                         <!-- <span class="article-title">美媒把“勿谓言之不预”放头条了</span> -->
                     </div>
                     <!-- 文章标题 -->
@@ -64,7 +67,9 @@
                         <!-- <span class="author-img-box"> -->
                         <img class="author-img" src="../imgs/article_display/scholar2.jpg" />
                         <!-- </span> -->
-                        <span class="author-name-box"><a href="#">苏轼</a></span>
+                        <span class="author-name-box">
+                            <!-- <a href="#">苏轼</a> -->
+                        </span>
                     </div>
                     <!-- 文章作者介绍 -->
 
@@ -84,11 +89,15 @@
                             <ul>
                                 <li>
                                     <span class="spec-img"><img src="../imgs/article_display/collect.png" /></span>
-                                    <span class="spec-num">12</span>
+                                    <span class="spec-num collectCount">
+                                        <!-- 12 -->
+                                    </span>
                                 </li>
                                 <li>
                                     <span class="spec-img"><img src="../imgs/article_display/comment.png" /></span>
-                                    <span class="spec-num">122</span>
+                                    <span class="spec-num commentCount">
+                                        <!-- 122 -->
+                                    </span>
                                 </li>
                             </ul>
                         </span>
@@ -97,22 +106,27 @@
 
                     <!-- 文章介绍区 -->
                     <div class="article-intro-box">
-                        <span>2019-05-30 08:25:42</span>
-                        <span>fontsize</span>
-                        <span>source</span>
+                        <span class="article-time">
+                            <!-- 2019-05-30 08:25:42 -->
+                        </span>
+                        <!-- <span>fontsize</span> -->
+                        <span class="article-source">
+                            <!-- source -->
+                        </span>
                     </div>
                     <!-- 文章介绍区 -->
 
                     <!-- 关键词 -->
                     <div class="keywords-box">
                         <span>关键字: &nbsp;&nbsp;</span>
-                        <ul>
-                            <li> 勿谓言之不预</li>
+                        <ul class="keywords">
+                            <!-- <li> 勿谓言之不预</li>-->
                         </ul>
                     </div>
                     <!-- 关键词 -->
                 </div>
 
+                <!-- 文章内容 -->
                 <div class="article-body-box">
                     <p class="word-p">&nbsp;&nbsp;&nbsp;&nbsp;
                         它是世界上最大的专业技术组织之一，
@@ -181,6 +195,7 @@
                         跟信息相关的一个组织。然后，它旗下有很多期刊，我们所知道的跟电相关的最主要的期刊应该都在这里边。
                     </p>
                 </div>
+                <!-- 文章内容 -->
 
                 <div class="article-tail-box">
                     <!-- 文章按钮区 -->
@@ -199,11 +214,11 @@
                             <ul>
                                 <li>
                                     <span class="spec-img"><img src="../imgs/article_display/collect.png" /></span>
-                                    <span class="spec-num">12</span>
+                                    <span class="spec-num collectCount">12</span>
                                 </li>
                                 <li>
                                     <span class="spec-img"><img src="../imgs/article_display/comment.png" /></span>
-                                    <span class="spec-num">122</span>
+                                    <span class="spec-num commentCount">122</span>
                                 </li>
                             </ul>
                         </span>
@@ -213,18 +228,21 @@
                     <!-- 文章标签 -->
                     <div class="article-label-box">
                         <span>标签</span>
-                        <a href="#">贸易</a>
-                        <a href="#">美国</a>
+                        <!-- <a href="#">贸易</a> -->
                     </div>
                     <!-- 文章标签 -->
 
                     <!-- 责任声明 -->
                     <div class="copyright-claim-box">
                         <div>请支持独立网站，转发请注明本文链接：
-                            <a href="#">https://www.baidu.com/</a>
+                            <a class="reprint-link" href="#">
+                                <!-- https://www.baidu.com/ -->
+                            </a>
                         </div>
-                        <div>责任编辑:二麻子</div>
-                        <div>最后更新: 2019-05-30 09:03:01</div>
+                        <div class="editor">
+                            <!-- 责任编辑：二麻子 -->
+                        </div>
+                        <!-- <div>最后更新: 2019-05-30 09:03:01</div> -->
                     </div>
                     <!-- 责任声明 -->
                 </div>
@@ -411,7 +429,7 @@
 
                 <!-- 搜索框 -->
                 <div class="search-box">
-                    <input type="text" placeholder="输入搜索内容..."/>
+                    <input type="text" placeholder="输入搜索内容..." />
                     <span>搜索</span>
                 </div>
                 <!-- 搜索框 -->

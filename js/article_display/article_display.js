@@ -116,6 +116,28 @@ $(function () {
     });
 
     // tailFunc();
+    articleProxy[article[Symbol.for('article-desc')]] = {
+        articleTitle: "美媒把“勿谓言之不预”放头条了全球顶级技术学会IEEE封杀华为？我们采访到一位内部人士",
+        authorImg: "../imgs/article_display/scholar2.jpg",
+        authorName: {
+            'link': '#',
+            'name': '苏轼'
+        },
+        collectCount: 12,
+        commentCount: 122,
+        articleTime: "2019-05-30 08:25:42",
+        articleSource: "智库",
+        keywords: ['勿谓言之不预', '勿谓言之不预'],
+        articleLabel: [{
+            'src': '#',
+            'label': '贸易战'
+        }, {
+            'src': '#',
+            'label': '中美关系'
+        }],
+        reprintLink: 'https://chengchanghu.github.io/themedia/html/article_display.html',
+        editor: '二麻子'
+    }
 });
 
 function tailFunc() {
