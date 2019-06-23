@@ -54,20 +54,19 @@ let articleLabelsTmpl = (labels) => `<span>标签</span>\t${labels.map(l => arti
 let articleProxy = new Proxy(article, {
     set: (obj, prop, value) => {
         log('--------------------------SET---------------------------');
-        print('obj:' + obj);
-        print('prop:' + prop);
-        print('value:' + value);
+        // print('obj:' + obj);
+        // print('prop:' + prop);
+        // print('value:' + value);
+        // 会造成打印
 
         $('.article-title').eq(0).html(article[Symbol.for('article-desc')].articleTitle);
         $('.author-img').eq(0).attr('arc', article[Symbol.for('article-desc')].authorImg);
-        log(article[Symbol.for('article-desc')].authorName);
         $('.author-name-box').eq(0).html(authorLinkTmpl(article[Symbol.for('article-desc')].authorName));
         $('.collectCount').html(article[Symbol.for('article-desc')].collectCount);
         $('.commentCount').html(article[Symbol.for('article-desc')].commentCount);
         $('.article-time').eq(0).html(article[Symbol.for('article-desc')].articleTime);
         $('.article-source').eq(0).html(article[Symbol.for('article-desc')].articleSource);
         $('.keywords').eq(0).html(keywordsTmpl(article[Symbol.for('article-desc')].keywords));
-        log(article[Symbol.for('article-desc')].keywords);
         $('.article-label-box').eq(0).html(articleLabelsTmpl(article[Symbol.for('article-desc')].articleLabel));
         $('.reprint-link').eq(0).html(article[Symbol.for('article-desc')].reprintLink);
         $('.reprint-link').eq(0).attr('href', article[Symbol.for('article-desc')].reprintLink);
