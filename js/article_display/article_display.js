@@ -5,20 +5,17 @@ log(comments);
 // addComment({ commentContent: '66666666' });
 
 $(function () {
+    // $('.content-container').eq(0).css('height', $('.main-content-box').height());
+    // $('.content-box').eq(0).css('height', $('.content-container').outerHeight());
 
-    // $('.main-content-box').eq(0).css('height', '1200px');
-    // $('.side-content-box').eq(0).css('height', '1100px');
-    $('.content-container').eq(0).css('height', $('.main-content-box').height());
-    $('.content-box').eq(0).css('height', $('.content-container').outerHeight());
+    // log($(window).height());//浏览器显示区域（可视区域）的高度
+    // log($(document).height());//页面的文档高度 
+    // log($(document.body).height());//浏览器当前窗口文档body的高度
 
-    log($(window).height());//浏览器显示区域（可视区域）的高度
-    log($(document).height());//页面的文档高度 
-    log($(document.body).height());//浏览器当前窗口文档body的高度
-
-    log("$('.column-box').eq(1).offset().top:" + $('.column-box').eq(1).offset().top);
+    // log("$('.column-box').eq(1).offset().top:" + $('.column-box').eq(1).offset().top);
     threshold = $('.column-box').eq(1).offset().top;
-    fixT = $('.right-fix-box').eq(0).offset().top;
-    log('fixT' + fixT);
+    // fixT = $('.right-fix-box').eq(0).offset().top;
+    // log('fixT' + fixT);
 
     // 滚动监听
     $(document).scroll(function () {
@@ -54,7 +51,7 @@ $(function () {
     $('.uparrow').click(function () {
         log('ok');
         // $('html , body').animate({ scrollTop: 0 }, 'slow');
-        $('html , body').animate({ scrollTop: 0 }, 2000);
+        $('html , body').animate({ scrollTop: 0 }, 800);
     });
 
     let serial = 0;
@@ -115,64 +112,104 @@ $(function () {
         window.location.assign('./article_search_list.html' + '?searchContent=' + encodeURI($('.search-box input').eq(0).val()));
     });
 
-    // tailFunc();
-    // article[Symbol.for('article-desc')] = {
-    // article['articleDesc'] = {
-    articleProxy['articleDesc'] = {
-        articleTitle: "特朗普把“勿谓言之不预”放头条了全球顶级技术学会IEEE封杀华为？我们采访到一位内部人士",
-        authorImg: "../imgs/article_display/scholar2.jpg",
-        authorName: {
-            'link': '#',
-            'name': '苏轼'
+    log('document.domain:' + document.domain);
+    $.ajax({
+        type: 'GET',
+        url: "http://223.3.75.80:8080/articles/2",
+        // data: requestParams,
+        // dataType: 'jsonp', //# 注意：这里是指服务端返回json格式的数据
+        success: function (responseData) {
+            console.log('SUCCESS: ' + JSON.stringify(responseData));
+            console.log(responseData);
+            log(responseData['data'].length);
+
+            articleProxy['articleDesc'] = {
+                articleTitle: responseData.data.title,
+                authorImg: "../imgs/article_display/scholar2.jpg",
+                authorName: {
+                    'link': '#',
+                    'name': '苏轼'
+                },
+                collectCount: 12,
+                commentCount: 122,
+                articleTime: "2019-05-30 08:25:42",
+                articleSource: responseData.data.source,
+                keywords: responseData.data.keywords.split(';'),
+                articleLabel: [{
+                    'src': '#',
+                    'label': '贸易战'
+                }, {
+                    'src': '#',
+                    'label': '中美关系'
+                }],
+                reprintLink: 'https://chengchanghu.github.io/themedia/html/article_display.html',
+                editor: '二麻子'
+            };
+
+            articleProxy['articleContent'] = {
+                content: `<p class="word-p">
+                                ${responseData.data.body}
+                            </p>
+                            <p class="img-p">
+                                <img src="../imgs/article_display/nj1.jpg" />
+                                <span>南京眼</span>
+                            </p>
+                            <p class="word-p">
+                                它是世界上最大的专业技术组织之一，
+                                是跟“电”相关的最主要的一个协会了，全称是电气电子工程师学会，
+                                涉及领域包括计算机、电子、电力、自动化等等，反正就是跟电相关的，
+                                跟信息相关的一个组织。然后，它旗下有很多期刊，我们所知道的跟电相关的最主要的期刊应该都在这里边。
+                            </p>`
+            };
+
         },
-        collectCount: 12,
-        commentCount: 122,
-        articleTime: "2019-05-30 08:25:42",
-        articleSource: "智库",
-        keywords: ['勿谓言之不预', '勿谓言之不预'],
-        articleLabel: [{
-            'src': '#',
-            'label': '贸易战'
-        }, {
-            'src': '#',
-            'label': '中美关系'
-        }],
-        reprintLink: 'https://chengchanghu.github.io/themedia/html/article_display.html',
-        editor: '二麻子'
-    }
-    log(article);
+        error: function (error) {
+            console.log('ERROR', error);
+        }
+    });
 
-    articleProxy['articleContent'] = {
-        content: `<p class="word-p">&nbsp;&nbsp;&nbsp;&nbsp;
-                        南京它是世界上最大的专业技术组织之一，
-                        是跟“电”相关的最主要的一个协会了，全称是电气电子工程师学会，
-                        涉及领域包括计算机、电子、电力、自动化等等，反正就是跟电相关的，
-                        跟信息相关的一个组织。然后，它旗下有很多期刊，我们所知道的跟电相关的最主要的期刊应该都在这里边。
-                    </p>
-                    <p class="img-p">
-                        <img src="../imgs/article_display/nj1.jpg" />
-                        <span>南京眼</span>
-                    </p>
-                    <p class="word-p">&nbsp;&nbsp;&nbsp;&nbsp;
-                        它是世界上最大的专业技术组织之一，
-                        是跟“电”相关的最主要的一个协会了，全称是电气电子工程师学会，
-                        涉及领域包括计算机、电子、电力、自动化等等，反正就是跟电相关的，
-                        跟信息相关的一个组织。然后，它旗下有很多期刊，我们所知道的跟电相关的最主要的期刊应该都在这里边。
-                    </p>`
-    }
-    log(article);
+    // articleProxy['articleDesc'] = {
+    //     articleTitle: "特朗普把“勿谓言之不预”放头条了全球顶级技术学会IEEE封杀华为？我们采访到一位内部人士",
+    //     authorImg: "../imgs/article_display/scholar2.jpg",
+    //     authorName: {
+    //         'link': '#',
+    //         'name': '苏轼'
+    //     },
+    //     collectCount: 12,
+    //     commentCount: 122,
+    //     articleTime: "2019-05-30 08:25:42",
+    //     articleSource: "智库",
+    //     keywords: ['勿谓言之不预', '勿谓言之不预'],
+    //     articleLabel: [{
+    //         'src': '#',
+    //         'label': '贸易战'
+    //     }, {
+    //         'src': '#',
+    //         'label': '中美关系'
+    //     }],
+    //     reprintLink: 'https://chengchanghu.github.io/themedia/html/article_display.html',
+    //     editor: '二麻子'
+    // };
+
+    // articleProxy['articleContent'] = {
+    //     content: `<p class="word-p">&nbsp;&nbsp;&nbsp;&nbsp;
+    //                     南京它是世界上最大的专业技术组织之一，
+    //                     是跟“电”相关的最主要的一个协会了，全称是电气电子工程师学会，
+    //                     涉及领域包括计算机、电子、电力、自动化等等，反正就是跟电相关的，
+    //                     跟信息相关的一个组织。然后，它旗下有很多期刊，我们所知道的跟电相关的最主要的期刊应该都在这里边。
+    //                 </p>
+    //                 <p class="img-p">
+    //                     <img src="../imgs/article_display/nj1.jpg" />
+    //                     <span>南京眼</span>
+    //                 </p>
+    //                 <p class="word-p">&nbsp;&nbsp;&nbsp;&nbsp;
+    //                     它是世界上最大的专业技术组织之一，
+    //                     是跟“电”相关的最主要的一个协会了，全称是电气电子工程师学会，
+    //                     涉及领域包括计算机、电子、电力、自动化等等，反正就是跟电相关的，
+    //                     跟信息相关的一个组织。然后，它旗下有很多期刊，我们所知道的跟电相关的最主要的期刊应该都在这里边。
+    //                 </p>`
+    // };
 });
-
-function tailFunc() {
-    let contentHeight = $('.main-content-box').eq(0).outerHeight() > $('.side-content-box').eq(0).outerHeight() ? $('.main-content-box').eq(0).outerHeight() : $('.side-content-box').eq(0).outerHeight();
-    log('contentHeight:' + contentHeight)
-    $('.content-container').eq(0).css('height', contentHeight + 'px');
-    $('.content-box').eq(0).css('height', contentHeight + 'px');
-}
-
-window.onload = function () {
-    tailFunc();
-};
 
 
 

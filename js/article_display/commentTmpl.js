@@ -66,7 +66,7 @@ let commentProxy = new Proxy(comments, {
     get: (target, property) => {
         log('------get------');
         if (property in target) {
-            tailFunc();
+            // tailFunc();
             return target[property];
         }
     },
@@ -76,7 +76,7 @@ let commentProxy = new Proxy(comments, {
         $('.comments-container').eq(0).append(
             commentTmpl({ commentContent: $('.comment-box textarea').eq(0).val() }));
         $('.comment-box textarea').eq(0).val("");
-        tailFunc();
+        // tailFunc();
     }
 });
 
@@ -96,14 +96,12 @@ function safeHTML(str) {
         .replace(/\n/g, "<br>");
 };
 
-function tailFunc() {
-    let contentHeight = $('.main-content-box').eq(0).outerHeight() > $('.side-content-box').eq(0).outerHeight() ? $('.main-content-box').eq(0).outerHeight() : $('.side-content-box').eq(0).outerHeight();
+// function tailFunc() {
+//     let contentHeight = $('.main-content-box').eq(0).outerHeight() > $('.side-content-box').eq(0).outerHeight() ? $('.main-content-box').eq(0).outerHeight() : $('.side-content-box').eq(0).outerHeight();
 
-    $('.content-container').eq(0).css('height', contentHeight + 'px');
-    $('.content-box').eq(0).css('height', contentHeight + 'px');
-}
-
-
+//     $('.content-container').eq(0).css('height', contentHeight + 'px');
+//     $('.content-box').eq(0).css('height', contentHeight + 'px');
+// }
 
 function addComment({
     headSculptureSrc = '../imgs/article_display/scholar2.jpg',

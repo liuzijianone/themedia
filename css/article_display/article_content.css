@@ -198,6 +198,7 @@
 .word-p {
     line-height: 30px;
     margin-top: 20px;
+    text-indent: 32px;
 }
 
 .img-p img {
