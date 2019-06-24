@@ -1,0 +1,82 @@
+.all{
+    width:1150px;
+    height:840px;
+    margin:0px 30px;
+    display: block;
+    background-color:white;
+
+}
+
+#apply_1{
+    margin-left: 20px;
+    height:86%;
+    width: 82%;
+    float: left;
+    background-color: white;
+}
+
+.input-group{
+    margin-top:10px;
+    width: 900px;
+}
+
+.red{
+    color: red;
+}
+
+.form-control{
+    width:30%;
+}
+
+#back{
+    margin-top: 30px;
+    border-radius: 4px;
+    background-color: black;
+    color:white;
+    padding: 6px 23px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 26px;
+    width: 20%;
+    height: 6%;
+    border: 0px solid black;
+    position: relative;
+    top: 20%;
+    left: 16%;
+    cursor: pointer;
+
+}
+
+
+#submit{
+    border-radius: 6px;
+    background-color: black;
+
+    color: white;
+    padding: 6px 22px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 26px;
+    width: 20%;
+    height: 6%;
+    border: 0px solid black;
+    position: relative;
+    top: 18%;
+    left: 22%;
+    cursor: pointer;
+}
+
+#inputfile{
+    font-size: 16px;
+}
+
+#inputfile1{
+    font-size: 16px;
+}
+#inputfile2{
+    font-size: 16px;
+}
+
+#inputfile3{
+    font-size: 16px;
+}

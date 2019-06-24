@@ -8,6 +8,7 @@
     </link>
     </link>
     <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+
     <script type="text/javascript">
         $(()=>{
             console.log('ok');
@@ -25,15 +26,28 @@
                 detail.location="file_manager.html";
             });
 
-            $('#email').click(()=>{
+            $("#email").click(()=>{
                 detail.location="message_inform.html";
+            });
+
+            $('#t3_1').click(()=>{
+                detail.location="personal_apply.html";
+            });
+            $('#t3_2').click(()=>{
+                detail.location="media_apply.html";
+            });
+            $('#t3_3').click(()=>{
+                detail.location="company_apply.html";
+            });
+            $('#t31').click(()=>{
+                detail.location="special_user_apply.html";
             });
 
 
         });
     </script>
 </head>
-<body>
+<body >
     <div id="container">
         <div id="content_menu">
 
@@ -61,13 +75,13 @@
                         <div id="pic_3"></div>权限认证申请</label> <input type="checkbox" id="folder3" />
                     <ol>
                         <li>
-                            <label for="subfolder2" class="folderTwo">认证用户申请</label> <input type="checkbox" id="subfolder2"  />
+                            <label for="subfolder2" class="folderTwo" id="t3_1">认证用户申请</label> <input type="checkbox" id="subfolder2"  />
                             <ol>
-                                <li class="file folderThree"><a href="#">认证为媒体</a></li>
-                                <li class="file folderThree"><a href="#">认证为企业</a></li>
+                                <li class="file folderThree" id="t3_2"><a href="#">认证为媒体</a></li>
+                                <li class="file folderThree" id="t3_3"><a href="#">认证为企业</a></li>
                             </ol>
                         </li>
-                        <li class="file folderTwo"><a href="#">特级用户申请</a></li>
+                        <li class="file folderTwo" id="t31"><a href="#">特级用户申请</a></li>
                     </ol>
                 </li>
                 <li>
@@ -88,19 +102,12 @@
         </div>
         <div id="inform">
             <div id="left" >全媒体新闻信息智能管理</div>
-<!--            <div id="L">-->
-<!--                <div id="star"></div>-->
-<!--                <div id="level">等级</div>-->
 
-<!--            </div>-->
-<!--            <div id="head">-->
-<!--                <div id="name">name</div>-->
-<!--                <div id="head_pic"></div>-->
-
-<!--            </div>-->
             <div id="notice"></div>
             <button id="email" ></button>
         </div>
+<!--        <iframe src="navi_bar.html" scrolling="no" id="guide" name="guide" frameborder="0"></iframe>-->
+<!--        <iframe src="top_inform.html" scrolling="no"  id="guide" name="guide" frameborder="0"></iframe>-->
         <iframe src="detail_com.html" scrolling="no" id="detail" name="detail" frameborder="0"></iframe>
 
     </div>
