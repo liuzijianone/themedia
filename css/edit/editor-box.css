@@ -25,7 +25,11 @@ textarea{
     height: auto;
     margin: 5px auto 5px;
     display: block;
-   /* background-color:#a2a2a2;*/
+}
+/*清除浮动*/
+.divbox:after{
+    content:"";
+    clear: both;
 }
 /*标题*/
 .articlebox{
