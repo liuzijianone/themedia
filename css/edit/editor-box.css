@@ -14,29 +14,30 @@ textarea{
 }
 /*菜单栏*/
 .toolbar{
-    width: 98%;
-    height: 30px;
-    margin: 2px auto 5px;
+    height: 35px;
+    line-height: 30px;
+    margin-left: 20px;
+    margin-top: 10px;
     background-color: #ffffff;
     display: block;
 }
+.divbox-header .divbox-main{
+    width: 100%;
+    height: auto;
+    margin: 5px auto 0px;
+    display: block;
+}
 .divbox{
-    width: 99%;
+    width: 100%;
     height: auto;
     margin: 5px auto 5px;
     display: block;
 }
-/*清除浮动*/
-.divbox:after{
-    content:"";
-    clear: both;
-}
 /*标题*/
 .articlebox{
     width: 98%;
-    height: 60px;
+    height: 75px;
     margin: 3px auto 1px;
-    margin-left: 3px;
     padding-left: 10px;
     padding-top: 8px;
     line-height: 25px;
@@ -47,9 +48,9 @@ textarea{
 /*作者*/
 .authorbox{
     width: 98%;
-    height: 30px;
-    margin: 3px auto 1px;
-    margin-left: 3px;
+    height: 35px;
+    line-height: 30px;
+    margin: 10px auto 1px;
     padding-top: 3px;
     padding-left: 10px;
     font-size: 15px;
@@ -57,22 +58,22 @@ textarea{
     display: block;
 }
 /*正文*/
+.editing{
+    width: 98%;
+    height:450px;
+    margin: 5px auto 0px;
+    display: block;
+   /* background: #aa0000;*/
+}
 .contentbox{
     width: 100%;
-    height: 300px;
-    margin: 3px auto 1px;
-    margin-left: 3px;
+    height: 400px;
+    margin: 0px auto;
     padding-top: 3px;
-    padding-left: 10px;
     border: 1px solid #ccc;
     overflow:auto ;
     display: block;
+    /*background-color: #1e88e5;*/
 }
-.editing-button{
-    float: right;
-    width: 100px;
-    height: 30px;
-    display: inline-block;
-    margin-right: 9px;
-    background-color: rgba(30, 136, 229, 0.79);
-}
+
+

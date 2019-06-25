@@ -1,7 +1,5 @@
 .examine-box {
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 20px;
     border: 1px solid #ddd;
     box-shadow: 0 0 1px #000;
 }

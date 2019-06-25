@@ -5,164 +5,90 @@
     <title>editor demo</title>
 
     <link href="../css/edit/editor.css" rel="stylesheet" type="text/css"/>
-    <link href="../css/edit/editor-header.css" rel="stylesheet" type="text/css"/>
-    <link href="../css/edit/editor-left-content.css" rel="stylesheet" type="text/css"/>
-    <link href="../css/edit/editor-right-content.css" rel="stylesheet" type="text/css"/>
     <link href="../css/edit/editor-box.css" rel="stylesheet" type="text/css">
     <link href="../wangEditor/release/wangEditor.min.css" rel="stylesheet" type="text/css">
-    <<link href="../wangEditor/wangEditor-fullscreen-plugin.css" rel="stylesheet" type="text/css">
+    <link href="../wangEditor/wangEditor-fullscreen-plugin.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
     <!--引入wangEditor中的js-->
     <script type="text/javascript" src="../wangEditor/release/wangEditor.min.js"></script>
     <script type="text/javascript" src="../wangEditor/wangEditor-fullscreen-plugin.js"></script>
     <script type="text/javascript" src="../js/edit/dates.js"></script>
     <script type="text/javascript" src="../js/edit/edit.js"></script>
-    <script type="text/javascript" src="../js/edit/ajax_exit.js"></script>
 </head>
 <body>
-<div class="header">
-    <div class="header-content-box">
-        <div class="header-title-box">
-            <span class="header-title">全媒体新闻智能管理</span>
-        </div>
-        <div class="header-inform-box">
-            <ul class="header-inform-ul">
-                <li class="header-inline"><a href="#"><img src="../imgs/edit/email.png" height="50" width="50"></a></li>
-                <li class="header-inline"><a href="#"><img src="../imgs/edit/note.png" height="50" width="50"></a></li>
-                <li class="header-inline"><a href="#"><img src="../imgs/edit/logo.png" height="80" width="80"></a></li>
-                <li class="header-inline-name"><a href="#"><span class="li-name">嘟嘟嘟</span></a></li>
-                <li class="header-inline-rank"><span class="li-rank">等级</span></a></li>
-                <li class="header-inline-star"><img src="../imgs/edit/star.png" height="30" width="30"><img
-                        src="../imgs/edit/star.png" height="30" width="30"></li>
-            </ul>
-        </div>
+<div class="main-box">
+    <!--选择器-->
+    <div class="editor-selector" id="tab">
+        <ul>
+            <li class="editor-li-show">视频制作</li>
+            <li>爆料制作</li>
+            <li>图文制作</li>
+        </ul>
     </div>
-</div>
-<div class="main-content">
-    <div class="left-box">
-        <div class="editor-box">
-            <!--选择器-->
-            <div class="editor-selector" id="tab">
-                <ul class="editor-ul">
-                    <li class="editor-li-show">视频制作</li>
-                    <li>爆料制作</li>
-                    <li>图文制作</li>
-                </ul>
-            </div>
-            <!--编辑框-->
-            <div class="editing-box" id="showBox">
-                <!--视频制作-->
-                <form class="editing">
-                    <!--编辑区1-->
-                    <div class="divbox">
-                        <textarea placeholder="请在这里输入标题" class="articlebox" required></textarea>
-                    </div>
-                    <!--编辑区2-->
-                    <div class="divbox">
-                        <textarea placeholder="请输入作者"  class="authorbox" required></textarea>
-                    </div>
-                    <!--编辑区3-->
-                    <div class="divbox">
-                        <div id="div1-2" class="contentbox">
-                            <p>从这里开始正文</p>
-                        </div>
-                    </div>
-                    <!--菜单栏-->
-                    <div id="div1-1" class="toolbar"></div>
-                    <!--按钮区-->
-                    <div class="divbox">
-                        <button class="editing-button" id="save1">保存</button>
-                        <button class="editing-button" id="watch1">预览</button>
-                        <button class="editing-button" id="publish1">发布</button>
-                    </div>
-                </form>
-               <!-- 视频制作-->
-
-               <!-- 爆料制作-->
-                <form class="editing">
-                    <!--编辑区1-->
-                    <div class="divbox">
-                        <textarea placeholder="请在这里输入标题" class="articlebox" required id="article1"></textarea>
-                    </div>
-                   <!-- 编辑区2-->
-                    <div class="divbox">
-                        <textarea placeholder="请输入作者"  class="authorbox" required></textarea>
-                    </div>
-                    <!--编辑区3-->
-                    <div class="divbox">
-                        <div id="div2-2" class="contentbox">
-                            <p>欢迎使用 <b>wangEditor</b> 富文本编辑器</p>
-                        </div>
-                    </div>
-                    <!--菜单栏-->
-                    <div id="div2-1" class="toolbar"></div>
-                    <!--按钮区-->
-                    <br>
-                    <div class="divbox">
-                        <button class="editing-button" id="save2">保存</button>
-                        <button class="editing-button" id="watch2">预览</button>
-                        <button class="editing-button" id="publish2">发布</button>
-                    </div>
-                </form>
-                <!--爆料制作-->
-
-
-                <!--图文制作-->
-                <form class="editing">
-                    <!--菜单栏-->
-                    <div id="div3-1" class="toolbar"></div>
-                    <!--编辑区1-->
-                    <div class="divbox">
-                        <textarea placeholder="请在这里输入标题" id="article3"class="articlebox" required ></textarea>
-                    </div>
-                    <!--编辑区2-->
-                    <div class="divbox">
-                        <textarea placeholder="请输入作者"  id="author3"class="authorbox" required ></textarea>
-                    </div>
-                    <!--编辑区3-->
-                    <div class="divbox">
-                        <div id="div3-2" class="contentbox">
-                            <p>从这里开始正文</p>
-                        </div>
-                    </div>
-                    <!--按钮区-->
-                    <div class="divbox">
-                        <button class="editing-button" id="test">test</button>
-                        <button class="editing-button" id="watch3">预览text</button>
-                        <button class="editing-button" id="publish3">发布</button>
-                    </div>
-                </form>
-                <!--图文制作-->
-            </div>
+    <!--编辑框-->
+    <div class="editing-box" id="showBox">
+        <!--视频制作-->
+        <!--编辑区1-->
+        <div class="divbox-header">
+            <textarea placeholder="请在这里输入标题" class="articlebox" id="title" required></textarea>
+            <textarea placeholder="请输入作者" class="authorbox" id="author" required></textarea>
         </div>
-        <div class="links-box">
-            <div class="links-title-box">
-                <span class="links-title">友情链接</span>
-            </div>
-            <div class="links-content-box" id="LinkNews">
-                <!--<span class="links-content"><a href="#">光明网</a></span>-->
-            </div>
+        <!--编辑区2-->
+        <div class="divbox-main">
+            <!-- 视频制作-->
+            <form class="editing">
+                <!--菜单栏-->
+                <div id="div1-1" class="toolbar"></div>
+                <!--编辑区3-->
+                <div class="divbox">
+                    <div id="div1-2" class="contentbox">
+                        <p>从这里开始正文</p>
+                    </div>
+                </div>
+            </form>
+            <!-- 视频制作-->
+
+            <!-- 爆料制作-->
+            <form class="editing">
+                <!--菜单栏-->
+                <div id="div2-1" class="toolbar"></div>
+                <!--编辑区3-->
+                <div class="divbox">
+                    <div id="div2-2" class="contentbox">
+                        <p>欢迎使用 <b>wangEditor</b> 富文本编辑器</p>
+                    </div>
+                </div>
+            </form>
+            <!--爆料制作-->
+
+            <!--图文制作-->
+            <form class="editing">
+                <!--菜单栏-->
+                <div id="div3-1" class="toolbar"></div>
+                <!--编辑区3-->
+                <div class="divbox">
+                    <div id="div3-2" class="contentbox">
+                        <p>欢迎使用富文本编辑器</p>
+                    </div>
+                </div>
+            </form>
+            <!--图文制作-->
         </div>
+        <!--按钮区-->
     </div>
-    <div class="right-box">
-        <div class="hotnews-box">
-            <div class="hotnews-title">24小时热新闻</div>
-            <ul class="hotnews-ul" id="24hot">
-                <!--<li class="hotnews-li">
-                    <span class="hotnews-img"><a href="#" target="_blank"><img src="./imgs/edit/air.jpg"></a></span>
-                    <span class="hotnews-label"><a href="#" target="_blank">这才是你该追的全球大片！世界有时差，梦想不打烊！</a></span>
-                </li>-->
-            </ul>
+    <div class="editor-send">
+        <div class="divbox_level">
+            <span>文章等级</span>
+            <select id="level">
+                <option value="0">1.普通</option>
+                <option value="1">2.专业</option>
+                <option value="2">3.特级</option>
+            </select>
         </div>
-        <div class="horizontal"></div>
-        <div class="image-box">
-            <div class="image-title">精彩图片</div>
-            <ul class="image-ul" id="ImgsNews">
-                <!-- <li class="image-li">
-                     <span class="image-img"><a href="#" target="_blank"><img src="./imgs/edit/air.jpg"></a></span>
-                     <span class="image-label"><a href="#" target="_blank">这才是你该追的全球大片！世界有时差，梦想不打烊！</a></span>
-                 </li>-->
-            </ul>
+        <div class="divbox_button">
+            <button class="editing-button" id="save">保存</button>
+            <button class="editing-button" id="watch">预览</button>
+            <button class="editing-button" id="publish">发布</button>
         </div>
     </div>
 </div>
@@ -203,13 +129,6 @@
         'video',  // 插入视频
     ]
     one_editor.create();
-    /*清除提示内容*/
-    /*editor1.txt.clear()*/
-    one_E.fullscreen.init('#div1-1');
-    document.getElementById('watch1').addEventListener('click', function () {
-        // 读取 html
-        alert( one_editor.txt.html())
-    }, false)
     /*视频编辑器设计*/
 
 
@@ -224,7 +143,8 @@
         'video',  // 插入视频
     ]
     /*two_editor.customConfig.uploadImgServer = '/admin.php/Upload/wang_editor';  // 上传图片到服务器*/
-    two_editor.customConfig.pasteIgnoreImg = true;         /*忽略粘贴内容的照片*/
+    two_editor.customConfig.pasteIgnoreImg = true;
+    /*忽略粘贴内容的照片*/
     two_editor.customConfig.uploadImgShowBase64 = true;   // 使用 base64 保存图片
     two_editor.customConfig.uploadImgMaxSize = 3 * 1024 * 1024;  //配置上传图片的大小 3M
     two_editor.customConfig.uploadImgMaxLength = 5;   //一次最多上传5张图片
@@ -267,40 +187,11 @@
             // 举例：假如上传图片成功后，服务器端返回的是 {url:'....'} 这种格式，即可这样插入图片：
             var url2 = result.data[0];
             insertImg(url);
-            console.log("插入图片 url = " + url2 );
+            console.log("插入图片 url = " + url2);
             // result 必须是一个 JSON 格式字符串！！！否则报错
         }
     }
-    /*清除提示内容*/
-    /*editor1.txt.clear()*/
-    //获取文本输入的内容
-    document.getElementById('save2').addEventListener('click', function () {
-        two_editor.txt.html(content);
-        var content = two_editor.txt.html();
-        console.log(content);
-        // 读取 text
-        var announcement_mag = two_editor.txt.text();
-        alert(announcement_mag)
-        $.ajax({
-            url : "http://localhost:8080/User/inserAnnouncements?announcement_mag="+announcement_mag,
-            type : "post",
-            dataType : "json",
-            success : function(data) {
-                alert(data.result);
-            },
-            error : function(msg) {
-                alert("ajax连接异常：" + msg);
-            }
-        });
-    }, false)
-    document.getElementById('watch2').addEventListener('click', function () {
-        // 读取 text
-        alert( two_editor.txt.html())
-    }, false)
     /*爆料编辑器设计*/
-
-
-
 
     /*图文制作编辑器设计*/
     var three_E = window.wangEditor;
@@ -331,14 +222,14 @@
         'redo'  // 重复
     ]
     three_editor.customConfig.debug = true;
-    three_editor.customConfig.pasteIgnoreImg = true; /*忽略粘贴内容的照片*/
+    three_editor.customConfig.pasteIgnoreImg = true;
+    /*忽略粘贴内容的照片*/
     three_editor.customConfig.uploadImgShowBase64 = true;   // 使用 base64 保存图片
     three_editor.customConfig.uploadImgMaxSize = 3 * 1024 * 1024;       // 3M
     three_editor.customConfig.uploadImgMaxLength = 5;  // 限制一次最多上传 5 张图片
     /*three_editor.customConfig.uploadFileName = '0_img';*/          // 自定义文件名
     three_editor.customConfig.uploadImgTimeout = 5000;// 将 timeout 时间改为 3s
     three_editor.create();
-/*    three_editor.txt.clear();//内容清除*/
 
     three_editor.customConfig.uploadImgHooks = {
         before: function (xhr, three_editor, files) {               // 图片上传之前触发
@@ -380,31 +271,40 @@
         }
     }
 
-    document.getElementById('test').addEventListener('click', function () {
+    /*提交数据*/
+    document.getElementById('save').addEventListener('click', function () {
         // 读取 html
-        /*alert(three_editor.txt.html())*/
-        three_editor.txt.html(content);
-        var content = three_editor.txt.html();
-        console.log(content);
-        var msg = three_editor.txt.html();    // 读取 text
-        alert(msg)
+        var content;
+        switch (e) {
+            case 1:
+                one_editor.txt.html(content);
+                content = one_editor.txt.html();
+                break;
+            case 2:
+                two_editor.txt.html(content);
+                content = two_editor.txt.html();
+                break;
+            case 3:
+                three_editor.txt.html(content);
+                content = three_editor.txt.html();
+        }
+        var sop = document.getElementById("level");
+        var level = sop.selectedIndex;
+        alert(content);
         $.ajax({
-            url : "http://223.3.65.243:9095/article/articles?msg="+msg,
-            type : "post",
-            dataType : "json",
-            success : function(data) {
+            url: "http://223.3.65.243:9095/article/articles?msg=" + content,
+            type: "post",
+            dataType: "json",
+            authorId: "001",
+            title: level,
+            success: function (data) {
                 alert(data.result);
-                },
-            error : function(msg) {
-                alert("ajax连接异常：" + msg);
+            },
+            error: function (content) {
+                alert("ajax连接异常：" + content);
             }
         });
     }, false)
-    document.getElementById('watch3').addEventListener('click', function () {
-        // 读取 text
-        alert(three_editor.txt.text())
-    }, false)
-    /*图文制作编辑器设计*/
 </script>
 
 </body>
