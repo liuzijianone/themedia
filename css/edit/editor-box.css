@@ -13,14 +13,14 @@ textarea{
     resize:none; /*尺寸不可变*/
 }
 /*菜单栏*/
-.toolbar{
+/*.toolbar{
     height: 35px;
     line-height: 30px;
     margin-left: 20px;
     margin-top: 10px;
     background-color: #ffffff;
     display: block;
-}
+}*/
 .divbox-header .divbox-main{
     width: 100%;
     height: auto;
@@ -60,12 +60,12 @@ textarea{
 /*正文*/
 .editing{
     width: 98%;
-    height:450px;
+    height:340px;
     margin: 5px auto 0px;
     display: block;
-   /* background: #aa0000;*/
+    /*background: #0914e5;*/
 }
-.contentbox{
+/*.contentbox{
     width: 100%;
     height: 400px;
     margin: 0px auto;
@@ -73,7 +73,7 @@ textarea{
     border: 1px solid #ccc;
     overflow:auto ;
     display: block;
-    /*background-color: #1e88e5;*/
-}
+    background-color: #1e88e5;
+}*/
 
 

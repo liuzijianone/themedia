@@ -20,7 +20,7 @@
     <!--选择器-->
     <div class="editor-selector">
         <ul>
-            <li id="li1" value="0"class="editor-li-show">视频制作</li>
+            <li id="li1" value="0" class="editor-li-show">视频制作</li>
             <li id="li2" value="1">爆料制作</li>
             <li id="li3" value="2">图文制作</li>
         </ul>
@@ -30,20 +30,15 @@
         <!--视频制作-->
         <!--编辑区1-->
         <div class="divbox-header">
-            <textarea placeholder="请在这里输入标题" class="articlebox" required></textarea>
+            <textarea placeholder="请在这里输入标题 (50字以内)" class="articlebox" required></textarea>
             <textarea placeholder="请输入作者" class="authorbox" required></textarea>
         </div>
         <!--编辑区2-->
         <div class="divbox-main">
             <!-- 视频制作-->
             <form class="editing">
-                <!--菜单栏-->
-                <div id="div1-1" class="toolbar"></div>
-                <!--编辑区3-->
-                <div class="divbox">
-                    <div id="div1-2" class="contentbox">
-                        <p>从这里开始正文</p>
-                    </div>
+                <div id="editor1">
+                    <p>从这里开始正文</p>
                 </div>
             </form>
             <!-- 视频制作-->
@@ -51,25 +46,16 @@
             <!-- 爆料制作-->
             <form class="editing" style="display: none;">
                 <!--菜单栏-->
-                <div id="div2-1" class="toolbar"></div>
-                <!--编辑区3-->
-                <div class="divbox">
-                    <div id="div2-2" class="contentbox">
-                        <p>欢迎使用 <b>wangEditor</b> 富文本编辑器</p>
-                    </div>
+                <div id="editor2">
+                    <p>从这里开始正文</p>
                 </div>
             </form>
             <!--爆料制作-->
 
             <!--图文制作-->
             <form class="editing" style="display: none;">
-                <!--菜单栏-->
-                <div id="div3-1" class="toolbar"></div>
-                <!--编辑区3-->
-                <div class="divbox">
-                    <div id="div3-2" class="contentbox">
-                        <p>欢迎使用富文本编辑器</p>
-                    </div>
+                <div id="editor3">
+                    <p>从这里开始正文</p>
                 </div>
             </form>
             <!--图文制作-->
@@ -87,10 +73,12 @@
         </div>
         <div class="divbox_button">
             <button class="editing-button" id="save">保存</button>
-            <button class="editing-button" id="watch">预览</button>
+            <!--<button class="editing-button" id="watch">预览</button>-->
             <button class="editing-button" id="publish">发布</button>
         </div>
     </div>
 </div>
+<input type="hidden" id="eId" value="0">
+<input type="hidden" id="eVersion" value="0">
 </body>
 </html>

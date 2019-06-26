@@ -11,6 +11,7 @@
 
 .w-e-menu a {
 	text-decoration: none;
+    color: #999999;
 }
 
 .fullscreen-editor {
@@ -21,6 +22,7 @@
 	top: 0px !important;
 	background-color: white;
 	z-index: 9999;
+
 }
 
 .fullscreen-editor .w-e-text-container {

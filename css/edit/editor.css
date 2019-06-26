@@ -62,7 +62,7 @@ body {
 /*编辑处*/
 .editing-box{
     width:100%;
-    /*background-color: #c7e2de;*/
+   /* background-color: #c7e2de;*/
     display: block;
 }
 /***********************************发送框*******************************************/
@@ -100,7 +100,7 @@ body {
     height: 50px;
     display: inline-block;
     position:relative;
-    left: 40%;
+    left: 50%;
    /* background: #31402a;*/
 }
 

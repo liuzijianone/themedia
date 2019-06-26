@@ -15,21 +15,21 @@ $(function () {
     /*视频编辑器设计*/
     var one_E = window.wangEditor;
     /* 创建富文本编辑器*/
-    var one_editor = new one_E('#div1-1', '#div1-2');
+    var one_editor = new one_E('#editor1');
     /*div1是菜单栏 div4 是被编辑栏*/
     /*配置菜单栏*/
     one_editor.customConfig.menus = [
         'video',  // 插入视频
     ]
     one_editor.create();
-    one_E.fullscreen.init('#div4');
+    one_E.fullscreen.init('#editor1');
     /*视频编辑器设计*/
 
 
     /*爆料编辑器设计*/
     var two_E = window.wangEditor;
     /* 创建富文本编辑器*/
-    var two_editor = new two_E('#div2-1', '#div2-2');
+    var two_editor = new two_E('#editor2');
     /*div1是菜单栏 div4 是被编辑栏*/
     /*配置菜单栏*/
     two_editor.customConfig.menus = [
@@ -43,6 +43,8 @@ $(function () {
     two_editor.customConfig.uploadImgMaxSize = 3 * 1024 * 1024;  //配置上传图片的大小 3M
     two_editor.customConfig.uploadImgMaxLength = 5;   //一次最多上传5张图片
     two_editor.create();
+    two_E.fullscreen.init('#editor2');
+
 
     two_editor.customConfig.uploadImgHooks = {
         before: function (xhr, two_editor, files) {
@@ -90,7 +92,7 @@ $(function () {
     /*图文制作编辑器设计*/
     var three_E = window.wangEditor;
     /* 创建富文本编辑器*/
-    var three_editor = new three_E('#div3-1', '#div3-2');
+    var three_editor = new three_E('#editor3');
     /*div1是菜单栏 div4 是被编辑栏*/
     /*配置菜单栏*/
     three_editor.customConfig.menus = [
@@ -124,6 +126,7 @@ $(function () {
     /*three_editor.customConfig.uploadFileName = '0_img';*/             // 自定义文件名
     three_editor.customConfig.uploadImgTimeout = 5000;                  // 将 timeout 时间改为 3s
     three_editor.create();
+    three_E.fullscreen.init('#editor3');
     /*监听函数*/
     three_editor.customConfig.uploadImgHooks = {
         before: function (xhr, three_editor, files) {               // 图片上传之前触发
@@ -167,20 +170,20 @@ $(function () {
 
     //***************************************************保存数据*****************************************************
     document.getElementById('save').addEventListener('click', function () {
-        let content="content";
+        var content1="content";
         switch (linumber) {
             case 0:
-                content = one_editor.txt.html();
+                content1 = one_editor.txt.html();
                 /*console.log('------------ 1etitle ----------------');
                 console.log(linumber);*/
                 break;
             case 1:
-                content = two_editor.txt.html();
+                content1 = two_editor.txt.html();
                 /*console.log('------------ 2etitle ----------------');
                 console.log(linumber);*/
                 break;
             case 2:
-                content = three_editor.txt.html();
+                content1 = three_editor.txt.html();
             /*console.log('------------ 3etitle ----------------');
             console.log(linumber);*/
         }
@@ -188,18 +191,26 @@ $(function () {
         let etitle=$(".articlebox").val();/*文章的题目*/
         let eauthor=$(".authorbox").val();/*文章的作者*/
         let elevel=$("#level").val(); /*文章等级*/
+        let eId=$("#eId").val();
+        let eVersion=$("#eVersion").val();
         /*console.log(etitle);
         console.log('------------ etitle ----------------');
         console.log(eauthor);
         console.log('------------ eauthor ----------------');
-        console.log(content);
+        console.log(content1);
         console.log('------------ content ----------------');
         console.log(elevel);
-        console.log('------------ elevel ----------------');*/
+        console.log('------------ elevel ----------------');
+        console.log(eId);
+        console.log('------------ eId ----------------');
+        console.log(eVersion);
+        console.log('------------ eVersion ----------------');*/
         let article = {
-            "body": content,
+            "body": content1,
             "level": elevel,
-            "title": etitle
+            "title": etitle,
+            "id":eId,
+            "version":eVersion
         };
         $.ajax({
             type: 'POST',
@@ -226,20 +237,20 @@ $(function () {
     //***************************************************提交数据*****************************************************
     document.getElementById('publish').addEventListener('click', function () {
         // 读取 html
-        let content="content";
+        var content2="content";
         switch (linumber) {
             case 0:
-                content = one_editor.txt.html();
+                content2 = one_editor.txt.html();
                 /*console.log('------------ 1etitle ----------------');
                 console.log(linumber);*/
                 break;
             case 1:
-                content = two_editor.txt.html();
+                content2 = two_editor.txt.html();
                 /*console.log('------------ 2etitle ----------------');
                 console.log(linumber);*/
                 break;
             case 2:
-                content = three_editor.txt.html();
+                content2 = three_editor.txt.html();
                 /*console.log('------------ 3etitle ----------------');
                 console.log(linumber);*/
         }
@@ -247,18 +258,26 @@ $(function () {
         let etitle=$(".articlebox").val();/*文章的题目*/
         let eauthor=$(".authorbox").val();/*文章的作者*/
         let elevel=$("#level").val(); /*文章等级*/
+        let eId=$("#eId").val();
+        let eVersion=$("#eVersion").val();
         /*console.log(etitle);
         console.log('------------ etitle ----------------');
         console.log(eauthor);
         console.log('------------ eauthor ----------------');
-        console.log(content);
+        console.log(content2);
         console.log('------------ content ----------------');
         console.log(elevel);
-        console.log('------------ elevel ----------------');*/
+        console.log('------------ elevel ----------------');
+        console.log(eId);
+        console.log('------------ eId ----------------');
+        console.log(eVersion);
+        console.log('------------ eVersion ----------------');*/
         let article = {
-            "body": content,
+            "body": content2,
             "level": elevel,
-            "title": etitle
+            "title": etitle,
+            "id":eId,
+            "version":eVersion
         };
         $.ajax({
             type: 'POST',
