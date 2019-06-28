@@ -1,6 +1,7 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 li, a {
     display: inline;
@@ -11,35 +12,101 @@ body {
     width: 100%;
     height: 100%;
 }
-
-.header {
-    width: 100%;
-    height:150px;
-    background-color: #222222;
+.main-box{
+    margin: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 1px #000;
+    /*background-color: rgba(7, 229, 26, 0.2);*/
+    display: block;
 }
-.main-content{
-    width: 1400px;
-    height: auto;
-   /* background-color: #31402a;*/
-    margin: 10px auto 0px;
+/*选择器*/
+.editor-selector{
+    width:100%;
+    height:65px;
+    /*background-color: #1e88e5;*/
+    display: block;
+}
+.editor-selector ul{
+    width: 98.5%;
+    height: 100%;
+    margin: 0px auto;
     display: flex;
+    flex-direction: row;
+    justify-content: left;
+    /*background-color: #c24f4a;*/
 }
-.left-box{
-    width: 1025px;
-    height: auto;
-    /*background-color: #a1a1a1;*/
-    /*border: 2px solid #31402a;*/
-    /*float: left;*/
+.editor-selector li{
+    width:150px;
     margin-left: 5px;
-    display: inline-block;
+    line-height: 55px;
+    text-align: center;
+    cursor: pointer;/*实现当鼠标移动至此时箭头转换成手指的操作*/
+    color: #232323;
+    font-size: 20px;
+    font-family: 黑体;
+    font-weight: bolder;
+    border: 1px solid #555555;
 }
-.right-box{
-    width:350px;
-    height: auto;
-   /* border: 2px solid #666666;*/
-   /* background-color: #a1a1a1;*/
-    /*float: left;*/
-    margin-top: 10px;
-    margin-left: 15px;
+.editor-li-show{
+    background-color: #ffa42a;
+    font-weight: bolder;
+}
+.hide{
+    display: none;
+}
+.editor-selector,.editing-box,.editor-send{
+    padding-left: 5px;
+    padding-top: 5px;
+}
+/***********************************编辑框*******************************************/
+/*编辑处*/
+.editing-box{
+    width:100%;
+   /* background-color: #c7e2de;*/
+    display: block;
+}
+/***********************************发送框*******************************************/
+.editor-send{
+    width:98%;
+    height:60px;
+    /*background-color: #ff5e33;*/
+    display: block;
+    margin: 0px auto;
+}
+.divbox_level{
+    width:30%;
+    height: 50px;
+    margin: 0px auto 5px;
     display: inline-block;
+    /*background: #31402a;*/
+
+}
+.divbox_level span{
+    height: 50px;
+    width: 100px;
+    font-size: 20px;
+    color: red;
+    font-weight: bolder;
+}
+.divbox_level select{
+    height: 40px;
+    width: 150px;
+    font-size: 18px;
+    margin-left: 15px;
+   /* background-color: #6a6a6a;*/
+}
+.divbox_button{
+    width: 320px;
+    height: 50px;
+    display: inline-block;
+    position:relative;
+    left: 50%;
+   /* background: #31402a;*/
+}
+
+.editing-button{
+    width: 100px;
+    height: 40px;
+    display: inline-block;
+    background-color: #1e88e5;
 }

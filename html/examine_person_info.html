@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap-table/1.14.2/bootstrap-table.min.css">
+    <link href="../css/examine/examine.css" rel="stylesheet" type="text/css">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap-table/1.14.2/bootstrap-table.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap-table/1.1.4/locale/bootstrap-table-zh-CN.min.js"></script>
+   <!-- <script src="../js/examine/person/examine_person.js"></script>-->
+    <title>个人信息审核</title>
+</head>
+<body>
+<!--<div class="examine-box">-->
+<div class="container-fluid">
+    <div class="panel panel-default">
+        <div class="examine-head">
+            <div class="examine-title"><h3>个人信息审核</h3></div>
+            <div class="examine-path">
+                <ol class="breadcrumb">
+                    <li><a href="#">主页</a></li>
+                    <li><a href="examine_main.html">审核</a></li>
+                    <li class="active">个人信息审核</li>
+                </ol>
+            </div>
+        </div>
+        <div class="examine-content">
+            <table id="mytab" class="table table-hover"></table>
+        </div>
+
+    </div>
+</div>
+<div class="popup" >
+    <div class="popup-content">
+        <h3>稿件审核通知</h3>
+        <p>稿件审核通知</p>
+        <button id="btn2">确定</button>
+    </div>
+</div>
+</body>
+<script>
+    $('#mytab').bootstrapTable({
+        url: '',  //请求后台的URL（*）
+        /*method: 'get',*/ //请求方式（*）
+        queryParams: "queryParams", //传递参数（*）
+        toolbar: "#toolbar",  //工具按钮用哪个容器
+        sidePagination: "true",  //分页方式：client客户端分页，server服务端分页（*）
+        striped: true, // 是否显示行间隔色
+        //search : "true",
+        uniqueId: "ID", //每一行的唯一标识，一般为主键列
+        pageSize: "10", //每页的记录行数（*）
+        /*height: 500,  *///行高，如果没有设置height属性，表格自动根据记录条数觉得表格高度
+        pagination: true, // 是否分页
+        sortable: true, // 是否启用排序
+        /*showColumns: true,*/ //是否显示所有的列
+        /*showRefresh: true, *///是否显示刷新按钮
+        columns: [{
+            title: '姓名',
+            field: 'Name',
+            align: 'center'
+        },
+            {
+                title: '注册方式',
+                field: 'RegisterApproach',
+                align: 'center'
+            },
+            {
+                title: '身份证号',
+                field: 'IDNumber',
+                align: 'center',
+            }, {
+                title: '申请权限',
+                field: 'Authority',
+                align: 'center',
+            },
+            {
+                title: '申请材料',
+                field: 'Material',
+                align: 'center',
+                width:240,
+                formatter: option0,
+            },
+            {
+                title: '权限分配',
+                field: 'AuthorityAssignment',
+                align: 'center',
+                valign: 'middle',
+                width: 240,
+                formatter: option1,
+            },
+            {
+                title: '操作',
+                field: 'Operation',
+                align: 'center',
+                valign: 'middle',
+                width: 240,
+                formatter: option2,
+            }
+
+        ], //数据
+        data: [{
+            "id": 1,
+            "Name": "user1",
+            "RegisterApproach": "手机",
+            "IDNumber": "123456789009876543",
+            "Authority":"认证用户",
+            "Material": "无"
+        },
+            {
+                "id": 2,
+                "Name": "user2",
+                "RegisterApproach": "手机",
+                "IDNumber": "123456789009876543",
+                "Authority":"认证用户",
+                "Material": "无"
+            },
+            {
+                "id": 3,
+                "Name": "user3",
+                "RegisterApproach": "手机",
+                "IDNumber": "123456789009876543",
+                "Authority":"认证用户",
+                "Material": "查看"
+            },
+            {
+                "id": 4,
+                "Name": "user4",
+                "RegisterApproach": "手机",
+                "IDNumber": "123456789009876543",
+                "Authority":"认证用户",
+                "Material": "无"
+            },
+            {
+                "id": 5,
+                "Name": "user5",
+                "RegisterApproach": "手机",
+                "IDNumber": "123456789009876543",
+                "Authority":"认证用户",
+                "Material": "无"
+            },
+            {
+                "id": 6,
+                "Name": "user6",
+                "RegisterApproach": "手机",
+                "IDNumber": "123456789009876543",
+                "Authority":"认证用户",
+                "Material": "无"
+            },
+            {
+                "id": 7,
+                "Name": "user7",
+                "RegisterApproach": "手机",
+                "IDNumber": "123456789009876543",
+                "Authority":"认证用户",
+                "Material": "无"
+            },
+            {
+                "id": 8,
+                "Name": "user8",
+                "RegisterApproach": "手机",
+                "IDNumber": "123456789009876543",
+                "Authority":"认证用户",
+                "Material": "无"
+            },
+            {
+                "id": 9,
+                "Name": "user9",
+                "RegisterApproach": "手机",
+                "IDNumber": "123456789009876543",
+                "Authority":"认证用户",
+                "Material": "无"
+            },
+            {
+                "id": 10,
+                "Name": "user10",
+                "RegisterApproach": "手机",
+                "IDNumber": "123456789009876543",
+                "Authority":"认证用户",
+                "Material": "无"
+            },
+            {
+                "id": 11,
+                "Name": "user11",
+                "RegisterApproach": "手机",
+                "IDNumber": "123456789009876543",
+                "Authority":"认证用户",
+                "Material": "无"
+            },
+            {
+                "id": 12,
+                "Name": "user12",
+                "RegisterApproach": "手机",
+                "IDNumber": "123456789009876543",
+                "Authority":"认证用户",
+                "Material": "无"
+            },
+            {
+                "id": 13,
+                "Name": "user13",
+                "RegisterApproach": "手机",
+                "IDNumber": "123456789009876543",
+                "Authority":"认证用户",
+                "Material": "无"
+            },
+            {
+                "id": 14,
+                "Name": "user14",
+                "RegisterApproach": "手机",
+                "IDNumber": "123456789009876543",
+                "Authority":"认证用户",
+                "Material": "无"
+            },
+            {
+                "id": 15,
+                "Name": "user15",
+                "RegisterApproach": "手机",
+                "IDNumber": "123456789009876543",
+                "Authority":"认证用户",
+                "Material": "无"
+            },
+            {
+                "id": 16,
+                "Name": "user16",
+                "RegisterApproach": "手机",
+                "IDNumber": "123456789009876543",
+                "Authority":"认证用户",
+                "Material": "无"
+            },
+            {
+                "id": 17,
+                "Name": "user17",
+                "RegisterApproach": "手机",
+                "IDNumber": "123456789009876543",
+                "Authority":"认证用户",
+                "Material": "无"
+            },
+            {
+                "id": 18,
+                "Name": "user18",
+                "RegisterApproach": "手机",
+                "IDNumber": "123456789009876543",
+                "Authority":"认证用户",
+                "Material": "无"
+            },
+            {
+                "id": 19,
+                "Name": "user19",
+                "RegisterApproach": "手机",
+                "IDNumber": "123456789009876543",
+                "Authority":"认证用户",
+                "Material": "无"
+            },
+            {
+                "id": 20,
+                "Name": "user20",
+                "RegisterApproach": "手机",
+                "IDNumber": "123456789009876543",
+                "Authority":"认证用户",
+                "Material": "无"
+            }
+        ]
+
+    });
+    $("a").each(function () {
+        $(this).bind("click",function () {
+            document.getElementsByClassName('popup')[0].className = 'popup active';
+        })
+    })
+    // document.getElementsByClassName('add').onclick = function() {
+    //     document.getElementsByClassName('popup')[0].className = 'popup active';
+    // }
+    document.getElementById('btn2').onclick = function() {
+        document.getElementsByClassName('popup')[0].className = 'popup';
+    }
+    //操作栏的格式化
+    // 定义删除、更新操作
+    function option0(value, row, index) {
+        var id = value;
+        var result2 = "";
+        result2 = "<a href='javascript:;' class='btn btn-xs green' onclick=\"EditViewById('" + id + "', view='view')\" title='查看'><span class='glyphicon glyphicon-search'></span></a>";
+        return result2;
+    }
+    function option1(value, row, index) {
+        var id = value;
+        var result = "";
+        result += "<select class=\"form-control\">" +
+            "<option>普通用户</option>" +
+            "<option>认证用户</option>" +
+            "<option>特级用户</option>" +
+            "</select>";
+        return result;
+    }
+    function option2(value, row, index) {
+        var id = value;
+        var result2 = "";
+        result2 += "<a href='javascript:;' class='btn btn-xs green' onclick=\"EditViewById('" + id + "', view='view')\" title='保存'><span class='glyphicon glyphicon-floppy-disk'></span></a>";
+        result2 += "<a href='javascript:;' class='btn btn-xs blue' onclick=\"EditViewById('" + id + "')\" title=提交'><span class='glyphicon glyphicon-ok'></span></a>";
+        return result2;
+    }
+
+</script>
+</html>

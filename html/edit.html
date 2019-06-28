@@ -5,35 +5,27 @@
     <title>editor demo</title>
 
     <link href="../css/edit/editor.css" rel="stylesheet" type="text/css"/>
-    <link href="../css/edit/editor-header.css" rel="stylesheet" type="text/css"/>
-    <link href="../css/edit/editor-left-content.css" rel="stylesheet" type="text/css"/>
-    <link href="../css/edit/editor-right-content.css" rel="stylesheet" type="text/css"/>
     <link href="../css/edit/editor-box.css" rel="stylesheet" type="text/css">
+    <link href="../wangEditor/release/wangEditor.min.css" rel="stylesheet" type="text/css">
+    <link href="../wangEditor/wangEditor-fullscreen-plugin.css" rel="stylesheet" type="text/css">
 
     <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../js/edit/ajax_edit.js"></script>
     <script type="text/javascript" src="../wangEditor/release/wangEditor.min.js"></script>
-    <script type="text/javascript" src="../js/edit/dates.js"></script>
-    <script type="text/javascript" src="../js/edit/edit.js"></script>
+    <script type="text/javascript" src="../wangEditor/wangEditor-fullscreen-plugin.js"></script>
 
 </head>
 <body>
-<div class="header">
-    <div class="header-content-box">
-        <div class="header-title-box">
-            <span class="header-title">全媒体新闻智能管理</span>
-        </div>
-        <div class="header-inform-box">
-            <ul class="header-inform-ul">
-                <li class="header-inline"><a href="#"><img src="../imgs/edit/email.png" height="50" width="50"></a></li>
-                <li class="header-inline"><a href="#"><img src="../imgs/edit/note.png" height="50" width="50"></a></li>
-                <li class="header-inline"><a href="#"><img src="../imgs/edit/logo.png" height="80" width="80"></a></li>
-                <li class="header-inline-name"><a href="#"><span class="li-name">嘟嘟嘟</span></a></li>
-                <li class="header-inline-rank"><span class="li-rank">等级</span></a></li>
-                <li class="header-inline-star"><img src="../imgs/edit/star.png" height="30" width="30"><img
-                        src="../imgs/edit/star.png" height="30" width="30"></li>
-            </ul>
-        </div>
+<div class="main-box">
+    <!--选择器-->
+    <div class="editor-selector">
+        <ul>
+            <li id="li1" value="0" class="editor-li-show">视频制作</li>
+            <li id="li2" value="1">爆料制作</li>
+            <li id="li3" value="2">图文制作</li>
+        </ul>
     </div>
+<<<<<<< HEAD
 </div>
 <div class="main-content">
     <div class="left-box">
@@ -132,174 +124,62 @@
                  <div id="div1" class="toolbar"></div>
                  &lt;!&ndash;菜单栏&ndash;&gt;
                  <div style="padding: 5px 0; color: #ccc"></div>
-
-                 &lt;!&ndash;编辑区1&ndash;&gt;
-                 <textarea id="div2" class="text1">请在这里输入标题</textarea>
-
-                 &lt;!&ndash;编辑区1&ndash;&gt;
-                 <div style="padding: 5px 0; color: #ccc"></div>
-                 &lt;!&ndash;编辑区2&ndash;&gt;
-                 <textarea id="div3" class="text2">请输入作者</textarea>
-                 &lt;!&ndash;编辑区2&ndash;&gt;
-                 <div style="padding: 5px 0; color: #ccc"></div>
-                 &lt;!&ndash;编辑区3&ndash;&gt;
-                 <div id="div4" class="text3">
-                     <p>从这里开始正文</p>
-                 </div>
-                 &lt;!&ndash;编辑区1&ndash;&gt;
-                 <button id="save">保存</button>
-                 <button id="watch">预览</button>
-                 <button id="publish">发布</button>-->
+=======
+    <!--编辑框-->
+    <div class="editing-box">
+        <!--视频制作-->
+        <!--编辑区1-->
+        <div class="divbox-header">
+            <textarea placeholder="请在这里输入标题 (50字以内)" class="articlebox" required></textarea>
+            <textarea placeholder="请输入作者" class="authorbox" required></textarea>
         </div>
-        <div class="links-box">
-            <div class="links-title-box">
-                <span class="links-title">友情链接</span>
-            </div>
-            <div class="links-content-box" id="LinkNews">
-                <!--<span class="links-content"><a href="#">光明网</a></span>-->
-            </div>
+        <!--编辑区2-->
+        <div class="divbox-main">
+            <!-- 视频制作-->
+            <form class="editing">
+                <div id="editor1">
+                    <p>从这里开始正文</p>
+                </div>
+            </form>
+            <!-- 视频制作-->
+>>>>>>> b8605ae0020112ab55dc6fa906408e446a9013fb
+
+            <!-- 爆料制作-->
+            <form class="editing" style="display: none;">
+                <!--菜单栏-->
+                <div id="editor2">
+                    <p>从这里开始正文</p>
+                </div>
+            </form>
+            <!--爆料制作-->
+
+            <!--图文制作-->
+            <form class="editing" style="display: none;">
+                <div id="editor3">
+                    <p>从这里开始正文</p>
+                </div>
+            </form>
+            <!--图文制作-->
         </div>
+        <!--按钮区-->
     </div>
-    <div class="right-box">
-        <div class="hotnews-box">
-            <div class="hotnews-title">24小时热新闻</div>
-            <ul class="hotnews-ul" id="24hot">
-                <!--<li class="hotnews-li">
-                    <span class="hotnews-img"><a href="#" target="_blank"><img src="./imgs/edit/air.jpg"></a></span>
-                    <span class="hotnews-label"><a href="#" target="_blank">这才是你该追的全球大片！世界有时差，梦想不打烊！</a></span>
-                </li>-->
-            </ul>
+    <div class="editor-send">
+        <div class="divbox_level">
+            <span>文章等级</span>
+            <select id="level">
+                <option value="1">1.普通</option>
+                <option value="2">2.专业</option>
+                <option value="3">3.特级</option>
+            </select>
         </div>
-        <div class="horizontal"></div>
-        <div class="image-box">
-            <div class="image-title">精彩图片</div>
-            <ul class="image-ul" id="ImgsNews">
-                <!-- <li class="image-li">
-                     <span class="image-img"><a href="#" target="_blank"><img src="./imgs/edit/air.jpg"></a></span>
-                     <span class="image-label"><a href="#" target="_blank">这才是你该追的全球大片！世界有时差，梦想不打烊！</a></span>
-                 </li>-->
-            </ul>
+        <div class="divbox_button">
+            <button class="editing-button" id="save">保存</button>
+            <!--<button class="editing-button" id="watch">预览</button>-->
+            <button class="editing-button" id="publish">发布</button>
         </div>
     </div>
 </div>
-
-
-<!--引用js-->
-<script type="text/javascript">
-    /*选项卡切换*/
-    window.onload = function () {
-        var nav = document.getElementById('tab');
-        var oNav = nav.getElementsByTagName('li');
-
-        var container = document.getElementById('showBox');
-        var oDiv = container.getElementsByClassName('editing');
-        for (var i = 0; i < oNav.length; i++) {
-            oNav[i].index = i;
-            oNav[i].onclick = function () {
-                for (var i = 0; i < oNav.length; i++) {
-                    oNav[i].className = 'editor-li-off';
-                    oDiv[i].style.display = "none";
-                }
-                this.className = 'editor-li-show';
-                oDiv[this.index].style.display = "block"
-            }
-            for (var m = 1; m < oNav.length; m++) {
-                oNav[m].className = 'editor-li-off';
-                oDiv[m].style.display = "none";
-            }
-        }
-    };
-    /*编辑器设计*/
-    /*视频编辑器设计*/
-    var one_E = window.wangEditor;
-    /* 创建富文本编辑器*/
-    var one_editor = new one_E('#div1-1', '#div1-2');
-    /*div1是菜单栏 div4 是被编辑栏*/
-    /*配置菜单栏*/
-    one_editor.customConfig.menus = [
-        'video',  // 插入视频
-    ]
-    one_editor.create()
-    /*清除提示内容*/
-    /*editor1.txt.clear()*/
-    document.getElementById('save').addEventListener('click', function () {
-        // 读取 text
-        alert( one_editor.txt.text())
-    }, false)
-    document.getElementById('watch').addEventListener('click', function () {
-        // 读取 text
-        alert( one_editor.txt.html())
-    }, false)
-    /*视频编辑器设计*/
-    /*爆料编辑器设计*/
-    var two_E = window.wangEditor;
-    /* 创建富文本编辑器*/
-    var two_editor = new two_E('#div2-1', '#div2-2');
-    /*div1是菜单栏 div4 是被编辑栏*/
-    /*配置菜单栏*/
-    two_editor.customConfig.menus = [
-        'image',  // 插入图片
-        'video',  // 插入视频
-    ]
-    two_editor.customConfig.pasteIgnoreImg = true
-    /*忽略粘贴内容的照片*/
-    two_editor.customConfig.uploadImgShowBase64 = true   // 使用 base64 保存图片
-    two_editor.create()
-    /*清除提示内容*/
-    /*editor1.txt.clear()*/
-    document.getElementById('save').addEventListener('click', function () {
-        // 读取 text
-        alert( two_editor.txt.text())
-    }, false)
-    document.getElementById('watch').addEventListener('click', function () {
-        // 读取 text
-        alert( two_editor.txt.html())
-    }, false)
-    /*爆料编辑器设计*/
-    /*图文制作编辑器设计*/
-    var three_E = window.wangEditor;
-    /* 创建富文本编辑器*/
-    var three_editor = new three_E('#div3-1', '#div3-2');
-    /*div1是菜单栏 div4 是被编辑栏*/
-    /*配置菜单栏*/
-    three_editor.customConfig.menus = [
-        'head',  // 标题
-        'bold',  // 粗体
-        'fontSize',  // 字号
-        'fontName',  // 字体
-        'italic',  // 斜体
-        'underline',  // 下划线
-        'strikeThrough',  // 删除线
-        'foreColor',  // 文字颜色
-        'backColor',  // 背景颜色
-        'link',  // 插入链接
-        'list',  // 列表
-        'justify',  // 对齐方式
-        'quote',  // 引用
-        'emoticon',  // 表情
-        'image',  // 插入图片
-        'table',  // 表格
-        'video',  // 插入视频
-        /*'code',  // 插入代码*/
-        'undo',  // 撤销
-        'redo'  // 重复
-    ]
-    three_editor.customConfig.pasteIgnoreImg = true
-    /*忽略粘贴内容的照片*/
-    three_editor.customConfig.uploadImgShowBase64 = true   // 使用 base64 保存图片
-    three_editor.create()
-    /*清除提示内容*/
-    /*editor1.txt.clear()*/
-    document.getElementById('save').addEventListener('click', function () {
-        // 读取 text
-        alert(three_editor.txt.text())
-    }, false)
-    document.getElementById('watch').addEventListener('click', function () {
-        // 读取 text
-        alert(three_editor.txt.html())
-    }, false)
-    /*图文制作编辑器设计*/
-</script>
-
+<input type="hidden" id="eId" value="0">
+<input type="hidden" id="eVersion" value="0">
 </body>
 </html>
