@@ -150,7 +150,7 @@ new Vue({
     user: {
       id: 1233342442,
       name: "季冬", 
-      avatar_url: "https://pic4.zhimg.com/v2-6d27037d06b4370969e72b7457848c65_im.jpg",
+      avatar_url: "http://p9-tt.byteimg.com/large/pgc-image/3e675927d59a4257967100ac34df2a3f",
       num_answer: 10,
       num_collect: 100,
       num_follow: 45,
