@@ -246,3 +246,8 @@ body {
 .user-card {
   margin-bottom: 15px;
 }
+
+.user-card img {
+  width: 80px;
+  max-height: 80px;
+}
