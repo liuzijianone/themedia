@@ -76,6 +76,32 @@ Vue.component("question-card", {
   `
 });
 
+Vue.component("hot-question-item", {
+  props: ['question'],
+  template: `
+    <div class="hot-question-item">
+      <div class="question-title">
+        <h2><a v-bind:href="'./question.html?qid=' + question.id">{{ question.title }}</a></h2>
+      </div>
+      <div class="answers">
+        <div class="answer-author">
+          <a>
+            <img v-bind:src="question.answer.author.avatar_url">{{question.answer.author.name}}
+          </a>
+          &nbsp;|&nbsp;
+          <span>{{question.answer.author.desc}}</span>
+        </div>
+        <div v-if="question.answer.pictures.length > 0" class="answer-pic">
+          <img v-bind:src="question.answer.pictures[0]">
+        </div>
+        <div class="answer-abstract">
+          <a href="">{{question.answer.abstract}}...<span class="answer-content-whole">正文</span></a>
+        </div>
+      </div>
+    </div>
+  `
+});
+
 Vue.component("user-card", {
   props: ['user'],
   template: `
@@ -118,6 +144,15 @@ Vue.component("creator-card", {
   `
 })
 
+Vue.component("hot-qa", {
+  props: ["hot_questions"],
+  template: `
+    <div class="hot-qa">
+      <h4><span>热门推荐</span><a href="more">更多<i></i></a></h4>
+      <hot-question-item v-for="question in hot_questions" v-bind:question="question"></hot-question-item>
+    </div>
+  `
+})
 Vue.component("copyright-card", {
   
 })
@@ -140,10 +175,29 @@ for(var i=1; i< 15; i++) {
     }})
 }
 
+hot_questions = []
+for(var i=1; i< 5; i++) {
+  hot_questions.push({
+    id: 3242424, 
+    title: "为什么特朗普要退出美日安保条约，遭到日本民众一致反对？",
+    answer_num: 45,
+    collect_num: 58,
+    answer:{
+      author:{name: "季冬", avatar_url: "", desc: "东南大学计算机专业研究生"}, 
+      abstract: "特朗普在要去日本参加G20峰会前，放出话想退出“美日安保条约”，可是没看到日本民众反对，日本政府怕美国退出是真的。为什么？特朗普认为美日安保条约对美国不公平：在日本受到攻击时，条约",
+      pictures: ["http://n.sinaimg.cn/finance/crawl/595/w550h845/20190629/ad6c-hyzpvis2535634.jpg"],
+      like_num: 2000,
+      unlike_num: null,
+      comment_num: 343,
+      share_num: null
+    }})
+}
+
 new Vue({
   el: "#app",
   data: {
     questionList: questionList,
+    hot_questions: hot_questions,
     app: {
       title: '首页 - 知否', logo: 'https://s3.pstatp.com/toutiao/resource/wenda/wenda_web/static/style/image/logo_5df43ca.png'
     },
