@@ -1,4 +1,4 @@
-a, div, span, img, form, h1, h2, h3, h4, h54 {
+a, div, span, img, form, h1, h2, h3, h4, h5, ul, li {
   margin: 0;
   padding: 0;
   border: 0;
@@ -195,6 +195,13 @@ body {
   font-size: 12px;
 }
 
+.question-card .answers .answer-author img {
+  width: 20px;
+  height: 20px;
+  border-radius: 8px;
+  margin-right: 6px;
+}
+
 .question-card .answers .answer-author a{
   font-size: 12px;
   font-weight: 700;
@@ -244,16 +251,47 @@ body {
 }
 
 .user-card {
-  margin-bottom: 40px;  ;
-}
-
-.user-card img {
-  width: 80px;
-  max-height: 80px;
-}
-
-.creator-card {
   margin-bottom: 40px;
+  padding: 17px;
+}
+
+.user-card .avatar {
+  float: left;
+  width: 72px;
+  height: 72px;
+}
+
+.user-card .avatar img {
+  width: 72px;
+  height: 72px;
+  border-radius: 36px;
+}
+
+.user-card .user-info {
+  padding-left: 86px;
+}
+
+.user-card .user-info .name {
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.user-card .user-info .desc {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #999;
+}
+
+.user-card ul {
+  margin-top: 10px;  
+}
+
+.user-card li a {
+  display: block;
+  font-size: 14px;
+  line-height: 40px;
+  color: #8590a6;
 }
 
 .hot-qa {
@@ -314,11 +352,20 @@ body {
 
 .hot-question-item .answers .answer-author{
   font-size: 12px;
+  height: 20px;
+}
+
+.hot-question-item .answers .answer-author img {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px; 
+  margin-right: 6px;
 }
 
 .hot-question-item .answers .answer-author a{
   font-size: 12px;
   font-weight: 700;
+  text-overflow: ellipsis;
 }
 
 .hot-question-item .answers .answer-abstract {
@@ -363,4 +410,46 @@ body {
 
 .hot-question-item .answers .answer-ops a:hover{
   color: #cacaca;
+}
+
+
+.creator-card {
+  margin-bottom: 40px;
+  padding: 0 17px;
+}
+
+.creator-card a{
+  color: #8590a6;  
+}
+
+.creator-card a:hover {
+  color: #8590a6;
+  cursor: pointer;
+}
+
+.creator-card .analytics {
+  position: relative;  
+}
+
+.creator-card .analytics>div {
+  display: inline-block;
+  width: 49%;
+  text-align: center;
+}
+
+.creator-card .analytics>div:first-child {
+  border-right: 1px solid #ebebeb;
+}
+
+.creator-card .creator-entrance-text {
+  height: 52px;
+  width: 100%;
+  line-height: 52px;
+  padding-left: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.creator-card .analytics {
+  padding: 17px 0;
+  font-size: 12px; 
 }
