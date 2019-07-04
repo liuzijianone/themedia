@@ -2,16 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>审核过渡页</title>
     <!-- 新 Bootstrap 核心 CSS 文件 -->
-    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet">-->
+    <link href="../bootstrap-4.0.0-dist/css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="../css/examine/examine.css" rel="stylesheet" type="text/css">
+    <link href="../css/examine/earticle.css" rel="stylesheet" type="text/css">
     <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-
-    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </head>
 <body>
 <div class="examine-box">
@@ -19,17 +20,239 @@
         <div class="examine-head">
             <div class="examine-title"><h3>稿件审核</h3></div>
             <div class="examine-path">
-                <ol class="breadcrumb">
-                    <li><a href="#">主页</a></li>
-                    <li><a href="examine_main.html">审核</a></li>
-                    <li class="active">稿件审核</li>
-                </ol>
+                <nav class="breadcrumb">
+                    <a class="breadcrumb-item" href="#">主页</a>
+                    <a class="breadcrumb-item" href="examine_main.html">审核</a>
+                    <span class="breadcrumb-item active">稿件审核</span>
+                </nav>
             </div>
+
         </div>
-    </div>
-    <div class="panel panel-default">
-        <div class="card">
-            <div class="card-body">Basic card</div>
+        <div class="examine-content" id="articleContent">
+            <!--图文-->
+            <div class="row" >
+                <div class="col-md-4 col-sm-6 " style="margin: 10px auto">
+                    <div class="card " style="width:98%;height:580px;border: 2px solid #999999">
+                        <div class="card-header  text-center text-white  bg-primary" style="height:60px;font-size:18pt;padding: 10px;">
+                            <div style="width: 60%;display:inline-block;margin: auto">图&nbsp;&nbsp;文</div>
+                            <span class='glyphicon glyphicon-remove'style="width:50px;float: right"></span>
+                        </div>
+                        <div class="card-body " style="height:450px">
+                            <div class="card-title"
+                                 style="height:60px;line-height:30px;font-size:27px;font-weight: bold;overflow: hidden;text-overflow: ellipsis;">
+                                <p>北京大兴国际机场明天上午开展试飞：三大航拿出当家机型飞：三大航拿出当家机型飞：三大航拿出当家机型</p>
+                            </div>
+                            <div class="card-text" style="width: 99%;height:250px;margin: 10px auto;">
+                                <img class="card-img-top img-responsive center-block" src="../imgs/edit/air.jpg" alt="Card image"
+                                     style="width: 100%;height: 100%">
+                            </div>
+                            <div class="card-text "
+                                 style="height: 90px;line-height: 30px;font-size: 13pt;overflow: hidden;text-overflow: ellipsis;">
+                                <p>根据民航局统一部署，北京大兴国际机场将在5月13日上午9点开展试飞工作。参与此次试飞的航空公司为南航、东航、国航和厦航。根据民航局统一部署，北京大兴国际机场将在5月13日上午9点开展试飞工作。参与此次试飞的航空公司为南航、东航、国航和厦航。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-right" style="font-size: 15pt">
+                            <!--<button type="button" class="btn btn-danger">Action</button>-->
+                            <button type="button" class="btn btn-primary">审核</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 " style="margin: 10px auto">
+                    <div class="card " style="width:98%;height:580px;border: 2px solid #999999">
+                        <div class="card-header  text-center text-white  bg-primary" style="height:60px;font-size:18pt;padding: 10px;">
+                            <div style="width: 60%;display:inline-block;margin: auto">图&nbsp;&nbsp;文</div>
+                            <span class='glyphicon glyphicon-remove'style="width:50px;float: right"></span>
+                        </div>
+                        <div class="card-body " style="height:450px">
+                            <div class="card-title"
+                                 style="height:60px;line-height:30px;font-size:27px;font-weight: bold;overflow: hidden;text-overflow: ellipsis;">
+                                <p>北京大兴国际机场明天上午开展试飞：三大航拿出当家机型飞：三大航拿出当家机型飞：三大航拿出当家机型</p>
+                            </div>
+                            <div class="card-text" style="width: 99%;height:250px;margin: 10px auto;">
+                                <img class="card-img-top img-responsive center-block" src="../imgs/edit/air.jpg" alt="Card image"
+                                     style="width: 100%;height: 100%">
+                            </div>
+                            <div class="card-text "
+                                 style="height: 90px;line-height: 30px;font-size: 13pt;overflow: hidden;text-overflow: ellipsis;">
+                                <p>根据民航局统一部署，北京大兴国际机场将在5月13日上午9点开展试飞工作。参与此次试飞的航空公司为南航、东航、国航和厦航。根据民航局统一部署，北京大兴国际机场将在5月13日上午9点开展试飞工作。参与此次试飞的航空公司为南航、东航、国航和厦航。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-right" style="font-size: 15pt">
+                            <!--<button type="button" class="btn btn-danger">Action</button>-->
+                            <button type="button" class="btn btn-primary">审核</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 " style="margin: 10px auto">
+                    <div class="card " style="width:98%;height:580px;border: 2px solid #999999">
+                        <div class="card-header  text-center text-white  bg-primary" style="height:60px;font-size:18pt;padding: 10px;">
+                            <div style="width: 60%;display:inline-block;margin: auto">图&nbsp;&nbsp;文</div>
+                            <span class='glyphicon glyphicon-remove'style="width:50px;float: right"></span>
+                        </div>
+                        <div class="card-body " style="height:450px">
+                            <div class="card-title"
+                                 style="height:60px;line-height:30px;font-size:27px;font-weight: bold;overflow: hidden;text-overflow: ellipsis;">
+                                <p>北京大兴国际机场明天上午开展试飞：三大航拿出当家机型飞：三大航拿出当家机型飞：三大航拿出当家机型</p>
+                            </div>
+                            <div class="card-text" style="width: 99%;height:250px;margin: 10px auto;">
+                                <img class="card-img-top img-responsive center-block" src="../imgs/edit/air.jpg" alt="Card image"
+                                     style="width: 100%;height: 100%">
+                            </div>
+                            <div class="card-text "
+                                 style="height: 90px;line-height: 30px;font-size: 13pt;overflow: hidden;text-overflow: ellipsis;">
+                                <p>根据民航局统一部署，北京大兴国际机场将在5月13日上午9点开展试飞工作。参与此次试飞的航空公司为南航、东航、国航和厦航。根据民航局统一部署，北京大兴国际机场将在5月13日上午9点开展试飞工作。参与此次试飞的航空公司为南航、东航、国航和厦航。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-right" style="font-size: 15pt">
+                            <!--<button type="button" class="btn btn-danger">Action</button>-->
+                            <button type="button" class="btn btn-primary">审核</button>
+                        </div>
+                    </div>
+                </div>
+
+            <!--</div>
+            &lt;!&ndash;视频&ndash;&gt;
+            <div class="row">-->
+
+                <div class="col-md-4 col-sm-6 " style="margin: 10px auto">
+                    <div class="card " style="width:98%;height:580px;border: 2px solid #999999">
+                        <div class="card-header  text-center text-white  bg-danger"
+                             style="height:60px;font-size:18pt;padding: 10px;">
+                            <div style="width: 60%;display:inline-block;margin: auto">视&nbsp;&nbsp;频</div>
+                            <span class='glyphicon glyphicon-remove'style="width:50px;float: right"></span>
+                        </div>
+                        <div class="card-body " style="height:450px">
+                            <div class="card-title"
+                                 style="height:60px;line-height:30px;font-size:27px;font-weight: bold;overflow: hidden;text-overflow: ellipsis;">
+                                <p>北京大兴国际机场明天上午开展试飞：三大航拿出当家机型飞：三大航拿出当家机型飞：三大航拿出当家机型</p>
+                            </div>
+                            <div class="card-text" style="width: 99%;height:250px;margin: 10px auto;">
+                                <video src="http://www.w3school.com.cn/i/movie.ogg" controls="controls"
+                                       style="width: 100%;height: 100%">name
+                                </video>
+                            </div>
+                            <div class="card-text " style="height: 90px;line-height: 30px;font-size: 13pt;overflow: hidden;text-overflow: ellipsis;">
+                                <p>根据民航局统一部署，北京大兴国际机场将在5月13日上午9点开展试飞工作。参与此次试飞的航空公司为南航、东航、国航和厦航。根据民航局统一部署，北京大兴国际机场将在5月13日上午9点开展试飞工作。参与此次试飞的航空公司为南航、东航、国航和厦航。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-right" style="font-size: 15pt">
+                            <button type="button" class="btn btn-danger">审核</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 " style="margin: 10px auto">
+                    <div class="card " style="width:98%;height:580px;border: 2px solid #999999">
+                        <div class="card-header  text-center text-white  bg-danger"
+                             style="height:60px;font-size:18pt;padding: 10px;">
+                            <div style="width: 60%;display:inline-block;margin: auto">视&nbsp;&nbsp;频</div>
+                            <span class='glyphicon glyphicon-remove'style="width:50px;float: right"></span>
+                        </div>
+                        <div class="card-body " style="height:450px">
+                            <div class="card-title"
+                                 style="height:60px;line-height:30px;font-size:27px;font-weight: bold;overflow: hidden;text-overflow: ellipsis;">
+                                <p>北京大兴国际机场明天上午开展试飞：三大航拿出当家机型飞：三大航拿出当家机型飞：三大航拿出当家机型</p>
+                            </div>
+                            <div class="card-text" style="width: 99%;height:250px;margin: 10px auto;">
+                                <video  src="http://www.w3school.com.cn/i/movie.ogg" controls="controls"
+                                       style="width: 100%;height: 100%">name
+                                </video>
+                            </div>
+                            <div class="card-text " style="height: 90px;line-height: 30px;font-size: 13pt;overflow: hidden;text-overflow: ellipsis;">
+                                <p>根据民航局统一部署，北京大兴国际机场将在5月13日上午9点开展试飞工作。参与此次试飞的航空公司为南航、东航、国航和厦航。根据民航局统一部署，北京大兴国际机场将在5月13日上午9点开展试飞工作。参与此次试飞的航空公司为南航、东航、国航和厦航。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-right" style="font-size: 15pt">
+                            <button type="button" class="btn btn-danger">审核</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 " style="margin: 10px auto">
+                    <div class="card " style="width:98%;height:580px;border: 2px solid #999999">
+                        <div class="card-header  text-center text-white  bg-danger"
+                             style="height:60px;font-size:18pt;padding: 10px;">
+                            <div style="width: 60%;display:inline-block;margin: auto">视&nbsp;&nbsp;频</div>
+                            <span class='glyphicon glyphicon-remove'style="width:50px;float: right"></span>
+                        </div>
+                        <div class="card-body " style="height:450px">
+                            <div class="card-title"
+                                 style="height:60px;line-height:30px;font-size:27px;font-weight: bold;overflow: hidden;text-overflow: ellipsis;">
+                                <p>北京大兴国际机场明天上午开展试飞：三大航拿出当家机型飞：三大航拿出当家机型飞：三大航拿出当家机型</p>
+                            </div>
+                            <div class="card-text" style="width: 99%;height:250px;margin: 10px auto;">
+                                <video  src="http://www.w3school.com.cn/i/movie.ogg" controls="controls"
+                                       style="width: 100%;height: 100%">name
+                                </video>
+                            </div>
+                            <div class="card-text " style="height: 90px;line-height: 30px;font-size: 13pt;overflow: hidden;text-overflow: ellipsis;">
+                                <p>根据民航局统一部署，北京大兴国际机场将在5月13日上午9点开展试飞工作。参与此次试飞的航空公司为南航、东航、国航和厦航。根据民航局统一部署，北京大兴国际机场将在5月13日上午9点开展试飞工作。参与此次试飞的航空公司为南航、东航、国航和厦航。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-right" style="font-size: 15pt">
+                            <button type='button' class='btn btn-danger btn-xs'>审核</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 " style="margin: 10px auto">
+                    <div class="card " style="width:98%;height:580px;border: 2px solid #999999">
+                        <div class="card-header  text-center text-white  bg-primary" style="height:60px;font-size:18pt;padding: 10px;">
+                            <div style="width: 60%;display:inline-block;margin: auto">图&nbsp;&nbsp;文</div>
+                            <span class='glyphicon glyphicon-remove'style="width:50px;float: right"></span>
+                        </div>
+                        <div class="card-body " style="height:450px">
+                            <div class="card-title"
+                                 style="height:60px;line-height:30px;font-size:27px;font-weight: bold;overflow: hidden;text-overflow: ellipsis;">
+                                <p>北京大兴国际机场明天上午开展试飞：三大航拿出当家机型飞：三大航拿出当家机型飞：三大航拿出当家机型</p>
+                            </div>
+                            <div class="card-text" style="width: 99%;height:250px;margin: 10px auto;">
+                                <img class="card-img-top img-responsive center-block" src="../imgs/edit/air.jpg" alt="Card image"
+                                     style="width: 100%;height: 100%">
+                            </div>
+                            <div class="card-text "
+                                 style="height: 90px;line-height: 30px;font-size: 13pt;overflow: hidden;text-overflow: ellipsis;">
+                                <p>根据民航局统一部署，北京大兴国际机场将在5月13日上午9点开展试飞工作。参与此次试飞的航空公司为南航、东航、国航和厦航。根据民航局统一部署，北京大兴国际机场将在5月13日上午9点开展试飞工作。参与此次试飞的航空公司为南航、东航、国航和厦航。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-right" style="font-size: 15pt">
+                            <!--<button type="button" class="btn btn-danger">Action</button>-->
+                            <button type="button" class="btn btn-primary">审核</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 " style="margin: 10px auto">
+                    <div class="card " style="width:98%;height:580px;border: 2px solid #999999">
+                        <div class="card-header  text-center text-white  bg-danger"
+                             style="height:60px;font-size:18pt;padding: 10px;">
+                            <div style="width: 60%;display:inline-block;margin: auto">视&nbsp;&nbsp;频</div>
+                            <span class='glyphicon glyphicon-remove'style="width:50px;float: right"></span>
+                        </div>
+                        <div class="card-body " style="height:450px">
+                            <div class="card-title"
+                                 style="height:60px;line-height:30px;font-size:27px;font-weight: bold;overflow: hidden;text-overflow: ellipsis;">
+                                <p>北京大兴国际机场明天上午开展试飞：三大航拿出当家机型飞：三大航拿出当家机型飞：三大航拿出当家机型</p>
+                            </div>
+                            <div class="card-text" style="width: 99%;height:250px;margin: 10px auto;">
+                                <video src="http://www.w3school.com.cn/i/movie.ogg" controls="controls"
+                                       style="width: 100%;height: 100%">name
+                                </video>
+                            </div>
+                            <div class="card-text " style="height: 90px;line-height: 30px;font-size: 13pt;overflow: hidden;text-overflow: ellipsis;">
+                                <p>根据民航局统一部署，北京大兴国际机场将在5月13日上午9点开展试飞工作。参与此次试飞的航空公司为南航、东航、国航和厦航。根据民航局统一部署，北京大兴国际机场将在5月13日上午9点开展试飞工作。参与此次试飞的航空公司为南航、东航、国航和厦航。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-right" style="font-size: 15pt">
+                            <button type="button" class="btn btn-danger">审核</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

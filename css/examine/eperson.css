@@ -1,0 +1,8 @@
+
+#mytab thead {
+    background: #5488c4;
+}
+/*隔行变色*/
+#mytab tr:nth-child(even) {
+    background: #f4f8fb;
+}

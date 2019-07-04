@@ -107,6 +107,9 @@ body {
 .editing-button{
     width: 100px;
     height: 40px;
+    margin-right: 10px;
     display: inline-block;
     background-color: #1e88e5;
+    border:0px solid #aa0000;
+    /*outline:none;*/
 }
