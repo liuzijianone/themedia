@@ -2,6 +2,8 @@
 <head>
     <meta charset="utf-8">
     <link href="../css/detailed_inf/apply.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../js/detailed_inf/ajax_personal_authentication.js"></script>
     <!-- 新 Bootstrap 核心 CSS 文件 -->
     <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
@@ -11,22 +13,22 @@
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript">
-        $(()=>{
+        $(() => {
             console.log('ok');
-            $('#back').click(()=>{
+            $('#back').click(() => {
 
-                window.location.href="chara_apply.html";
-
-            });
-            $('#c_2').click(()=>{
-
-                window.location.href="media_apply.html";
+                window.location.href = "chara_apply.html";
 
             });
+            $('#c_2').click(() => {
 
-            $('#c_3').click(()=>{
+                window.location.href = "media_apply.html";
 
-                window.location.href="company_apply.html";
+            });
+
+            $('#c_3').click(() => {
+
+                window.location.href = "company_apply.html";
 
             });
 
@@ -35,27 +37,28 @@
     </script>
     <style>
         .active {
-            background-color:red;
+            background-color: red;
 
-                width: 24px;
-                height: 18px;
-                font-size:34px;
-                margin-top: 13px;
+            width: 24px;
+            height: 18px;
+            font-size: 34px;
+            margin-top: 13px;
         }
 
         .show {
             display: block;
 
-                width: 1200px;
-                height: 32px;
-                font-size: 22px;
-                margin-top: 20px;
+            width: 1200px;
+            height: 32px;
+            font-size: 22px;
+            margin-top: 20px;
         }
 
-      .sele{
-          font-size: 20px;
-      }
-        .form-control{
+        .sele {
+            font-size: 20px;
+        }
+
+        .form-control {
             height: 37px;
         }
     </style>
@@ -66,13 +69,13 @@
 <body>
 
 <div class="all">
-        <div class="show">
-            认证用户申请/认证为个人（适合垂直领域的专家、意见领袖、评论家、自媒体人士及站长申请）
-        </div>
+    <div class="show">
+        认证用户申请/认证为个人（适合垂直领域的专家、意见领袖、评论家、自媒体人士及站长申请）
+    </div>
 
-    <input class='active' type="radio" name="cha" checked="checked" id="c_1" ><span class="sele">认证为个人</span></input>
-    <input  class='active' type="radio" name="cha" id="c_2" ><span class="sele">认证为媒体</span></input>
-    <input  class='active' type="radio" name="cha" id="c_3" ><span class="sele">认证为企业</span></input>
+    <input class='active' type="radio" name="cha" checked="checked" id="c_1"><span class="sele">认证为个人</span></input>
+    <input class='active' type="radio" name="cha" id="c_2"><span class="sele">认证为媒体</span></input>
+    <input class='active' type="radio" name="cha" id="c_3"><span class="sele">认证为企业</span></input>
 
 
     <div>
@@ -80,7 +83,7 @@
         <div class="input-group">
             <span class="input-group-addon" id="basic-field"><span class="red">*</span> 领域</span>
 
-            <select class="form-control" >
+            <select class="form-control" id="media_field">
                 <option>1 新闻</option>
                 <option>2 娱乐</option>
                 <option>3 体育</option>
@@ -105,19 +108,22 @@
             </select>
         </div>
         <div class="input-group">
-            <span class="input-group-addon" id="basic-addon1" ><span class="red">*</span> 名称</span>
-            <input type="text" class="form-control" placeholder="2～10个字，使用与发文领域相关名称，能有效提升读者点击量。示例：梅姐说电影"aria-describedby="basic-addon1">
+            <span class="input-group-addon" id="basic-addon1"><span class="red">*</span> 名称</span>
+            <input type="text" class="form-control" id="com_name" placeholder="2～10个字，使用与发文领域相关名称，能有效提升读者点击量。示例：梅姐说电影"
+                   aria-describedby="basic-addon1">
         </div>
 
         <div class="input-group">
             <span class="input-group-addon" id="basic-addon2"><span class="red">*</span> 签名</span>
-            <input type="text" class="form-control" placeholder="0～20个字，将显示在个人主页。签名准确描述文章风格，有助于加强读者对您的了解。示例，专注科幻电影解说" aria-describedby="basic-addon2">
+            <input type="text" class="form-control" id="sig"
+                   placeholder="0～20个字，将显示在个人主页。签名准确描述文章风格，有助于加强读者对您的了解。示例，专注科幻电影解说" aria-describedby="basic-addon2">
 
         </div>
 
         <div class="input-group">
             <span class="input-group-addon"><span class="red">*</span> 介绍</span>
-            <input type="textarea" class="form-control" aria-label="Amount (to the nearest dollar)"  placeholder="10～100个字，介绍将出现在部分分发渠道中的作者介绍栏里">
+            <input type="textarea" class="form-control" id="introduction" aria-label="Amount (to the nearest dollar)"
+                   placeholder="10～100个字，介绍将出现在部分分发渠道中的作者介绍栏里">
 
         </div>
 
@@ -128,34 +134,36 @@
         </div>
 
 
-
         <h2>运营者信息</h2>
         <div class="input-group">
-            <span class="input-group-addon" ><span class="red">*</span> 姓名 </span>
-            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="张云山">
+            <span class="input-group-addon"><span class="red">*</span> 姓名 </span>
+            <input type="text" class="form-control" id="operator_name" aria-label="Amount (to the nearest dollar)"
+                   placeholder="张云山">
 
         </div>
         <div class="input-group">
-            <span class="input-group-addon" ><span class="red">*</span> 身份证</span>
-            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="342901154784512566">
+            <span class="input-group-addon"><span class="red">*</span> 身份证</span>
+            <input type="text" id="id_number" class="form-control" aria-label="Amount (to the nearest dollar)"
+                   placeholder="342901154784512566">
 
         </div>
         <div class="input-group">
-            <span class="input-group-addon" ><span class="red">*</span> 邮箱 </span>
-            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="5687451252@qq.com">
+            <span class="input-group-addon"><span class="red">*</span> 邮箱 </span>
+            <input type="text" id="email_number" class="form-control" aria-label="Amount (to the nearest dollar)"
+                   placeholder="5687451252@qq.com">
 
         </div>
 
         <div class="input-group">
             <span class="input-group-addon"><span class="red">*</span>验证码</span>
-            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+            <input type="text" class="form-control" id="getcode" aria-label="Amount (to the nearest dollar)">
             <span class="input-group-btn">
         <button class="btn btn-default" type="button">发送验证码</button>
       </span>
         </div>
 
         <input id="back" type="button" value="返回"></input>
-        <input id="submit" type="button" value="提交"></input>
+        <input id="submit_person" type="button" value="提交"></input>
     </div>
 </div>
 
