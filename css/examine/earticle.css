@@ -1,16 +1,115 @@
-/*
-.card{
-
+/***********************************************卡片内容********************************************************************/
+.examine-content ul {
+    box-sizing: border-box;
 }
+
+.examine-content ul li {
+    margin: 10px -3px;
+    /*background: #1c7430;*/
+    display: inline-block;
+}
+
+.card {
+    width: 98%;
+    height: 580px;
+    border: 2px solid #999999;
+}
+
 .card-header{
-
+    height: 60px;
+    font-size: 18pt;
+    padding: 10px;
+    position: relative;
 }
-.card-body{
 
+.card-header div {
+    width: 60%;
+    display: inline;
+    position: relative;
+    margin: auto;
 }
-.card-footer{
 
+.card-header span {
+    width: 50px;
+    position: absolute;
+    top:33%;
+    right: 2%;
+    /*float: right;*/
 }
-.card-title{
 
-}*/
+.card-body {
+    height: 450px;
+}
+
+.card-title p{
+    height: 60px;
+    width: 98%;
+    line-height: 30px;
+    font-size: 27px;
+    font-weight: bold;
+    /*overflow: hidden;*/
+    /*white-space:nowrap;*/
+    /*text-overflow: ellipsis;*/
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.card-text {
+    height: 90px;
+    line-height: 30px;
+    font-size: 13pt;
+    /*overflow: hidden;
+    text-overflow: ellipsis;*/
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+.card-text-video {
+    width: 100%;
+    height: 100%;
+}
+
+.card-text img {
+    width: 100%;
+    height: 100%;
+}
+
+.card-box {
+    width: 99%;
+    height: 250px;
+    margin: 10px auto;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 100%;
+}
+
+.card-footer {
+    font-size: 15pt;
+}
+/***********************************************模式框内容********************************************************************/
+
+.modal-header{
+    background: #78909c;
+    color: #aa0000;
+}
+.modal-title{
+    text-align: center !important;
+    font-weight: bolder;
+    font-size: 20pt;
+    padding-left: 420px !important;
+}
+.select1,.select2{
+    display: inline-block;
+}
+.modal-footer ul li{
+    display: inline-block;
+}
+.modal-footer ul li button{
+    float: right;
+}

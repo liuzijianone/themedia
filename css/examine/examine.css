@@ -17,6 +17,7 @@
     padding-top: 5px;
     padding-left: 10px;
     font-weight: bolder;
+    font-size: 40px;
     /* background: #eee;*/
 }
 
@@ -29,6 +30,7 @@
     width: 93%;
     margin: 0px auto;
     font-weight: bolder;
-    /*background: #999999;*/
+    box-sizing: border-box;
+    /*background: #e0a800;*/
     /*border:2px solid #ffa42a;*/
 }
