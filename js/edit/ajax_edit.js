@@ -251,10 +251,10 @@ $(function () {
                 break;
             case 2:
                 content2 = three_editor.txt.html();
-                /*console.log('------------ 3etitle ----------------');
-                console.log(linumber);*/
+            /*console.log('------------ 3etitle ----------------');
+            console.log(linumber);*/
         }
-       /* alert(content);*/
+        /* alert(content);*/
         let etitle=$(".articlebox").val();/*文章的题目*/
         let eauthor=$(".authorbox").val();/*文章的作者*/
         let elevel=$("#level").val(); /*文章等级*/

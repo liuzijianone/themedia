@@ -62,7 +62,7 @@ body {
 /*编辑处*/
 .editing-box{
     width:100%;
-   /* background-color: #c7e2de;*/
+    /* background-color: #c7e2de;*/
     display: block;
 }
 /***********************************发送框*******************************************/
@@ -93,7 +93,7 @@ body {
     width: 150px;
     font-size: 18px;
     margin-left: 15px;
-   /* background-color: #6a6a6a;*/
+    /* background-color: #6a6a6a;*/
 }
 .divbox_button{
     width: 320px;
@@ -101,15 +101,12 @@ body {
     display: inline-block;
     position:relative;
     left: 50%;
-   /* background: #31402a;*/
+    /* background: #31402a;*/
 }
 
 .editing-button{
     width: 100px;
     height: 40px;
-    margin-right: 10px;
     display: inline-block;
     background-color: #1e88e5;
-    border:0px solid #aa0000;
-    /*outline:none;*/
 }
