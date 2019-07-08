@@ -16,14 +16,15 @@
     margin-left: 5px;
     padding-top: 5px;
     padding-left: 10px;
-    font-weight: bolder;
-    font-size: 40px;
+    font-weight: bold;
+    font-size: 38px;
     /* background: #eee;*/
 }
 
 .examine-path {
     padding-top: 5px;
     padding-left: 5px;
+    font-size: 16px;
     /*background: #eee;*/
 }
 .examine-content {

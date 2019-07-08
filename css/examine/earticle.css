@@ -11,15 +11,16 @@
 
 .card {
     width: 98%;
-    height: 580px;
+    height: 565px;
     border: 2px solid #999999;
 }
 
 .card-header{
-    height: 60px;
-    font-size: 18pt;
+    height: 50px;
+    font-size: 14pt;
     padding: 10px;
     position: relative;
+    letter-spacing:20px;
 }
 
 .card-header div {
@@ -30,7 +31,7 @@
 }
 
 .card-header span {
-    width: 50px;
+    width: 33px;
     position: absolute;
     top:33%;
     right: 2%;
@@ -45,7 +46,7 @@
     height: 60px;
     width: 98%;
     line-height: 30px;
-    font-size: 27px;
+    font-size: 20px;
     font-weight: bold;
     /*overflow: hidden;*/
     /*white-space:nowrap;*/
@@ -59,7 +60,7 @@
 .card-text {
     height: 90px;
     line-height: 30px;
-    font-size: 13pt;
+    font-size: 11pt;
     /*overflow: hidden;
     text-overflow: ellipsis;*/
     display: -webkit-box;
@@ -89,8 +90,8 @@
     height: 100%;
 }
 
-.card-footer {
-    font-size: 15pt;
+.card-footer button{
+    font-size: 5pt;
 }
 /***********************************************模式框内容********************************************************************/
 
@@ -101,8 +102,9 @@
 .modal-title{
     text-align: center !important;
     font-weight: bolder;
-    font-size: 20pt;
+    font-size: 17pt;
     padding-left: 420px !important;
+    letter-spacing: 10px;
 }
 .select1,.select2{
     display: inline-block;
@@ -112,4 +114,47 @@
 }
 .modal-footer ul li button{
     float: right;
+}
+/***********************************************模式框内容********************************************************************/
+.modal-article{
+    width: 90%;
+    margin: 0px auto;
+    border: 2px solid #dddddd;
+    padding: 10px 20px 0px 20px;
+}
+.article-title-box{
+    line-height: 28px;
+    border-bottom: 2px solid #dddddd;
+    font-size: 15pt;
+    font-weight: bolder;
+}
+.article-content-box{
+    width: 100%;
+    margin: 2px auto;
+}
+.article-source,.article-date{
+    font-weight: normal;
+    font-size: 10pt;
+    color: #979797;
+}
+.article-date{
+    margin-bottom: 4px;
+}
+.article-source{
+    margin-top: 5px;
+}
+.article-main{
+    width: 98%;
+    margin: 13px auto;
+    font-size: 12pt;
+}
+
+.modal-footer{
+    width: 90%;
+    margin: 0px auto;
+}
+.btn-li{
+    position: absolute;
+    bottom:2.5%;
+    right: 5%;
 }
