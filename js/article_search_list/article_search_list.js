@@ -20,9 +20,9 @@ $(function () {
         "current_page": 1
     };
     $.ajax({
-        type: 'POST',
-        url: "http://223.3.65.243:9095/search/search/article/key_word",
-        data: requestParams,
+        type: 'GET',
+        url: "http://223.3.84.128:8000/article/?content=测试&item=2&current_page=1",
+        // data: requestParams,
         //dataType: 'json', //# 注意：这里是指服务端返回json格式的数据
         success: function (responseData) {
             console.log('SUCCESS: ' + JSON.stringify(responseData));
