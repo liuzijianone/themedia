@@ -84,6 +84,59 @@
     cursor: pointer;
 }
 
+#submit_company{
+    border-radius: 6px;
+    background-color: black;
+
+    color: white;
+    padding: 6px 22px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 26px;
+    width: 20%;
+    height: 6%;
+    border: 0px solid black;
+    position: relative;
+    top: 18%;
+    left: 22%;
+    cursor: pointer;
+}
+
+#submit_specialuser{
+    border-radius: 6px;
+    background-color: black;
+
+    color: white;
+    padding: 6px 22px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 26px;
+    width: 20%;
+    height: 6%;
+    border: 0px solid black;
+    position: relative;
+    top: 18%;
+    left: 22%;
+    cursor: pointer;
+}
+
+#submit_media{
+    border-radius: 6px;
+    background-color: black;
+
+    color: white;
+    padding: 6px 22px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 26px;
+    width: 20%;
+    height: 6%;
+    border: 0px solid black;
+    position: relative;
+    top: 18%;
+    left: 22%;
+    cursor: pointer;
+}
 #inputfile{
     font-size: 16px;
 }

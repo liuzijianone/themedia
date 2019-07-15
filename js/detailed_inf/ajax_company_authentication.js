@@ -1,23 +1,27 @@
 window.onload = function () {
 
-    document.getElementById('submit_person').addEventListener('click', function () {
+    document.getElementById('submit_company').addEventListener('click', function () {
         // 读取 html
         let media_field=$("#media_field").val();/*领域*/
-        let name=$("#com_name").val();/*机构名称*/
+        let name=$(".com_name").val();/*机构名称*/
         let description=$("#sig").val(); /*签名描述*/
         let introduction=$("#introduction").val();
         let operator_name=$("#operator_name").val();
         let portrait=$("#inputfile").val();
         let id_number=$("#id_number").val();
+        let organization_name=$("#organization_name").val();
+        let organization_id=$("#organization_id").val();
+        let internet_license_picture=$("#inputfile1").val();
+        let license_picture=$("#inputfile2").val();
 
         let authentication_message = {
             "description": description,
-            "enterprise_id":null,
-            "enterprise_name": null,
+            "enterprise_id":organization_id,
+            "enterprise_name": organization_name,
             "head_portrait": portrait,
             "id_number": id_number,
-            "internet_license_picture": null,
-            "license_picture": null,
+            "internet_license_picture": internet_license_picture,
+            "license_picture": license_picture,
             "media_field": media_field,
             "name": name,
             "operator_name": operator_name,
