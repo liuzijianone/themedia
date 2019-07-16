@@ -60,7 +60,7 @@ textarea{
 /*正文*/
 .editing{
     width: 98%;
-    height:340px;
+    min-height:340px;
     margin: 5px auto 0px;
     display: block;
     /*background: #0914e5;*/
