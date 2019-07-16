@@ -2,12 +2,12 @@ $(function () {
     //*********************************************表格的加载**************************************************************
     $('#table').bootstrapTable({
         ajax: function (request) {
-            /*console.log("start");*/
+            console.log("start");
+
             $.ajax({
                 type: "GET",
                 url: "/themedia/js/examine/person/data1.json",
-                /*contentType: "application/json;charset=utf-8",*/
-                dataType: "json",
+                dataType: "application/json",
                 data: '',
                 jsonp: 'callback',
                 success: function (msg) {
@@ -19,6 +19,7 @@ $(function () {
                 },
                 error: function () {
                     alert("错误");
+                    console.log("没有从json中找到数据");
                 }
             });
         },
@@ -90,16 +91,18 @@ $(function () {
             field: 'operation',
             align: 'center',
             valign: 'middle',
-            width: 240,
+            width: 140,
             formatter: option2,
         }],
         onLoadSuccess: function () {
+            showTips("数据加载成功！！！");
         },
         onLoadError: function () {
             showTips("数据加载失败！");
         },
     });
 });
+
 function getSelectValue(){
     var a = $table.bootstrapTable('getSelections');//获取选中行的数据
     if(a.length > 0){
@@ -111,7 +114,6 @@ function getSelectValue(){
 function option0(value, row, index) {
     var id = value;
     var result2 = "";
-    /*result2="<button type='button' class='btn btn-info btn-xs' data-toggle='modal' data-target='#myModal'><span class='glyphicon glyphicon-menu-hamburger'></span></button>";*/
     result2="<button type='button' class='btn btn-info btn-xs' onclick='queryInfo({id})'><span class='glyphicon glyphicon-menu-hamburger'></span></button>";
     return result2;
 }
@@ -129,24 +131,21 @@ function option1(value, row, index) {
 //保存和提交操作
 function option2(value, row, index) {
     var result2 = "";
-/*result2 += "<button type='button' class='btn btn-primary btn-xs' data-toggle='modal' data-target='#saveModal'><span class='glyphicon glyphicon-floppy-disk'></span></button>&nbsp&nbsp&nbsp";*/
-    result2 += "<button type='button' class='btn btn-danger btn-xs' onclick='return saveInfo({id})'>" +
+    result2 += "<button type='button' class='btn btn-danger btn-xs' <!--onclick='return saveInfo({id})'>-->>" +
         "<span class='glyphicon glyphicon-floppy-disk'></span></button>&nbsp&nbsp&nbsp";
-    result2 += "<button type='button' class='btn btn-danger btn-xs'onclick='return submitInfo({id})'>"+
+    result2 += "<button type='button' class='btn btn-danger btn-xs' <!--onclick='return submitInfo({id})'-->>"+
         "<span class='glyphicon glyphicon-ok'></span></button>";
     return result2;
 }
 //查询审核资料
 function queryInfo(id) {
     console.log('ajax请求之前');
+    let url="http://223.3.65.243:9095/article?id="+id;
     $.ajax({
-        url : "/themedia/js/examine/person/data2.json",
+        /*url : "/themedia/js/examine/person/data2.json",*/
+        url :url,
         async : true,
-        type : "POST",
-        data : {
-            "type" : "query",
-            "id" : id
-        },
+        type : "GET",
         // 成功后开启模态框
         success : showQuery,
         error : function() {
@@ -162,6 +161,7 @@ function showQuery(data) {
     // 显示模态框
     $('#myModal').modal('show');
 }
+
 // 保存用户信息 需要得到用户的id 和对应的权限分配值传到后台
 function saveInfo(id)
 {
@@ -181,19 +181,9 @@ function saveInfo(id)
             {
                 xhr.setRequestHeader("userId",6);
             },
-            success:function(data)
-            {
-                if(data > 0)
-                {
-                    console.log('SUCCESS: ');
-                    alert('操作成功');
-
-                }
-                else
-                {
-                    $("#tip").html("<span style='color:red'>失败，请重试</span>");
-                    alert('操作失败');
-                }
+            success: function (responseData) {
+                // console.log( + JSON.stringify(responseData));
+                console.log('SUCCESS: '+responseData);
             },
             error:function()
             {
@@ -213,27 +203,26 @@ function submitInfo(user_id)
         alert('用户ID不能为空！');
         return false;
     }
-    alert("提交数据");
-    // 异步提交数据到action/add_action.php页面
+    alert("提交数据"+user_id);
+    let authentication = {
+        "id": 0,
+        "reviewDescription": "string",
+        "reviewerId": 0,
+        "status": 0,
+        "userId": 123
+    };
     $.ajax(
         {
-            url: "action/user_action.php",
-            data:{"form_data":form_data,"act":act},
+            url: "http://223.3.65.243:9095/article/UserReviews",
+            data: JSON.stringify(authentication),
             type: "post",
             beforeSend:function(xhr)
             {
                 xhr.setRequestHeader("userId",6);
             },
-            success:function(data)
-            {
-                if(data > 0)
-                {
-                    alert("OK！");
-                }
-                else
-                {
-                    alert('操作失败');
-                }
+            success: function (responseData) {
+                // console.log( + JSON.stringify(responseData));
+                console.log('SUCCESS: '+responseData);
             },
             error:function()
             {
