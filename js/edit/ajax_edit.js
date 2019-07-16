@@ -9,7 +9,7 @@ $(function () {
                 $(".editing").eq(index).show().siblings(".editing").hide();
             })
         });
-    })
+    });
 
     //******************************************************编辑器生成******************************************************/
     /*视频编辑器设计*/
@@ -20,7 +20,7 @@ $(function () {
     /*配置菜单栏*/
     one_editor.customConfig.menus = [
         'video',  // 插入视频
-    ]
+    ];
     one_editor.create();
     one_E.fullscreen.init('#editor1');
     /*视频编辑器设计*/
@@ -30,63 +30,76 @@ $(function () {
     var two_E = window.wangEditor;
     /* 创建富文本编辑器*/
     var two_editor = new two_E('#editor2');
+    // console.log("author:"+eAuthor);
     /*div1是菜单栏 div4 是被编辑栏*/
     /*配置菜单栏*/
     two_editor.customConfig.menus = [
         'image',  // 插入图片
         'video',  // 插入视频
-    ]
-    /*two_editor.customConfig.uploadImgServer = '/admin.php/Upload/wang_editor';  // 上传图片到服务器*/
-    two_editor.customConfig.pasteIgnoreImg = true;
-    /*忽略粘贴内容的照片*/
+    ];
+    two_editor.customConfig.uploadImgServer = 'http://223.3.88.110:9001/picture';  // 上传图片到服务器
+    // two_editor.customConfig.pasteIgnoreImg = true;       /*忽略粘贴内容的照片*/
     two_editor.customConfig.uploadImgShowBase64 = true;   // 使用 base64 保存图片
     two_editor.customConfig.uploadImgMaxSize = 3 * 1024 * 1024;  //配置上传图片的大小 3M
     two_editor.customConfig.uploadImgMaxLength = 5;   //一次最多上传5张图片
+    two_editor.customConfig.uploadImgParams = { //上传图片时可自定义传递一些参数，参数会被添加到formdata中。
+        author: "123",
+        file:"",
+    };
+    two_editor.customConfig.uploadImgParamsWithUrl = true;//需要将参数拼接到 url 中
+    /*two_editor.customConfig.uploadImgHeaders = { //上传图片时刻自定义设置 header
+        'Accept: application/json'
+        {"type":"formData"}
+    };*/
+    /*two_editor.customConfig.withCredentials = true;*///跨域上传中如果需要传递 cookie 需设置 withCredentials
+    two_editor.customConfig.uploadImgTimeout = 1000;//默认的 timeout 时间是 10 秒钟
     two_editor.create();
     two_E.fullscreen.init('#editor2');
 
-
+    //使用监听函数在上传图片的不同阶段做相应处理
     two_editor.customConfig.uploadImgHooks = {
-        before: function (xhr, two_editor, files) {
-            // 图片上传之前触发
-            // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象，files 是选择的图片文件
-            // 如果返回的结果是 {prevent: true, msg: 'xxxx'} 则表示用户放弃上传
-            // return {
-            //     prevent: true,
-            //     msg: '放弃上传'
-            // }
-            // alert("前奏");
-        },
+        // before: function (xhr, two_editor, files) {
+        //     // 图片上传之前触发
+        //     // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象，files 是选择的图片文件
+        //     // 如果返回的结果是 {prevent: true, msg: 'xxxx'} 则表示用户放弃上传
+        //     console.log("前奏");
+        //     return {
+        //         prevent: true,
+        //         msg: '放弃上传'
+        //     };
+        //
+        // },
         success: function (xhr, two_editor, result) {
             // 图片上传并返回结果，图片插入成功之后触发
             // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象，result 是服务器端返回的结果
-            // var url = result.data.url;
-            // alert(JSON.stringify(url));
-            // editor.txt.append(url);
-            // alert("成功");
+            var url = result.data.url;
+            console.log(JSON.stringify(url));
+            editor.txt.append(url);
+            console.log("成功");
         },
         fail: function (xhr, two_editor, result) {
             // 图片上传并返回结果，但图片插入错误时触发
             // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象，result 是服务器端返回的结果
-            alert("失败");
+            console.log("失败");
         },
         error: function (xhr, two_editor) {
             // 图片上传出错时触发
             // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象
-            // alert("错误");
+            console.log("错误");
         },
         // 如果服务器端返回的不是 {errno:0, data: [...]} 这种格式，可使用该配置
         // （但是，服务器端返回的必须是一个 JSON 格式字符串！！！否则会报错）
-        customInsert: function (insertImg, result, two_editor) {
-            // 图片上传并返回结果，自定义插入图片的事件（而不是编辑器自动插入图片！！！）
-            // insertImg 是插入图片的函数，editor 是编辑器对象，result 是服务器端返回的结果
-            // 举例：假如上传图片成功后，服务器端返回的是 {url:'....'} 这种格式，即可这样插入图片：
-            var url2 = result.data[0];
-            insertImg(url);
-            console.log("插入图片 url = " + url2);
-            // result 必须是一个 JSON 格式字符串！！！否则报错
-        }
-    }
+        // customInsert: function (insertImg, result, two_editor) {
+        //     // 图片上传并返回结果，自定义插入图片的事件（而不是编辑器自动插入图片！！！）
+        //     // insertImg 是插入图片的函数，editor 是编辑器对象，result 是服务器端返回的结果
+        //     // 举例：假如上传图片成功后，服务器端返回的是 {url:'....'} 这种格式，即可这样插入图片：
+        //     // var url2 = result.data[0];
+        //     // insertImg(url2);
+        //     console.log(result);
+        //     console.log("插入图片 url = " + url2);
+        //     // result 必须是一个 JSON 格式字符串！！！否则报错
+        // }
+    };
     /*爆料编辑器设计*/
 
     /*图文制作编辑器设计*/
@@ -116,7 +129,7 @@ $(function () {
         'code',  // 插入代码
         'undo',  // 撤销
         'redo'  // 重复
-    ]
+    ];
     three_editor.customConfig.debug = true;
     three_editor.customConfig.pasteIgnoreImg = true;                    //忽略粘贴内容的照片
     /*three_editor.customConfig.uploadImgServer='/upload';*/            //配置服务器的地址
@@ -214,14 +227,14 @@ $(function () {
         };
         $.ajax({
             type: 'POST',
-            url: "http://223.3.75.80:8080/articles",
+            url: "http://223.3.65.243:9095/article/articles",
             //前段需要将传输的数据显示转换为json
             data: JSON.stringify(article),
             // dataType:'json',
             contentType:'application/json',
             success: function (responseData) {
-                console.log('SUCCESS: ' + JSON.stringify(responseData));
-                console.log(responseData);
+                // console.log( + JSON.stringify(responseData));
+                console.log('SUCCESS: '+responseData);
             },
             //测试时直接带上userId的header，如实正式使用应该是token
             beforeSend:function(xhr){
@@ -281,18 +294,19 @@ $(function () {
         };
         $.ajax({
             type: 'POST',
-            url: "http://223.3.75.80:8080/articles/submit",
+            url: "http://223.3.65.243:9095/article/articles?isSubmit=1",
             //前段需要将传输的数据显示转换为json
             data: JSON.stringify(article),
             // dataType:'json',
             contentType:'application/json',
             success: function (responseData) {
-                console.log('SUCCESS: ' + JSON.stringify(responseData));
-                console.log(responseData);
+                // console.log('SUCCESS: ' + JSON.stringify(responseData));
+                console.log('SUCCESS: ' + responseData);
+                // console.log(responseData);
             },
             //测试时直接带上userId的header，如实正式使用应该是token
-            beforeSend:function(xhr){
-                xhr.setRequestHeader("userId",6);
+            beforeSend:function(shr){
+                shr.setRequestHeader("userId",6);
             },
             error: function (error) {
                 console.log('ERROR', error);

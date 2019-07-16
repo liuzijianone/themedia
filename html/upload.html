@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wangEditor demo</title>
+    <script src="../wangEditor/release/wangEditor.min.js"></script>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<div id="editor">
+    <p>欢迎使用 <b>wangEditor</b> 富文本编辑器</p>
+</div>
+
+<script type="text/javascript">
+    let E = window.wangEditor;
+    let editor = new E('#editor');
+
+    // editor.customConfig.uploadImgServer = 'http://223.3.88.110:9001/picture'; //上传URL
+    editor.customConfig.uploadImgMaxSize = 3 * 1024 * 1024;
+    editor.customConfig.uploadImgMaxLength = 5;
+    editor.customConfig.uploadFileName = 'myFileName';
+
+    editor.customConfig.customUploadImg = function (files, insert) {
+        // files 是 input 中选中的文件列表
+        // insert 是获取图片 url 后，插入到编辑器的方法
+        let file = new FormData();
+        file.append("file", files[0]);
+        let eAuthor = "April";
+        let url = " http://223.3.88.110:9001/picture?author=" + eAuthor;
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: JSON.stringify(file),
+            // processData: false,
+            contentType: 'application/json',
+            // async: false,
+            beforeSend: function (xhr) {
+                console.log('url: ' + url);
+                console.log('xhr: ' + xhr);
+                xhr.setRequestHeader('type', 'formData');
+            },
+            success: function (response) {
+                // alert(response);
+
+                console.log("success:" + JSON.stringify(response));
+                // for (var i = 0; i < response.length; i++) {
+                //     insert(response[i].url);
+                // }
+            },
+            fail: function (response) {
+                // alert(response);
+                console.log(response);
+            },
+            error: function (error) {
+                console.log('ERROR', error);
+            }
+        });
+
+
+        // 通过 url 参数配置 debug 模式。url 中带有 wangeditor_debug_mode=1 才会开启 debug 模式
+        //editor.customConfig.debug = location.href.indexOf('wangeditor_debug_mode=1') > 0;
+
+    };
+    editor.create();
+
+    //根据id得到对应图片的url
+    function getPicture(pid){
+        let url = " http://223.3.88.110:9001/picture?id=" + pid;
+        $.ajax({
+            type: "GET",
+            url: url,
+            // processData: false,
+            contentType: 'application/json',
+            // async: false,
+            beforeSend: function (xhr) {
+                console.log('url: ' + url);
+                console.log('xhr: ' + xhr);
+                xhr.setRequestHeader('type', 'formData');
+            },
+            success: function (response) {
+                // alert(response);
+                console.log("success:" + JSON.stringify(response));
+                var imgUrl=response;
+                return imgUrl;
+            },
+            fail: function (response) {
+                // alert(response);
+                console.log(response);
+            },
+            error: function (error) {
+                console.log('ERROR', error);
+            }
+        });
+    }
+</script>
+</body>
+</html>
