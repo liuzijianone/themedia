@@ -24,6 +24,7 @@
 .examine-path {
     padding-top: 5px;
     padding-left: 5px;
+    font-size: 16px;
     /*background: #eee;*/
 }
 .examine-content {
