@@ -20,4 +20,14 @@ $(() => {
     }, () => {
         $('.report-box img').eq(0).attr('src', '../imgs/video_display/report1.png');
     });
+
+    $('.search-box input').eq(0).bind('keypress', (event) => {
+        if (event.keyCode === 13)
+            $('.search-box span').eq(0).click();
+    });
+
+    $('.search-box span').eq(0).click(() => {
+        // window.location.href='./article_search_list.html'+'?search='+$('.search-box input').eq(0).val();
+        window.location.assign('./article_search_list.html' + '?searchContent=' + encodeURI($('.search-box input').eq(0).val()));
+    });
 }); 

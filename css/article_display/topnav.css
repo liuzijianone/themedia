@@ -38,8 +38,9 @@
 .logo {
     display: inline-block;
     position: relative;
-    height: 180%;
-    top: -40%;
+    /* height: 180%;
+    top: -40%; */
+    height: 100%;
 }
 
 /* ****************************************************** */

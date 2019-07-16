@@ -20,14 +20,10 @@ $(function () {
     // 滚动监听
     $(document).scroll(function () {
         let scroH = $(document).scrollTop();  //滚动高度
-        // console.log(scroH);
         // let viewH = $(window).height();  //可见高度 
         // let topH = $('.top-nav-box').eq(0).height();// 导航栏高度
         // let mainH = $('.main-content-box').eq(0).height();// 左侧内容高度
         // let sideH = $('.side-content-box').eq(0).height();// 右侧边栏高度
-
-        // $('.left-fix-box').eq(0).css('top', 500 + scroH + 'px');
-        // $('.right-fix-box').eq(0).css('top', 500 + scroH + 'px');
 
         // 顶部固定 右侧较矮
         if (scroH >= threshold) {
@@ -88,18 +84,9 @@ $(function () {
             .replace(/</g, "&lt;")
             .replace(/>/g, "&gt;").replace(/\n/g, "\\n"));
 
-        // addComment({
-        //     commentContent: $('.comment-box textarea').eq(0).val().replace(/&/g, "&amp;")
-        //         .replace(/</g, "&lt;")
-        //         .replace(/>/g, "&gt;")
-        //         .replace(/\n/g, "\\n")
-        // });
-
         addComment({
             commentContent: safeHTML($('.comment-box textarea').eq(0).val())
         });
-        // $('.comments-container').eq(0).append(
-        //     commentTmpl({ commentContent: $('.comment-box textarea').eq(0).val() }));
     });
 
     $('.search-box input').eq(0).bind('keypress', (event) => {

@@ -36,19 +36,15 @@ const mainColumnCardTmpl = ({
 
 let columnCardsProxy = new Proxy(columnCards, {
     get: (target, property) => {
-        // log('------get------');
         if (property in target) {
             return target[property];
         }
     },
     set: (obj, prop, value) => {
-        // log('------set------');
         log(obj);
         log(prop);
         log(value);
 
-        // $('.comments-container').eq(0).append(
-        //     mainColumnCardTmpl({ title }));
         obj[prop] = value;
         $('.main-column-box').eq(0).html(mainColumnCardsTmpl(obj[prop]));
     }
@@ -62,7 +58,8 @@ const mainColumnCardsTmpl = (objs) => `
         ${objs.map((card) => mainColumnCardTmpl({
     imgSrc: card.img_url ? card.img_url : undefined,
     title: card.title,
-    time: new Date(card.time).toLocaleDateString().replace(/\//g, '-') + " " + new Date(card.time).toTimeString().substring(0, 8),
+    // time: new Date(card.time).toLocaleDateString().replace(/\//g, '-') + " " + new Date(card.time).toTimeString().substring(0, 8),
+    time: card.create_time,
     source: card.source ? card.source : undefined
 })).join('')}`;
 
@@ -77,11 +74,9 @@ const mainColumnCardsTmpl = (objs) => `
 // }
 
 function setColumnCards(objects) {
-    // log('--1--');
-    // log(columnCardsProxy[Symbol.for('allColumnCards')])
+    log('-----------------------------------------')
+    log(objects);
     columnCardsProxy[Symbol.for('allColumnCards')] = objects;
-    // log(columnCardsProxy[Symbol.for('allColumnCards')]);
-    // log('--2--');
 }
 
 function safeHTML(str) {

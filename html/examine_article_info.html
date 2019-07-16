@@ -15,6 +15,7 @@
     <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
 
+    <script src='../js/article_display/url_manager.js'></script>
     <script src='../js/examine/article/article.json'></script>
     <script src='../js/examine/article/examine_article.js'></script>
 </head>
@@ -84,7 +85,8 @@
                                 </div>
                             </div>
                             <div class="card-footer text-right">
-                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#ex">审核</button>
+                                <button type="button" class="btn btn-danger" data-toggle="modal"
+                                    data-target="#ex">审核</button>
                             </div>
                         </div>
                     </li>
@@ -109,7 +111,8 @@
                                 </div>
                             </div>
                             <div class="card-footer text-right">
-                                <button type="button" class="btn btn-primary">审核</button>
+                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target="#ex">审核</button>
                             </div>
                         </div>
                     </li>
@@ -135,7 +138,8 @@
                                 </div>
                             </div>
                             <div class="card-footer text-right">
-                                <button type="button" class="btn btn-danger">审核</button>
+                                <button type="button" class="btn btn-danger" data-toggle="modal"
+                                    data-target="#ex">审核</button>
                             </div>
                         </div>
                     </li>
@@ -161,7 +165,8 @@
                                 </div>
                             </div>
                             <div class="card-footer text-right">
-                                <button type="button" class="btn btn-danger">审核</button>
+                                <button type="button" class="btn btn-danger" data-toggle="modal"
+                                    data-target="#ex">审核</button>
                             </div>
                         </div>
                     </li>
@@ -187,7 +192,8 @@
                                 </div>
                             </div>
                             <div class="card-footer text-right">
-                                <button type='button' class='btn btn-danger btn-xs'>审核</button>
+                                <button type='button' class='btn btn-danger btn-xs' data-toggle="modal"
+                                    data-target="#ex">审核</button>
                             </div>
                         </div>
                     </li>
@@ -212,7 +218,8 @@
                                 </div>
                             </div>
                             <div class="card-footer text-right">
-                                <button type="button" class="btn btn-primary">审核</button>
+                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target="#ex">审核</button>
                             </div>
                         </div>
                     </li>
@@ -238,7 +245,8 @@
                                 </div>
                             </div>
                             <div class="card-footer text-right" style="font-size: 15pt">
-                                <button type="button" class="btn btn-danger">审核</button>
+                                <button type="button" class="btn btn-danger" data-toggle="modal"
+                                    data-target="#ex">审核</button>
                             </div>
                         </div>
                     </li>
@@ -248,23 +256,36 @@
     </div>
     <!-- 模态框 -->
     <!-- 模态框 -->
-    <button type="button" id="popup-btn" class="btn btn-primary" style="display: none;" data-toggle="modal" data-target="#ex">审核</button>
+    <button type="button" id="popup-btn" class="btn btn-primary" style="display: none;" data-toggle="modal"
+        data-target="#ex">审核</button>
     <div class="modal fade" id="ex">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <span class="modal-title text-center">紧&nbsp;急&nbsp;文&nbsp;件</span>
+                    <span id="mo-rank" class="modal-title text-center">紧急文件</span>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
-                <div class="modal-body ">
-                    <div class="article-title-box"></div>
-                    <div class="article-content-box">
-                        <div class="article-source"></div>
-                        <div class="article-date"></div>
-                        <div class="article-main"></div>
+                <div class="modal-body">
+                    <div class="modal-article">
+                        <div id="mo-title" class="article-title-box">
+                            <p>北京大兴国际机场明天上午开展试飞：三大航拿出当家机型飞：三大航拿出当家机型飞：三大航拿出当家机型01</p>
+                        </div>
+                        <div class="article-content-box">
+                            <div class="article-source"><span id="mo-author">胡宝秀</span>/<span id="mo-source">澎湃新闻</span>
+                            </div>
+                            <div id="mo-data" class="article-date"><span>2019-05-12 20:22</span></div>
+                            <div id="mo-main" class="article-main">
+                                <img class="card-img-top img-responsive center-block" src="../imgs/edit/air.jpg"
+                                    alt="Card image">
+                                <p>根据民航局统一部署，北京大兴国际机场将在5月13日上午9点开展试飞工作。参与此次试飞的航空公司为南航、
+                                    东航、国航和厦航。根据民航在5月13日上午9点开展试飞工作。参与此次试飞的航空公司为南航、东航、国航和厦航。
+                                    根据民航局统一部署，北京大兴国参与此次试飞的航空公司为南航、东航、国航和厦航。根据民航局统一部署，
+                                    北京大兴国际机场将在5月13日上午9点开展试飞工作。参与此次试航和厦航。</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="modal-footer " style="justify-content: flex-start;height: 80px">
+                <div class="modal-footer" style="justify-content: flex-start;height: 80px">
                     <ul class="list-inline">
                         <li>
                             <ul>
@@ -286,8 +307,12 @@
                             </ul>
                         </li>
                         <li>
-                            <button class="btn btn-primary" type="button" style="margin-right: 20px;">保存</button>
-                            <button class="btn btn-primary" type="button" style="margin-right: 20px;">提交</button>
+                            <ul class="btn-li">
+                                <li><button class="btn btn-primary" type="button"
+                                        style="margin-right: 20px;">保存</button></li>
+                                <li><button class="btn btn-primary" type="button"
+                                        style="margin-right: 20px;">提交</button></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>

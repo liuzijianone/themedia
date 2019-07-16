@@ -27,11 +27,32 @@
     margin-top: 20px;
 }
 
-.main-column-title {
-    font-size: 16pt;
-    font-weight: bolder;
-    color: #000;
+/* **************************************************** */
+
+.search-feilds {
+    height: 30px;
+    line-height: 30px;
 }
+
+.field-label {
+    display: inline-block;
+    width: 48px;
+    text-align: center;
+    border: 1px solid brown;
+    border-radius: 10px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    color: brown;
+    cursor: pointer;
+}
+
+.field-label:hover {
+    background-color: brown;
+    color: #fff;
+}
+
+/* **************************************************** */
 
 .main-column-label {
     font-size: 10pt;
@@ -45,9 +66,11 @@
     padding-right: 5px;
 }
 
+/* ****************************************************** */
+
 .main-column-card {
     height: 100px;
-    border-bottom: 1px solid #999;
+    border-bottom: 1px solid #aaa;
     padding: 10px 10px;
 }
 
