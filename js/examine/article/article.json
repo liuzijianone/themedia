@@ -3,7 +3,7 @@
     "id": 0,
     "name": "test0",
     "approach": "邮箱",
-    "IdNumber":123456789009876543,
+    "IdNumber": 123456789009876543,
     "authority": "认证用户",
     "material": "查看"
   },
@@ -11,15 +11,15 @@
     "id": 1,
     "name": "test1",
     "approach": "手机",
-    "IdNumber":123456789009876543,
+    "IdNumber": 123456789009876543,
     "authority": "特级用户",
     "material": "查看"
   },
   {
     "id": 2,
     "name": "test2",
-    "approach":  "邮箱",
-    "IdNumber":12345678909876543,
+    "approach": "邮箱",
+    "IdNumber": 12345678909876543,
     "authority": "认证用户",
     "material": "查看"
   },
@@ -27,24 +27,23 @@
     "id": 3,
     "name": "test3",
     "approach": "手机",
-    "IdNumber":123456789009876543,
+    "IdNumber": 123456789009876543,
     "authority": "认证用户",
     "material": "查看"
   },
   {
     "id": 4,
     "name": "test4",
-    "approach":  "邮箱",
-    "IdNumber":123456789009876543,
+    "approach": "邮箱",
+    "IdNumber": 123456789009876543,
     "authority": "普通用户",
     "material": "查看"
-
   },
   {
     "id": 5,
     "name": "test5",
     "approach": "手机",
-    "IdNumber":123456789009876543,
+    "IdNumber": 123456789009876543,
     "authority": "特级用户",
     "material": "查看"
   },
@@ -52,15 +51,15 @@
     "id": 6,
     "name": "test6",
     "approach": "手机",
-    "IdNumber":123456789009876543,
-    "authority":"普通用户",
+    "IdNumber": 123456789009876543,
+    "authority": "普通用户",
     "material": "查看"
   },
   {
     "id": 7,
     "name": "test7",
-    "approach":  "邮箱",
-    "IdNumber":123456789009876543,
+    "approach": "邮箱",
+    "IdNumber": 123456789009876543,
     "authority": "认证用户",
     "material": "查看"
   },
@@ -68,23 +67,23 @@
     "id": 8,
     "name": "test8",
     "approach": "手机",
-    "IdNumber":123456789009876543,
+    "IdNumber": 123456789009876543,
     "authority": "认证用户",
     "material": "查看"
   },
   {
     "id": 9,
     "name": "test9",
-    "approach":  "邮箱",
-    "IdNumber":123456789009876543,
+    "approach": "邮箱",
+    "IdNumber": 123456789009876543,
     "authority": "普通用户",
     "material": "查看"
   },
   {
     "id": 10,
     "name": "test10",
-    "approach":  "邮箱",
-    "IdNumber":123456789009876543,
+    "approach": "邮箱",
+    "IdNumber": 123456789009876543,
     "authority": "认证用户",
     "material": "查看"
   }
